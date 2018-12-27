@@ -270,6 +270,7 @@
    position:relative;
    overflow: hidden;
    ul.control{
+      z-index: 10000;
       position: absolute;
       left: 50%;
       bottom:0px;
@@ -294,6 +295,7 @@
       top:50%;
       transform: translate(0,-50%);
       color:white;
+      z-index: 10000;
    }
    .arrow-right{
       right:5px;

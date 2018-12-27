@@ -18,7 +18,7 @@ export default {
    },
    methods:{
       getFolders(){
-         axios.get('api/folders').then((response) => {
+         axios.get('/api/folders').then((response) => {
             this.folders=response.data.data;
          })
       }

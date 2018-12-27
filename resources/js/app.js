@@ -10,11 +10,14 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import VueRouter from 'vue-router'
+import 'es6-promise/auto'
+import Vuex from 'vuex'
+import store from  './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook,faInstagram,faFlickr,faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faAngleLeft,faAngleRight,faDotCircle,faCircle } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faCog,faSignOutAlt,faDesktop,faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
+// veřejné stránky
 import Bts from './pages/bts'
 import Contact from './pages/contact'
 import Portfolio from './pages/portfolio'
@@ -22,21 +25,21 @@ import Review from './pages/review'
 import Home from './pages/home'
 import Folder from './pages/folder'
 
+// admin stránky
+
+import SpravaSlozek from './adminPages/spravaSlozek'
+import Dashboard from './adminPages/dashboard'
+
+//rozdělovací komponenty mezi veřejnými a administrátorkými stránky
 import page from './page'
 import admin from './admin'
 
-library.add(faFacebook,faInstagram,faFlickr,faYoutube,faAngleLeft,faAngleRight,faDotCircle,faCircle)
+library.add(faFacebook,faInstagram,faFlickr,faYoutube,faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faDesktop,faCog,faSignOutAlt,faPlusCircle )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 Vue.use(VueRouter)
+Vue.use(Vuex)
 
 const router = new VueRouter({
     mode: 'history',
@@ -75,12 +78,23 @@ const router = new VueRouter({
             path: '/folder/:id',
             name: 'folder',
             component: Folder
-        }
+        },
+        {
+            path: '/admin/sprava_slozek',
+            name: 'spravaSlozek',
+            component: SpravaSlozek
+        },
+        {
+            path: '/admin/dashboard',
+            name: 'dashboard',
+            component: Dashboard
+        },
     ],
 });
 
 const app = new Vue({
     el: '#app',
     components: {page,admin},
+    store,
     router
 });

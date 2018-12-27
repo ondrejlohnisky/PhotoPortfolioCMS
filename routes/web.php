@@ -29,13 +29,13 @@ Route::get('/{vue}',function(Request $request){
 })->where('vue','(|home|portfolio|bts|kontakt|review|folder\/[\d]*)');
 
 Route::get('/admin',function(Request $request){
-    return redirect('admin/index');
+    return redirect('admin/dashboard');
 });
 
 
 //auth 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('/index','AdminController@showPage');
+    Route::get('/{adminVue}','AdminController@showPage')->where('adminVue','|dashboard|sprava_slozek');
     Auth::routes();
 });
 

@@ -28,7 +28,7 @@ d
          border-bottom-left-radius: 5px;
          border-bottom-right-radius: 5px;
          margin-bottom: 1rem;
-         transition: all 0.15s;
+         transition: all 0.25s;
          cursor: pointer;
          .time_stamp{
             margin-left:5px;
@@ -41,8 +41,8 @@ d
          }
       }
       .card:hover{
-         -ms-transform: scale(1.03, 1.03); /* IE 9 */
-         -webkit-transform: scale(1.03, 1.03); /* Safari */
+         -ms-transform: scale(1.03, 1.03);
+         -webkit-transform: scale(1.03, 1.03);
          transform: scale(1.03, 1.03);
       }
    }

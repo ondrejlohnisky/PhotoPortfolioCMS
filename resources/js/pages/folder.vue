@@ -1,23 +1,23 @@
 <template>
    <div class="jumbotron">
       <div class="row">
-         <div class="col-md-4 public-image"><img class="rounded-circle" :src="public_image" :alt="title"></div>
-         <div class="col-md-8"><h3>{{ title }}</h3><p>{{ description }}</p></div>
+         <div class="col-md-3 public-image"><img class="rounded-circle" :src="public_image" :alt="title"></div>
+         <div class="col-md-9"><h3>{{ title }}</h3><p>{{ description }}</p></div>
       </div><hr/><br/>
       <div class="row">
          <div class="col-md-4" v-for="(image,index) in images" :key="index">
             <img @click="slideIndex=index" :src="image.src" :alt="image.title" width="100%">
          </div>
       </div>
-   <vue-gallery-slideshow :images="images.map(image=>image.src)" :index="slideIndex" @close="index=null"/>
+   <vue-gallery :images="images.map(image=>image.src)" :index="slideIndex" @close="slideIndex=null"/>
    </div>
 </template>
 
 <script>
-   import VueGallerySlideshow from 'vue-gallery-slideshow'
+   import VueGallery from 'vue-gallery'
    export default {
       components:{
-         VueGallerySlideshow
+         VueGallery
       },
       data(){
          return {
@@ -117,7 +117,7 @@
       display:inline-block;
       text-align: center;
    }
-   .col-md-8{
+   .col-md-9{
       p{
          word-wrap: break-word;
       }

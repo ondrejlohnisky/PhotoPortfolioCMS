@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="app">
-        <admin api_token="{{ $user->api_token }}"></admin>
+        <admin userdata="{{ $user }}"></admin>
     </div>
 </body>
 </html>

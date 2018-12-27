@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light rounded border-bottom">
-        <div class="container">
+        <div class="container-fluid">
             <router-link :to="{name: 'home'}"><img draggable="false" src="/images/PodpisLogo.png" alt="PetrSmille" class="logo"></router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

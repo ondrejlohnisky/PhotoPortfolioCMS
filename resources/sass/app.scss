@@ -6,7 +6,8 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap-material-design/scss/bootstrap-material-design';
+@import '~mdbootstrap/css/bootstrap.min.css';
+@import '~mdbootstrap/css/mdb.min.css';
 
 .navbar-laravel {
   background-color: #fff;
