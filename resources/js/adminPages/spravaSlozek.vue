@@ -1,9 +1,9 @@
 <template>
-   <div>
+   <div class="disabledByModal">
       <div>
          <h2>Správa složek</h2>
          <br/>
-         <button @click="$store.commit('openModal')" class="btn btn-success rounded">
+         <button @click="openUploadModal()" class="btn btn-success rounded btn-md">
             <font-awesome-icon size="lg" :icon="['fas','plus-circle']"/> new         
          </button>
          <br/>
@@ -15,6 +15,9 @@
    </div>
 </template>
 
+<style lang="scss" scoped>
+
+</style>
 
 
 
@@ -39,6 +42,15 @@ import folder from '../components/folder'
          },
          uploadFolder(){
             axios.post('/api/folders',)
+         },
+         openUploadModal(){
+            var top = $(window).scrollTop();
+            var left = $(window).scrollLeft();
+            $('body').css('overflow', 'hidden');
+            $(window).scroll(function(){
+               $(this).scrollTop(top).scrollLeft(left);
+            });
+            this.$store.commit('openUploadModal');
          }
       },
       mounted(){

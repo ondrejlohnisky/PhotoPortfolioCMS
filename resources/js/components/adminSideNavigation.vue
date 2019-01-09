@@ -1,18 +1,20 @@
 <template>
    <div class="sideNav">
       <font-awesome-icon v-if="loadedImg" id="close" size="lg" :icon="['fas','angle-double-left']" @click="actionSideNav()"/>
-      <div class="avatar">
-         <img id="avatar" @load="loadedImg=true" src="/images/boss.png" alt="Avatar" ><br/>
-         <h5 v-if="loadedImg" for="avatar"><font-awesome-icon size="xs" :icon="['fas','circle']" style="color:lightgreen"/> {{ username }}</h5><br/>
-      </div>
-      <div v-if="loadedImg">
-         <ul class="nav">
-            <li><router-link :to="{name: 'dashboard'}" :class="this.$route.name=='dashboard' ? 'active navItem' : 'navItem'">Dashboard</router-link></li>
-            <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaSlozek' ? 'active navItem' : 'navItem'">Správa složek</router-link></li>
-            <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaAdministratoru' ? 'active navItem' : 'navItem'">Správa administrátorů</router-link></li>
-         </ul><br/><br/><br/>
-         <hr/>
-         <Footer/>
+      <div class="sideNavContent">
+         <div class="avatar">
+            <img id="avatar" @load="loadedImg=true" src="/images/boss.png" alt="Avatar" ><br/>
+            <h5 v-if="loadedImg" for="avatar"><font-awesome-icon size="xs" :icon="['fas','circle']" style="color:lightgreen"/> {{ username }}</h5><br/>
+         </div>
+         <div v-if="loadedImg">
+            <ul class="nav">
+               <li><router-link :to="{name: 'dashboard'}" :class="this.$route.name=='dashboard' ? 'active navItem' : 'navItem'">Dashboard</router-link></li>
+               <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaSlozek' ? 'active navItem' : 'navItem'">Správa složek</router-link></li>
+               <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaAdministratoru' ? 'active navItem' : 'navItem'">Správa administrátorů</router-link></li>
+            </ul><br/>
+            <hr/>
+            <Footer/>
+         </div>
       </div>
    </div>
 </template>
@@ -32,15 +34,22 @@ window.$ = require('jquery');
       data(){
          return{
             loadedImg:false,
-            degree:180
+            degree:180,
          }
       },
       methods:{
          actionSideNav(){
             EventBus.$emit('actionSideNav');
             $("#close").css({'transform' : 'rotate('+this.degree+'deg)'});
-            if (this.degree==180) this.degree+=180;
-            else this.degree -=180;
+            if (this.degree==180){
+               this.degree+=180;
+               $(".sideNavContent").hide(600);
+            } 
+            else{
+               this.degree-=180;
+               $(".sideNavContent").show(600);
+
+            } 
          }
       }
    }
@@ -101,6 +110,7 @@ h5{
    cursor:pointer;
    right:5px;
    top:5px;
+   z-index:10000;
    color:gray;
    animation-play-state: running;
    -webkit-animation-play-state: running;
@@ -185,25 +195,6 @@ h5{
 .footer{
    padding:10px 25px;
    font-size:15px;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-  height:5px;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: grey; 
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background:rgb(172, 172, 172); 
 }
 
 @media (max-width: 991px){

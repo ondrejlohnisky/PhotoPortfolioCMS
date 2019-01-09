@@ -15,7 +15,7 @@ import Vuex from 'vuex'
 import store from  './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook,faInstagram,faFlickr,faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faCog,faSignOutAlt,faDesktop,faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faCog,faSignOutAlt,faDesktop,faPlusCircle,faImages,faImage } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // veřejné stránky
 import Bts from './pages/bts'
@@ -34,7 +34,7 @@ import Dashboard from './adminPages/dashboard'
 import page from './page'
 import admin from './admin'
 
-library.add(faFacebook,faInstagram,faFlickr,faYoutube,faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faDesktop,faCog,faSignOutAlt,faPlusCircle )
+library.add(faFacebook,faInstagram,faFlickr,faYoutube,faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faDesktop,faCog,faSignOutAlt,faPlusCircle,faImage,faImages)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

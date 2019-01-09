@@ -11,10 +11,10 @@ export default new Vuex.Store({
          state.ApiToken=token;
       },
       //upload Modal-otevření/zavření upload modalu
-      openModal(state){
+      openUploadModal(state){
          state.uploadModal=true;
       },
-      closeModal(state){
+      closeUploadModal(state){
          state.uploadModal=false;
       }
    }
