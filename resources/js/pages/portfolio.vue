@@ -1,9 +1,9 @@
 <template>
    <div>
       <div class="row">
-         <router-link class="col-md-4" :to="{ name: 'folder',params:{id:folder.id} }" v-for="(folder,index) in folders" :key="index" >
+         <div class="col-md-4" v-for="(folder,index) in folders" :key="index" @click="routerPush({ name: 'folder',params:{id:folder.id}})">
             <folder :folder="folder"/>
-         </router-link>
+         </div>
       </div>
    </div>
 </template>
@@ -17,6 +17,9 @@ export default {
       }
    },
    methods:{
+      routerPush(params){
+         this.$router.push(params);
+      },
       getFolders(){
          axios.get('/api/folders').then((response) => {
             this.folders=response.data.data;
@@ -37,4 +40,5 @@ a{
    text-decoration: none;
    color:inherit;
 }
+
 </style>

@@ -30188,7 +30188,7 @@ window.Vue = __webpack_require__(9);
 
 
 
-__WEBPACK_IMPORTED_MODULE_4__fortawesome_fontawesome_svg_core__["c" /* library */].add(__WEBPACK_IMPORTED_MODULE_5__fortawesome_free_brands_svg_icons__["a" /* faFacebook */], __WEBPACK_IMPORTED_MODULE_5__fortawesome_free_brands_svg_icons__["c" /* faInstagram */], __WEBPACK_IMPORTED_MODULE_5__fortawesome_free_brands_svg_icons__["b" /* faFlickr */], __WEBPACK_IMPORTED_MODULE_5__fortawesome_free_brands_svg_icons__["d" /* faYoutube */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["b" /* faAngleLeft */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["c" /* faAngleRight */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["g" /* faDotCircle */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["d" /* faCircle */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["h" /* faEllipsisH */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["a" /* faAngleDoubleLeft */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["f" /* faDesktop */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["e" /* faCog */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["l" /* faSignOutAlt */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["k" /* faPlusCircle */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["i" /* faImage */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["j" /* faImages */]);
+__WEBPACK_IMPORTED_MODULE_4__fortawesome_fontawesome_svg_core__["c" /* library */].add(__WEBPACK_IMPORTED_MODULE_5__fortawesome_free_brands_svg_icons__["a" /* faFacebook */], __WEBPACK_IMPORTED_MODULE_5__fortawesome_free_brands_svg_icons__["c" /* faInstagram */], __WEBPACK_IMPORTED_MODULE_5__fortawesome_free_brands_svg_icons__["b" /* faFlickr */], __WEBPACK_IMPORTED_MODULE_5__fortawesome_free_brands_svg_icons__["d" /* faYoutube */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["b" /* faAngleLeft */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["c" /* faAngleRight */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["g" /* faDotCircle */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["d" /* faCircle */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["h" /* faEllipsisH */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["a" /* faAngleDoubleLeft */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["f" /* faDesktop */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["e" /* faCog */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["m" /* faSignOutAlt */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["l" /* faPlusCircle */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["i" /* faImage */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["j" /* faImages */], __WEBPACK_IMPORTED_MODULE_6__fortawesome_free_solid_svg_icons__["k" /* faLock */]);
 
 Vue.component('font-awesome-icon', __WEBPACK_IMPORTED_MODULE_7__fortawesome_vue_fontawesome__["a" /* FontAwesomeIcon */]);
 
@@ -58072,7 +58072,7 @@ var _iconsCache = {
 /* unused harmony export faListOl */
 /* unused harmony export faListUl */
 /* unused harmony export faLocationArrow */
-/* unused harmony export faLock */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return faLock; });
 /* unused harmony export faLockOpen */
 /* unused harmony export faLongArrowAltDown */
 /* unused harmony export faLongArrowAltLeft */
@@ -58184,7 +58184,7 @@ var _iconsCache = {
 /* unused harmony export faPlayCircle */
 /* unused harmony export faPlug */
 /* unused harmony export faPlus */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return faPlusCircle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return faPlusCircle; });
 /* unused harmony export faPlusSquare */
 /* unused harmony export faPodcast */
 /* unused harmony export faPoll */
@@ -58268,7 +58268,7 @@ var _iconsCache = {
 /* unused harmony export faSign */
 /* unused harmony export faSignInAlt */
 /* unused harmony export faSignLanguage */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return faSignOutAlt; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return faSignOutAlt; });
 /* unused harmony export faSignal */
 /* unused harmony export faSignature */
 /* unused harmony export faSitemap */
@@ -61066,6 +61066,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
    },
 
    methods: {
+      routerPush: function routerPush(params) {
+         this.$router.push(params);
+      },
       getFolders: function getFolders() {
          var _this = this;
 
@@ -61117,7 +61120,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n#folder .card[data-v-5b59f10e] {\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n  margin-bottom: 1rem;\n  -webkit-transition: all 0.25s;\n  transition: all 0.25s;\n  cursor: pointer;\n}\n#folder .card .time_stamp[data-v-5b59f10e] {\n    margin-left: 5px;\n    color: gray;\n}\n#folder .card img[data-v-5b59f10e] {\n    margin: 0.3rem;\n    max-width: 100%;\n    width: auto;\n}\n#folder .card[data-v-5b59f10e]:hover {\n  -webkit-transform: scale(1.03, 1.03);\n  transform: scale(1.03, 1.03);\n}\n", ""]);
+exports.push([module.i, "\n#folder[data-v-5b59f10e] {\n  position: relative;\n  -webkit-transition: all 0.25s;\n  transition: all 0.25s;\n  margin-bottom: 1rem;\n}\n#folder .card[data-v-5b59f10e] {\n    border-bottom-left-radius: 5px;\n    border-bottom-right-radius: 5px;\n    cursor: pointer;\n}\n#folder .card .time_stamp[data-v-5b59f10e] {\n      margin-left: 5px;\n      color: gray;\n}\n#folder .card img[data-v-5b59f10e] {\n      margin: 0.3rem;\n      max-width: 100%;\n      width: auto;\n}\n#folder[data-v-5b59f10e]:hover {\n    -webkit-transform: scale(1.015, 1.015);\n    transform: scale(1.015, 1.015);\n}\n.lock[data-v-5b59f10e] {\n  position: absolute;\n  z-index: 10000;\n  right: 0px;\n  top: 0px;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n}\n", ""]);
 
 // exports
 
@@ -61128,6 +61131,7 @@ exports.push([module.i, "\n#folder .card[data-v-5b59f10e] {\n  border-bottom-lef
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -61159,24 +61163,36 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "folder" } }, [
-    _c("div", { staticClass: "card" }, [
-      _c("img", {
-        staticClass: "card-img",
-        attrs: { src: _vm.folder.public_image, alt: _vm.folder.title }
-      }),
+  return _c(
+    "div",
+    { attrs: { id: "folder" } },
+    [
+      _vm.folder.locked
+        ? _c("font-awesome-icon", {
+            staticClass: "lock",
+            attrs: { size: "lg", icon: ["fas", "lock"] }
+          })
+        : _vm._e(),
       _vm._v(" "),
-      _c("div", { staticClass: "card-block mx-3" }, [
-        _c("h4", { staticClass: "card-title" }, [
-          _vm._v(_vm._s(_vm.folder.title))
+      _c("div", { staticClass: "card" }, [
+        _c("img", {
+          staticClass: "card-img",
+          attrs: { src: _vm.folder.public_image, alt: _vm.folder.title }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-block mx-3" }, [
+          _c("h4", { staticClass: "card-title" }, [
+            _vm._v(_vm._s(_vm.folder.title))
+          ])
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "time_stamp" }, [
+          _vm._v("Created " + _vm._s(_vm.folder.created_at))
         ])
-      ]),
-      _vm._v(" "),
-      _c("span", { staticClass: "time_stamp" }, [
-        _vm._v("Created " + _vm._s(_vm.folder.created_at))
       ])
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -61202,11 +61218,15 @@ var render = function() {
       { staticClass: "row" },
       _vm._l(_vm.folders, function(folder, index) {
         return _c(
-          "router-link",
+          "div",
           {
             key: index,
             staticClass: "col-md-4",
-            attrs: { to: { name: "folder", params: { id: folder.id } } }
+            on: {
+              click: function($event) {
+                _vm.routerPush({ name: "folder", params: { id: folder.id } })
+              }
+            }
           },
           [_c("folder", { attrs: { folder: folder } })],
           1
@@ -63745,7 +63765,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.adminRedirect {\n  color: rgba(255, 255, 0, 0.698);\n  font-size: 5px;\n}\n::-webkit-scrollbar {\n  width: 10px;\n}\n::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 5px grey;\n          box-shadow: inset 0 0 5px grey;\n}\n::-webkit-scrollbar-thumb {\n  background: grey;\n  border-radius: 5px;\n}\n::-webkit-scrollbar-thumb:hover {\n  background: #acacac;\n}\n", ""]);
+exports.push([module.i, "\n.row > a {\n  padding: 0;\n}\n.adminRedirect {\n  color: rgba(255, 255, 0, 0.698);\n  font-size: 5px;\n}\n::-webkit-scrollbar {\n  width: 10px;\n}\n::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 5px grey;\n          box-shadow: inset 0 0 5px grey;\n}\n::-webkit-scrollbar-thumb {\n  background: grey;\n  border-radius: 5px;\n}\n::-webkit-scrollbar-thumb:hover {\n  background: #acacac;\n}\n", ""]);
 
 // exports
 
@@ -64836,7 +64856,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n@keyframes pending-data-v-335894ff {\n0% {\n    right: 5px;\n}\n50% {\n    right: 9px;\n}\n100% {\n    right: 5px;\n}\n}\n@-webkit-keyframes pending-data-v-335894ff {\n0% {\n    right: 5px;\n}\n50% {\n    right: 9px;\n}\n100% {\n    right: 5px;\n}\n}\na[data-v-335894ff] {\n  color: unset;\n}\nh5[data-v-335894ff] {\n  font-weight: bold;\n}\n#close[data-v-335894ff] {\n  position: absolute;\n  cursor: pointer;\n  right: 5px;\n  top: 5px;\n  z-index: 10000;\n  color: gray;\n  animation-play-state: running;\n  -webkit-animation-play-state: running;\n  -moz-animation-play-state: running;\n  -webkit-transition: -webkit-transform .2s ease-in;\n  -webkit-transition: -webkit-transform .4s ease-in;\n  transition: -webkit-transform .4s ease-in;\n  transition: transform .4s ease-in;\n  transition: transform .4s ease-in, -webkit-transform .4s ease-in;\n}\n#close[data-v-335894ff]:hover {\n    color: black;\n    animation: pending-data-v-335894ff .5s linear;\n    animation-play-state: running;\n    -moz-animation: pending-data-v-335894ff .5s linear;\n    -moz-animation-play-state: running;\n    -webkit-animation: pending-data-v-335894ff .5s linear;\n    -webkit-animation-play-state: running;\n}\n.avatar[data-v-335894ff] {\n  text-align: center;\n}\n.avatar img[data-v-335894ff] {\n    width: 40%;\n    display: inline-block;\n}\n.sideNav[data-v-335894ff] {\n  overflow-y: hidden;\n  overflow-x: hidden;\n  background-color: white;\n  position: fixed;\n  left: 0;\n  height: 100%;\n  -webkit-box-shadow: 1px 0px 10px rgba(44, 44, 44, 0.6);\n          box-shadow: 1px 0px 10px rgba(44, 44, 44, 0.6);\n}\n.nav[data-v-335894ff] {\n  margin-top: 10px;\n  list-style-type: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.navItem[data-v-335894ff] {\n  text-align: left;\n  font-size: 3vb;\n  font-weight: bolder;\n  display: block;\n  border-top-right-radius: 6px;\n  border-bottom-right-radius: 6px;\n  color: black;\n  width: 100%;\n  padding: 13px 15px;\n  text-decoration: none;\n  overflow: visible;\n  cursor: pointer;\n}\n.navItem[data-v-335894ff]:hover {\n    border-right: 25px solid #c8c8c8;\n    -webkit-transition: background-color .2s;\n    transition: background-color .2s;\n    background-color: #dfdfdf;\n    color: #2f2f2f;\n}\n.navItem[data-v-335894ff]:active {\n    color: grey;\n    background-color: #c8c8c8;\n}\n.active[data-v-335894ff] {\n  border-right: 25px solid rgba(0, 128, 0, 0.6) !important;\n  background-color: #dfdfdf;\n}\n.footer[data-v-335894ff] {\n  padding: 10px 25px;\n  font-size: 15px;\n}\n@media (max-width: 991px) {\n.footer[data-v-335894ff] {\n    font-size: 6px;\n}\n.sideNav[data-v-335894ff] {\n    overflow-y: auto;\n    overflow-x: hidden;\n}\n}\n", ""]);
+exports.push([module.i, "\n@keyframes pending-data-v-335894ff {\n0% {\n    right: 5px;\n}\n50% {\n    right: 9px;\n}\n100% {\n    right: 5px;\n}\n}\n@-webkit-keyframes pending-data-v-335894ff {\n0% {\n    right: 5px;\n}\n50% {\n    right: 9px;\n}\n100% {\n    right: 5px;\n}\n}\na[data-v-335894ff] {\n  color: unset;\n}\nh5[data-v-335894ff] {\n  font-weight: bold;\n}\n#close[data-v-335894ff] {\n  position: absolute;\n  cursor: pointer;\n  right: 5px;\n  top: 5px;\n  z-index: 10000;\n  color: darkgrey;\n  animation-play-state: running;\n  -webkit-animation-play-state: running;\n  -moz-animation-play-state: running;\n  -webkit-transition: -webkit-transform .2s ease-in;\n  -webkit-transition: -webkit-transform .4s ease-in;\n  transition: -webkit-transform .4s ease-in;\n  transition: transform .4s ease-in;\n  transition: transform .4s ease-in, -webkit-transform .4s ease-in;\n}\n#close[data-v-335894ff]:hover {\n    color: grey;\n    animation: pending-data-v-335894ff .5s linear;\n    animation-play-state: running;\n    -moz-animation: pending-data-v-335894ff .5s linear;\n    -moz-animation-play-state: running;\n    -webkit-animation: pending-data-v-335894ff .5s linear;\n    -webkit-animation-play-state: running;\n}\n.avatar[data-v-335894ff] {\n  text-align: center;\n}\n.avatar img[data-v-335894ff] {\n    width: 40%;\n    display: inline-block;\n}\n.sideNav[data-v-335894ff] {\n  overflow-y: hidden;\n  overflow-x: hidden;\n  background-color: white;\n  position: fixed;\n  left: 0;\n  height: 100%;\n  -webkit-box-shadow: 1px 0px 10px rgba(44, 44, 44, 0.6);\n          box-shadow: 1px 0px 10px rgba(44, 44, 44, 0.6);\n}\n.nav[data-v-335894ff] {\n  margin-top: 10px;\n  list-style-type: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.navItem[data-v-335894ff] {\n  text-align: left;\n  font-size: 3vb;\n  font-weight: bolder;\n  display: block;\n  border-top-right-radius: 6px;\n  border-bottom-right-radius: 6px;\n  color: black;\n  width: 100%;\n  padding: 13px 15px;\n  text-decoration: none;\n  overflow: visible;\n  cursor: pointer;\n}\n.navItem[data-v-335894ff]:hover {\n    border-right: 25px solid #c8c8c8;\n    -webkit-transition: background-color .2s;\n    transition: background-color .2s;\n    background-color: #dfdfdf;\n    color: #2f2f2f;\n}\n.navItem[data-v-335894ff]:active {\n    color: grey;\n    background-color: #c8c8c8;\n}\n.active[data-v-335894ff] {\n  border-right: 25px solid rgba(0, 128, 0, 0.6) !important;\n  background-color: #dfdfdf;\n}\n.footer[data-v-335894ff] {\n  padding: 10px 25px;\n  font-size: 15px;\n}\n@media (max-width: 991px) {\n.footer[data-v-335894ff] {\n    font-size: 6px;\n}\n.sideNav[data-v-335894ff] {\n    overflow-y: auto;\n    overflow-x: hidden;\n}\n}\n", ""]);
 
 // exports
 
@@ -65139,7 +65159,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n#imagePreview[data-v-64773b9e] {\n  width: 100%;\n  display: none;\n}\n#titleImageSize[data-v-64773b9e] {\n  font-style: italic;\n}\n.file-field[data-v-64773b9e] {\n  position: relative;\n}\n.file-path[data-v-64773b9e] {\n  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;\n  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;\n  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\n  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;\n  outline: 0;\n  -webkit-box-shadow: none;\n  box-shadow: none;\n  border: none;\n  border-bottom: 2px solid #ced4da;\n  border-radius: 0;\n  -webkit-box-sizing: content-box;\n  box-sizing: content-box;\n  background-color: transparent;\n}\n.file-path.validate[data-v-64773b9e] {\n    border-color: #4d86e2;\n}\n.file-path.validated[data-v-64773b9e] {\n    border-color: #28a745;\n}\n.form-control.validated[data-v-64773b9e] {\n  background-color: #fff;\n  border-color: #28a745;\n  outline: 0;\n  -webkit-box-shadow: 0 0 0 0.05rem rgba(0, 255, 0, 0.25);\n          box-shadow: 0 0 0 0.05rem rgba(0, 255, 0, 0.25);\n}\n.myInputButton[data-v-64773b9e] {\n  position: relative;\n}\n.myInputFile[data-v-64773b9e] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n  cursor: pointer;\n  opacity: 0;\n}\n.myInputFileLabel[data-v-64773b9e] {\n  width: 100%;\n  height: calc(2.25rem + 2px);\n  padding: 0.375rem 0.75rem;\n  font-size: 1rem;\n  line-height: 1.5;\n  color: #6c757d;\n  opacity: 1;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid #ced4da;\n  border-radius: 0.25rem;\n  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;\n  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;\n  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;\n}\n.myInputFileLabelSpan[data-v-64773b9e] {\n  height: 100%;\n  width: 40%;\n  background-color: #cfcfcf;\n}\n.pageModal[data-v-64773b9e] {\n  position: fixed;\n  overflow: auto;\n  left: 50%;\n  top: 50%;\n  height: 70%;\n  width: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  background-color: white;\n  border-radius: 5px;\n  z-index: 60000;\n  -webkit-box-shadow: 0px 0px 10px gray;\n          box-shadow: 0px 0px 10px gray;\n  padding: 15px;\n}\n@media (max-width: 686px) {\n.pageModal[data-v-64773b9e] {\n    width: 80%;\n}\n}\n.pageModalHeader[data-v-64773b9e] {\n  text-align: center;\n  font-size: 6vb;\n  font-weight: 500;\n  padding: 5px;\n  width: 100%;\n  height: auto;\n}\n.pageModalWrapper[data-v-64773b9e] {\n  position: fixed;\n  z-index: 50000;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(199, 199, 199, 0.4);\n}\n", ""]);
+exports.push([module.i, "\n#imagePreview[data-v-64773b9e] {\n  width: 100%;\n  border-radius: calc(.25rem - 1px);\n}\n#titleImageSize[data-v-64773b9e] {\n  font-style: italic;\n}\n.file-field[data-v-64773b9e] {\n  position: relative;\n}\n.file-path[data-v-64773b9e] {\n  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;\n  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;\n  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\n  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;\n  outline: 0;\n  -webkit-box-shadow: none;\n  box-shadow: none;\n  border: none;\n  border-bottom: 2px solid #ced4da;\n  border-radius: 0;\n  -webkit-box-sizing: content-box;\n  box-sizing: content-box;\n  background-color: transparent;\n}\n.file-path.validate[data-v-64773b9e] {\n    border-color: #4d86e2;\n}\n.file-path.validated[data-v-64773b9e] {\n    border-color: #28a745;\n}\n.form-control.validated[data-v-64773b9e] {\n  background-color: #fff;\n  border-color: #28a745;\n  outline: 0;\n  -webkit-box-shadow: 0 0 0 0.05rem rgba(0, 255, 0, 0.25);\n          box-shadow: 0 0 0 0.05rem rgba(0, 255, 0, 0.25);\n}\n.myInputButton[data-v-64773b9e] {\n  position: relative;\n}\n.myInputFile[data-v-64773b9e] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n  cursor: pointer;\n  opacity: 0;\n}\n.myInputFileLabel[data-v-64773b9e] {\n  width: 100%;\n  height: calc(2.25rem + 2px);\n  padding: 0.375rem 0.75rem;\n  font-size: 1rem;\n  line-height: 1.5;\n  color: #6c757d;\n  opacity: 1;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid #ced4da;\n  border-radius: 0.25rem;\n  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;\n  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;\n  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;\n}\n.myInputFileLabelSpan[data-v-64773b9e] {\n  height: 100%;\n  width: 40%;\n  background-color: #cfcfcf;\n}\n.pageModal[data-v-64773b9e] {\n  position: fixed;\n  overflow: auto;\n  left: 50%;\n  top: 50%;\n  height: 70%;\n  width: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  background-color: white;\n  border-radius: 5px;\n  z-index: 60000;\n  -webkit-box-shadow: 0px 0px 10px gray;\n          box-shadow: 0px 0px 10px gray;\n  padding: 15px;\n}\n@media (max-width: 686px) {\n.pageModal[data-v-64773b9e] {\n    width: 80%;\n}\n}\n.pageModalHeader[data-v-64773b9e] {\n  text-align: center;\n  padding: 5px;\n  width: 100%;\n  height: auto;\n}\n.pageModalWrapper[data-v-64773b9e] {\n  position: fixed;\n  z-index: 50000;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(199, 199, 199, 0.4);\n}\n", ""]);
 
 // exports
 
@@ -65197,16 +65217,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
    data: function data() {
       return {
-         password: ''
+         title: '',
+         description: '',
+         imageSrc: null,
+         locked: false,
+         count: 1
       };
    },
 
    methods: {
-      generatePassword: function generatePassword() {},
       closeUploadModal: function closeUploadModal() {
          $('body').css('overflow', 'auto');
          $(window).unbind('scroll');
@@ -65220,8 +65254,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var reader = new FileReader();
 
             reader.onload = function (e) {
-               $('#imagePreview').attr('src', e.target.result);
-               $('#imagePreview').css('display', 'initial');
+               that.imageSrc = e.target.result;
             };
             reader.readAsDataURL(input.files[0]);
          }
@@ -65250,6 +65283,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             detectValue();
          });
          $("#fileNamePreview").on('focus', function () {
+            detectValue();
+         });
+         $("#fileNamePreview").on('input', function () {
             detectValue();
          });
 
@@ -65283,45 +65319,41 @@ var render = function() {
     }),
     _vm._v(" "),
     _c("div", { staticClass: "pageModal" }, [
-      _c("div", { staticClass: "pageModalHeader mb-4" }, [
+      _c("div", { staticClass: "pageModalHeader mb-4 h5" }, [
         _vm._v("\n         Přidat složku\n      ")
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "pageModalBody" }, [
-        _c("p", { staticClass: "h2 mb-4" }, [_vm._v("Základní údaje")]),
+        _c("p", { staticClass: "h6 mb-4" }, [_vm._v("Základní informace")]),
         _vm._v(" "),
         _vm._m(0),
         _vm._v(" "),
         _c("div", { staticClass: "form-row" }, [
-          _c("div", { staticClass: "col-8 mb-2" }, [
+          _c("div", { class: [_vm.imageSrc ? "col-8" : "col", "mb-2"] }, [
             _c("div", { staticClass: "file-field" }, [
-              _c(
-                "div",
-                { staticClass: "myInputButton btn btn-primary btn-sm" },
-                [
-                  _c(
-                    "span",
-                    [
-                      _c("font-awesome-icon", {
-                        attrs: { size: "lg", icon: ["fas", "image"] }
-                      }),
-                      _vm._v(
-                        "   \n                        Vybrat titulní fotku\n                     "
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "myInputFile",
-                    attrs: {
-                      type: "file",
-                      id: "titleImageInput",
-                      accept: "image/*"
-                    }
-                  })
-                ]
-              ),
+              _c("div", { staticClass: "myInputButton btn btn-light btn-sm" }, [
+                _c(
+                  "span",
+                  [
+                    _c("font-awesome-icon", {
+                      attrs: { size: "lg", icon: ["fas", "image"] }
+                    }),
+                    _vm._v(
+                      "\n                        Vybrat titulní fotku\n                     "
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "myInputFile",
+                  attrs: {
+                    type: "file",
+                    id: "titleImageInput",
+                    accept: "image/*"
+                  }
+                })
+              ]),
               _vm._v(" "),
               _c("input", {
                 staticClass: "file-path",
@@ -65339,54 +65371,117 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _vm._m(1)
+          _vm.imageSrc
+            ? _c("div", { staticClass: "col-4 mb-2" }, [
+                _c("img", {
+                  attrs: {
+                    src: _vm.imageSrc,
+                    id: "imagePreview",
+                    alt: "Image Not Found"
+                  }
+                })
+              ])
+            : _vm._e()
         ]),
         _vm._v(" "),
-        _c("p", { staticClass: "h2 mb-4 mt-2" }, [_vm._v("Zabezpečení")]),
+        _c("hr"),
+        _vm._v(" "),
+        _c("p", { staticClass: "h6 mb-4 mt-2" }, [_vm._v("Zabezpečení")]),
         _vm._v(" "),
         _c("div", { staticClass: "form-row" }, [
           _c("div", { staticClass: "col-sm-6 mb-2" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.password,
-                  expression: "password"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "title",
-                placeholder: "password",
-                onkeypress: "return false;"
-              },
-              domProps: { value: _vm.password },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+            _c("div", { staticClass: "custom-control custom-checkbox" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.locked,
+                    expression: "locked"
                   }
-                  _vm.password = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-light btn-sm",
+                ],
+                staticClass: "custom-control-input",
+                attrs: { type: "checkbox", id: "locked" },
+                domProps: {
+                  checked: Array.isArray(_vm.locked)
+                    ? _vm._i(_vm.locked, null) > -1
+                    : _vm.locked
+                },
                 on: {
-                  click: function($event) {
-                    _vm.generatePassword()
+                  change: function($event) {
+                    var $$a = _vm.locked,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = null,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.locked = $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          (_vm.locked = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
+                      }
+                    } else {
+                      _vm.locked = $$c
+                    }
                   }
                 }
-              },
-              [_vm._v("Generate")]
-            )
+              }),
+              _vm._v(" "),
+              _c(
+                "label",
+                {
+                  staticClass: "custom-control-label",
+                  attrs: { for: "locked" }
+                },
+                [_vm._v("Zaheslovat složku")]
+              )
+            ])
           ])
-        ])
+        ]),
+        _vm._v(" "),
+        _vm.locked
+          ? _c("div", { staticClass: "form-row" }, [
+              _c("div", { staticClass: "col-sm-8" }, [
+                _c("label", { attrs: { for: "count" } }, [
+                  _vm._v("Počet použití hesla "),
+                  _c("span", { staticClass: "text-danger font-weight-bold" }, [
+                    _vm._v(_vm._s(_vm.count))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.count,
+                      expression: "count"
+                    }
+                  ],
+                  staticClass: "custom-range",
+                  attrs: { type: "range", min: "1", max: "100", id: "count" },
+                  domProps: { value: _vm.count },
+                  on: {
+                    __r: function($event) {
+                      _vm.count = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-success btn-block my-4",
+            attrs: { type: "submit" }
+          },
+          [_vm._v("Vytvořit")]
+        )
       ])
     ])
   ])
@@ -65400,24 +65495,16 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-sm-6 mb-2" }, [
         _c("input", {
           staticClass: "form-control",
-          attrs: { type: "text", name: "title", placeholder: "Název" }
+          attrs: { type: "text", placeholder: "Název" }
         })
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-sm-6 mb-2" }, [
         _c("textarea", {
           staticClass: "form-control",
-          attrs: { type: "text", name: "description", placeholder: "Popis" }
+          attrs: { type: "text", placeholder: "Popis" }
         })
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-4 mb-2" }, [
-      _c("img", { attrs: { id: "imagePreview", alt: "Image Not Found" } })
     ])
   }
 ]

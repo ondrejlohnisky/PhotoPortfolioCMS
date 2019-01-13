@@ -21,6 +21,9 @@
 </script>
 
 <style lang="scss">
+.row > a{
+   padding:0;
+}
 .adminRedirect{
    color:rgba(255, 255, 0, 0.698);
    font-size: 5px;

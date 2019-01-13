@@ -11,6 +11,11 @@
 
    <!-- Scripts -->
    <script src="{{ asset('js/app.js') }}" defer></script>
+   <script>
+        window.__VUE_DEVTOOLS_HOST__ = 'localhost' // default: localhost
+        window.__VUE_DEVTOOLS_PORT__ = '8098' // default: 8098
+    </script>
+    <script src="http://localhost:8098"></script>
 
    <!-- Styles -->
    <link href="{{ asset('css/app.css') }}" rel="stylesheet">

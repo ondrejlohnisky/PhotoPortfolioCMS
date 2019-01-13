@@ -3,25 +3,25 @@
    <div class="pageModalWrapper" @click="closeUploadModal()">
    </div>
    <div class="pageModal">
-      <div class="pageModalHeader mb-4">
+      <div class="pageModalHeader mb-4 h5">
          Přidat složku
       </div>
       <div class="pageModalBody">
-         <p class="h2 mb-4">Základní údaje</p>
+         <p class="h6 mb-4">Základní informace</p>
          <div class="form-row">
             <div class="col-sm-6 mb-2">
-               <input type="text" name="title" class="form-control" placeholder="Název"> 
+               <input type="text" class="form-control" placeholder="Název"> 
             </div>
             <div class="col-sm-6 mb-2">
-               <textarea type="text" name="description" class="form-control" placeholder="Popis"></textarea>
+               <textarea type="text" class="form-control" placeholder="Popis"></textarea>
             </div>
          </div>
          <div class="form-row">
-            <div class="col-8 mb-2">
+            <div :class="[imageSrc ? 'col-8' : 'col','mb-2']">
                <div class="file-field">
-                  <div class="myInputButton btn btn-primary btn-sm">
+                  <div class="myInputButton btn btn-light btn-sm">
                      <span>
-                        <font-awesome-icon size="lg" :icon="['fas','image']" />   
+                        <font-awesome-icon size="lg" :icon="['fas','image']" />
                         Vybrat titulní fotku
                      </span>
                      <input type="file" id="titleImageInput" class="myInputFile" accept="image/*">
@@ -30,17 +30,28 @@
                   <label id="titleImageSize" for="fileNamePreview"></label>
                </div>
             </div>
-            <div class="col-4 mb-2">
-               <img id="imagePreview" alt="Image Not Found">
+            <div v-if="imageSrc" class="col-4 mb-2">
+               <img :src="imageSrc" id="imagePreview" alt="Image Not Found">
             </div>
          </div>
-         <p class="h2 mb-4 mt-2">Zabezpečení</p>
+         <hr>
+         <p class="h6 mb-4 mt-2">Zabezpečení</p>
          <div class="form-row">
             <div class="col-sm-6 mb-2">
-               <input v-model="password" type="text" name="title" class="form-control" placeholder="password" onkeypress="return false;"> 
-               <button @click="generatePassword()" class="btn btn-light btn-sm">Generate</button>
+               <div class="custom-control custom-checkbox">
+                  <input v-model="locked" type="checkbox" class="custom-control-input" id="locked">
+                  <label class="custom-control-label" for="locked">Zaheslovat složku</label>
+               </div>
             </div>
          </div>
+         <div v-if="locked" class="form-row">
+            <div class="col-sm-8">
+               <label for="count">Počet použití hesla <span class="text-danger font-weight-bold">{{ count }}</span></label>
+               <input v-model="count" type="range" class="custom-range" min="1" max="100" id="count">
+               
+            </div>
+         </div>
+         <button class="btn btn-success btn-block my-4" type="submit">Vytvořit</button>
       </div>
    </div>
 </div>
@@ -49,13 +60,14 @@
 export default {
    data(){
       return{
-         password:''
+         title:'',
+         description:'',
+         imageSrc:null,
+         locked:false,
+         count:1
       }
    },
    methods:{
-      generatePassword(){
-
-      },
       closeUploadModal(){
          $('body').css('overflow', 'auto');
          $(window).unbind('scroll');
@@ -69,8 +81,7 @@ export default {
             var reader = new FileReader();
 
             reader.onload = function(e) {
-               $('#imagePreview').attr('src', e.target.result);
-               $('#imagePreview').css('display', 'initial');
+               that.imageSrc=e.target.result;
             }
             reader.readAsDataURL(input.files[0]);
          }
@@ -101,6 +112,9 @@ export default {
          $("#fileNamePreview").on('focus',function(){
             detectValue();
          });
+         $("#fileNamePreview").on('input',function(){
+            detectValue();
+         });
 
          $(".form-control").on('input',function(){
             if($(this).val().length>=1){
@@ -116,7 +130,7 @@ export default {
 <style lang="scss" scoped>
 #imagePreview{
    width:100%;
-   display:none;
+   border-radius: calc(.25rem - 1px);
 }
 #titleImageSize{
    font-style: italic;
@@ -211,8 +225,6 @@ export default {
 }
 .pageModalHeader{
    text-align:center;
-   font-size: 6vb;
-   font-weight: 500;
    padding:5px;
    width:100%;
    height:auto;

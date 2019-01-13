@@ -1,5 +1,6 @@
 <template>
    <div id="folder">
+      <font-awesome-icon v-if="folder.locked" class="lock" size="lg" :icon="['fas','lock']" /> 
       <div class="card">
          <img class="card-img" :src="folder.public_image" :alt="folder.title">
          <div class="card-block mx-3">
@@ -24,11 +25,12 @@ export default {
 d
 <style lang="scss" scoped>
    #folder{
+      position:relative;
+      transition: all 0.25s;
+      margin-bottom: 1rem;
       .card{
          border-bottom-left-radius: 5px;
          border-bottom-right-radius: 5px;
-         margin-bottom: 1rem;
-         transition: all 0.25s;
          cursor: pointer;
          .time_stamp{
             margin-left:5px;
@@ -40,10 +42,17 @@ d
             width:auto;
          }
       }
-      .card:hover{
-         -ms-transform: scale(1.03, 1.03);
-         -webkit-transform: scale(1.03, 1.03);
-         transform: scale(1.03, 1.03);
+      &:hover{
+         -ms-transform: scale(1.015, 1.015);
+         -webkit-transform: scale(1.015, 1.015);
+         transform: scale(1.015, 1.015);
       }
+   }
+   .lock{
+      position:absolute;
+      z-index: 10000;
+      right:0px;
+      top:0px;
+      transform: translate(-50%, -50%);
    }
 </style>

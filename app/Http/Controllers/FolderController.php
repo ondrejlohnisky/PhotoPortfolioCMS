@@ -62,6 +62,7 @@ class FolderController extends Controller
      */
     public function show(Folder $folder)
     {
+        
         return $folder->with('images')->find($folder);
     }
 

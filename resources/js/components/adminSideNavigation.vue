@@ -111,7 +111,7 @@ h5{
    right:5px;
    top:5px;
    z-index:10000;
-   color:gray;
+   color:darkgrey;
    animation-play-state: running;
    -webkit-animation-play-state: running;
    -moz-animation-play-state: running;
@@ -120,7 +120,7 @@ h5{
    transition: transform .4s ease-in; 
    
    &:hover{
-      color:black;
+      color:grey;
       animation: pending .5s linear;
       animation-play-state: running;
 
