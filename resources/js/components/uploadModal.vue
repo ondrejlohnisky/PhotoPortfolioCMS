@@ -3,6 +3,11 @@
    <div class="pageModalWrapper" @click="closeUploadModal()">
    </div>
    <div class="pageModal">
+      <transition name="slide-fade">
+         <div v-if="message" class="alert alert-danger" role="alert">
+            <div v-html="message"></div>
+         </div>
+      </transition>
       <div class="pageModalHeader mb-4 h5">
          Přidat složku
       </div>
@@ -10,10 +15,10 @@
          <p class="h6 mb-4">Základní informace</p>
          <div class="form-row">
             <div class="col-sm-6 mb-2">
-               <input type="text" class="form-control" placeholder="Název"> 
+               <input v-model="title" type="text" class="form-control" placeholder="Název"> 
             </div>
             <div class="col-sm-6 mb-2">
-               <textarea type="text" class="form-control" placeholder="Popis"></textarea>
+               <textarea v-model="description" type="text" class="form-control" placeholder="Popis"></textarea>
             </div>
          </div>
          <div class="form-row">
@@ -24,7 +29,7 @@
                         <font-awesome-icon size="lg" :icon="['fas','image']" />
                         Vybrat titulní fotku
                      </span>
-                     <input type="file" id="titleImageInput" class="myInputFile" accept="image/*">
+                     <input type="file" id="titleImageInput" class="myInputFile" accept="image/*" ref="imageInput">
                   </div>
                   <input type="text" id="fileNamePreview" class="file-path" placeholder="Soubor nevybrán" onkeypress="return false;">
                   <label id="titleImageSize" for="fileNamePreview"></label>
@@ -34,8 +39,7 @@
                <img :src="imageSrc" id="imagePreview" alt="Image Not Found">
             </div>
          </div>
-         <hr>
-         <p class="h6 mb-4 mt-2">Zabezpečení</p>
+         <!-- <p class="h6 mb-4 mt-2">Zabezpečení</p>
          <div class="form-row">
             <div class="col-sm-6 mb-2">
                <div class="custom-control custom-checkbox">
@@ -50,21 +54,21 @@
                <input v-model="count" type="range" class="custom-range" min="1" max="100" id="count">
                
             </div>
-         </div>
-         <button class="btn btn-success btn-block my-4" type="submit">Vytvořit</button>
+         </div> -->
+         <button class="btn btn-success btn-block my-4" type="submit" @click="createFolder()">Vytvořit</button>
       </div>
    </div>
 </div>
 </template>
 <script>
+import {EventBus} from '../event-bus.js';
 export default {
    data(){
       return{
          title:'',
          description:'',
          imageSrc:null,
-         locked:false,
-         count:1
+         message:''
       }
    },
    methods:{
@@ -72,6 +76,22 @@ export default {
          $('body').css('overflow', 'auto');
          $(window).unbind('scroll');
          this.$store.commit('closeUploadModal')
+      },
+      createFolder(){
+         if(this.title==''){
+            this.message='Název je povinný!';
+         }else{
+            let config={headers: {'Content-Type':'multipart/form-data'}};
+            let fd=new FormData();
+            fd.append("title",this.title);
+            fd.append("description",this.description);
+            fd.append("public_image",this.$refs.imageInput.files[0]);
+
+            axios.post("/api/folders",fd,config).then((response)=>{
+               this.closeUploadModal();
+               EventBus.$emit("folderUploaded",response.data.title);
+            });
+         }
       }
    },
    mounted(){
@@ -80,7 +100,7 @@ export default {
          if (input.files && input.files[0]) {
             var reader = new FileReader();
 
-            reader.onload = function(e) {
+            reader.onload = (e)=>{
                that.imageSrc=e.target.result;
             }
             reader.readAsDataURL(input.files[0]);
@@ -208,8 +228,9 @@ export default {
    position:fixed;
    overflow: auto;
    left:50%;
-   top:50%;
-   height:70%;
+   top:35%;
+   height:auto;
+   max-height:65%;
    width:50%;
    transform: translate(-50%, -50%);
    background-color: white;
@@ -237,5 +258,15 @@ export default {
    width:100%;
    height:100%;
    background-color: rgba(199, 199, 199, 0.4)
+}
+.slide-fade-enter-active {
+  transition: all .5s ease-in;
+}
+.slide-fade-leave-active {
+  transition: all .8s ease-out;
+}
+.slide-fade-enter, .slide-fade-leave-to{
+   margin-top:-65px;
+   opacity:0;
 }
 </style>

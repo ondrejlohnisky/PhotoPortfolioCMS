@@ -32,10 +32,14 @@ Route::get('/admin',function(Request $request){
     return redirect('admin/dashboard');
 });
 
+Route::get('/images/folders/{folder}/{filename}','ImageController@accessRawImage');
+Route::get('/access/images/folders/{folder}/{filename}','ImageController@adminAccessRawImage');
+
+
 
 //auth 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('/{adminVue}','AdminController@showPage')->where('adminVue','|dashboard|sprava_slozek');
-    Auth::routes();
+    Route::get('/{adminVue}','AdminController@showPage')->where('adminVue','|dashboard|sprava_slozek|folder\/[\d]*');
+    Auth::routes(['register' => false]);
 });
 

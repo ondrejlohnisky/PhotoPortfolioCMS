@@ -18,6 +18,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        body{
+            position:absolute;
+            height:100%;
+            width:100%;
+            overflow: auto;
+            background-image: url('/images/Decin_mlha_2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

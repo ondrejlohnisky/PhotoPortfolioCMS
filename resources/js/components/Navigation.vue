@@ -1,27 +1,27 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-bottom">
         <div class="container-fluid">
             <router-link :to="{name: 'home'}"><img draggable="false" src="/images/PodpisLogo.png" alt="PetrSmille" class="logo"></router-link>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse flex-md-column" id="navbarsExample09">
+            <div class="collapse navbar-collapse flex-md-column" id="navbarID">
                 <ul class="navbar-nav ml-auto">
                     <li :class="this.$route.name=='home' ? 'active nav-item' : 'nav-item'">
-                        <router-link class="nav-link" :to="{ name: 'home' }">Domů</router-link>
+                        <router-link class="nav-link" data-toggle="collapse" data-target="#navbarID.show" :to="{ name: 'home' }">Domů</router-link>
                     </li>
                     <li :class="this.$route.name=='portfolio' ? 'active nav-item' : 'nav-item'">
-                        <router-link class="nav-link" :to="{ name: 'portfolio' }">Portfolio</router-link>
+                        <router-link class="nav-link" data-toggle="collapse" data-target="#navbarID.show" :to="{ name: 'portfolio' }">Portfolio</router-link>
                     </li>
                     <li :class="this.$route.name=='review' ? 'active nav-item' : 'nav-item'">
-                        <router-link class="nav-link" :to="{ name: 'review' }">Review</router-link>
+                        <router-link class="nav-link" data-toggle="collapse" data-target="#navbarID.show" :to="{ name: 'review' }">Review</router-link>
                     </li>
                     <li :class="this.$route.name=='bts' ? 'active nav-item' : 'nav-item'">
-                        <router-link class="nav-link" :to="{ name: 'bts' }">BTS</router-link>
+                        <router-link class="nav-link" data-toggle="collapse" data-target="#navbarID.show" :to="{ name: 'bts' }">BTS</router-link>
                     </li>
                     <li :class="this.$route.name=='contact' ? 'active nav-item' : 'nav-item'">
-                        <router-link class="nav-link" :to="{ name: 'contact' }">Kontakt</router-link>
+                        <router-link class="nav-link" data-toggle="collapse" data-target="#navbarID.show" :to="{ name: 'contact' }">Kontakt</router-link>
                     </li>
                 </ul>
                 <div class="icons ml-auto">

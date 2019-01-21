@@ -4,9 +4,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
    state:{
       ApiToken: 'undefined',
-      uploadModal:false
+      uploadModal:false,
+      folderPassword:''
+
    },
    mutations:{
+      setFolderPassword(state,password){
+         state.folderPassword=password;
+      },
       setApiToken(state,token){ // nastavit administrátorký api token pro CRUD  (bezpečnost)
          state.ApiToken=token;
       },

@@ -12,7 +12,6 @@
                <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaSlozek' ? 'active navItem' : 'navItem'">Správa složek</router-link></li>
                <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaAdministratoru' ? 'active navItem' : 'navItem'">Správa administrátorů</router-link></li>
             </ul><br/>
-            <hr/>
             <Footer/>
          </div>
       </div>

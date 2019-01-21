@@ -15,7 +15,7 @@ import Vuex from 'vuex'
 import store from  './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook,faInstagram,faFlickr,faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faCog,faSignOutAlt,faDesktop,faPlusCircle,faImages,faImage,faLock } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faCog,faSignOutAlt,faDesktop,faPlusCircle,faImages,faImage,faLock,faTrashAlt,faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // veřejné stránky
 import Bts from './pages/bts'
@@ -29,12 +29,13 @@ import Folder from './pages/folder'
 
 import SpravaSlozek from './adminPages/spravaSlozek'
 import Dashboard from './adminPages/dashboard'
+import AdminFolder from './adminPages/adminfolder'
 
 //rozdělovací komponenty mezi veřejnými a administrátorkými stránky
 import page from './page'
 import admin from './admin'
 
-library.add(faFacebook,faInstagram,faFlickr,faYoutube,faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faDesktop,faCog,faSignOutAlt,faPlusCircle,faImage,faImages,faLock)
+library.add(faFacebook,faInstagram,faFlickr,faYoutube,faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faDesktop,faCog,faSignOutAlt,faPlusCircle,faImage,faImages,faLock,faTrashAlt,faCheckCircle)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -89,6 +90,11 @@ const router = new VueRouter({
             name: 'dashboard',
             component: Dashboard
         },
+        {
+            path: '/admin/folder/:id',
+            name: 'adminfolder',
+            component: AdminFolder
+        }
     ],
 });
 

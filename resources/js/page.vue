@@ -1,11 +1,10 @@
 <template>
-   <div>
+   <div class="page">
       <Navigation/>
-      <div class="my-5 container">
+      <div class="container my-4">
          <router-view/>
       </div>
       <Footer/>
-      <a href="/admin" class="adminRedirect float-right">AdminLogin</a>
    </div>
 </template>
 
@@ -21,12 +20,15 @@
 </script>
 
 <style lang="scss">
+
+div.page{
+   position:absolute;
+   height:100%;
+   width:100%;
+   overflow: auto;
+}
 .row > a{
    padding:0;
-}
-.adminRedirect{
-   color:rgba(255, 255, 0, 0.698);
-   font-size: 5px;
 }
 
 ::-webkit-scrollbar {

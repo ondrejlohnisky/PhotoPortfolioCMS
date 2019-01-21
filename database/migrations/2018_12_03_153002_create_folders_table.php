@@ -17,9 +17,7 @@ class CreateFoldersTable extends Migration
             $table->increments('id');
             $table->char('title',25);
             $table->string('description')->nullable();
-            $table->string('public_image')->nullable();
-            $table->char('password',12)->nullable();
-            $table->tinyInteger('password_count')->nullable();
+            $table->string('public_image');
             $table->timestamps();
         });
     }

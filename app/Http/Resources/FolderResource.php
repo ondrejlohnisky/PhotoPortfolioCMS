@@ -17,10 +17,9 @@ class FolderResource extends JsonResource
         return [
             'id' => $this->id,
             'title' => $this->title,
-            'description' => $this->description,
             'public_image' => $this->public_image,
             'created_at' => $this->created_at->diffForHumans(),
-            'locked' => $this->password == null ? false : true
+            'locked' => $this->passwords()->exists()
         ];
     }
 }

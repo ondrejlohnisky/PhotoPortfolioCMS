@@ -16,6 +16,12 @@ use Illuminate\Http\Request;
 
 
 Route::apiResource('folders','FolderController');
+Route::get('/folders/check/{folder}','FolderController@checkFolderAccessability');
+Route::get('admin/folders/{folder}','FolderController@adminShow');
+Route::apiResource('passwords','PasswordController');
+Route::apiResource('images','ImageController');
+Route::get('folderImages/{folder}', 'ImageController@getImages');
+Route::get('admin/folderImages/{folder}', 'ImageController@adminGetImages');
 
 Route::group(['prefix' => '/v1', 'middleware' => 'auth:api'], function () {
     Route::get('/user', function (Request $request) {

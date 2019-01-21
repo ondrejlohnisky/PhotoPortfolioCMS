@@ -12,17 +12,16 @@ class FolderSeeder extends Seeder
      */
     public function run()
     {
-        $image = new Folder;
-        $image->title="Složka 1";
-        $image->description="folderdeskripcefolderdeskripcefolderdeskripcefolderdeskripcefolderdeskripcefolderdeskripce";
-        $image->public_image="https://www.boxmotions.com/blog/wp-content/uploads/2017/06/1458593290-timbercraft-tiny-home-2.jpg";
-        $image->save();
+        $folder = new Folder;
+        $folder->title="Složka 1";
+        $folder->description="folderdeskripcefolderdeskripcefolderdeskripcefolderdeskripcefolderdeskripcefolderdeskripce";
+        $folder->public_image="https://www.boxmotions.com/blog/wp-content/uploads/2017/06/1458593290-timbercraft-tiny-home-2.jpg";
+        $folder->save();
 
-        $image = new Folder;
-        $image->title="Složka 2";
-        $image->description="folderdeskripcefolderdeskripcefolderdeskripcefolderdeskripcefolderdeskripcefolderdeskripce";
-        $image->public_image="https://www.boxmotions.com/blog/wp-content/uploads/2017/06/1458593290-timbercraft-tiny-home-2.jpg";
-        $image->password=str_random(8);
-        $image->save();
+        $folder = new Folder;
+        $folder->title="Složka 2";
+        $folder->description="folderdeskripcefolderdeskripcefolderdeskripcefolderdeskripcefolderdeskripcefolderdeskripce";
+        $folder->public_image="https://www.boxmotions.com/blog/wp-content/uploads/2017/06/1458593290-timbercraft-tiny-home-2.jpg";
+        $folder->save();
     }
 }

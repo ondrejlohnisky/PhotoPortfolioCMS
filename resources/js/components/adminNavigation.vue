@@ -9,8 +9,8 @@
                <button @click="redirect('/')" class="btn btn-primary btn-rounded btn-sm"><b><font-awesome-icon size="lg" :icon="['fas','desktop']"/> Zpět na stránku</b></button>
             </div>
             <div class="ml-auto">
-               <button @click="redirect('')" class="btn btn-blue-grey btn-md"><font-awesome-icon size="lg" :icon="['fas','cog']"/> Nastavení účtu</button>
-               <button @click="logout()" class="btn btn-danger btn-md"><font-awesome-icon size="lg" :icon="['fas','sign-out-alt']"/> Odhlásit se</button>
+               <button @click="redirect('')" class="btn btn-blue-grey btn-sm"><font-awesome-icon size="lg" :icon="['fas','cog']"/> Nastavení účtu</button>
+               <button @click="logout()" class="btn btn-outline-mdb-color btn-sm"><font-awesome-icon size="lg" :icon="['fas','sign-out-alt']"/> Odhlásit se</button>
             </div>
          </div>
       </nav>

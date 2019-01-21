@@ -20,6 +20,9 @@ class CreateImagesTable extends Migration
             $table->string('src');
             $table->integer('folder_id')->unsigned();
             $table->timestamps();
+            $table->foreign('folder_id')
+                ->references('id')->on('folders')
+                ->onDelete('cascade');
         });
     }
 

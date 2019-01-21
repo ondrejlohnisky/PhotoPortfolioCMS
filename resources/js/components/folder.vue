@@ -4,9 +4,9 @@
       <div class="card">
          <img class="card-img" :src="folder.public_image" :alt="folder.title">
          <div class="card-block mx-3">
-            <h4 class="card-title">{{ folder.title }}</h4>
+            <h4 class="card-title text-center font-weight-normal">{{ folder.title }}</h4>
          </div>
-         <span class="time_stamp">Created {{ folder.created_at }}</span>
+         <span class="time_stamp">Přidáno {{ folder.created_at }}</span>
       </div>
    </div>
 </template>
@@ -50,8 +50,8 @@ d
    }
    .lock{
       position:absolute;
-      z-index: 10000;
-      right:0px;
+      z-index: 1000;
+      right:-15px;
       top:0px;
       transform: translate(-50%, -50%);
    }

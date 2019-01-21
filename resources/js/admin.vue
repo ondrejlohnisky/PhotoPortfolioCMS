@@ -40,6 +40,7 @@ import {EventBus} from './event-bus.js'
       },
       mounted() {
          this.$store.commit('setApiToken',this.user.api_token);
+         axios.defaults.headers.common['Authorization'] = 'Bearer '+this.user.api_token;
       }
    }
 
@@ -103,10 +104,10 @@ EventBus.$on('actionSideNav',function(){
    }
    .sideNavigation{
       width:300px;
-      z-index:15000;
+      z-index:1000;
    }
    .navigation{
-      z-index:10000;
+      z-index:1000;
       margin-left:300px;
    }
 
