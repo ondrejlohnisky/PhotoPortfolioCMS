@@ -1,6 +1,6 @@
 <template>
    <div>
-      <button @click="deleteFolder()" class="btn btn-danger btn-md mb-4">
+      <button @click="openDeleteFolderModal()" class="btn btn-danger btn-md mb-4">
          <font-awesome-icon size="lg" :icon="['fas','trash-alt']"/> Smazat složku
       </button>
       
@@ -19,21 +19,26 @@
                </thead>
                <tbody>
                   <tr v-for="(password,index) in passwords" :key="index">
-                     <td>{{ password.password }}</td>
-                     <td><div @click="password.password_count > 1 ? password.password_count-- : ''" class="circle d-inline-block">-</div>  <input v-model="password.password_count" type="number"> <div @click="password.password_count++" class="circle d-inline-block">+</div></td>
+                     <td><p class="text-muted text-monospace">{{ password.password }}</p></td>
                      <td>
-                        <button @click="savePassword(password.id,password.password_count)" class="btn btn-primary btn-sm">Uložit</button>
-                        <button @click="deletePassword(password.id)" class="btn btn-danger btn-sm">Smazat</button>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="4">
-                        <button @click="openAddPasswordModal()" class="btn btn-indigo btn-md btn-block btn-rounded">
-                           <font-awesome-icon color="white" size="lg" :icon="['fas','plus-circle']"/>  Přidat heslo
-                        </button>
+                        <div @click="password.password_count > 1 ? password.password_count-- : ''" class="circle d-inline-block">-</div>
+                        <div class="md-form d-inline-block">
+                           <input v-model="password.password_count" type="number" id="form2" class="form-control">
+                        </div> 
+                        <div @click="password.password_count++" class="circle d-inline-block">+</div></td>
+                     <td>
+                        <button @click="savePassword(password.id,password.password_count)" class="btn btn-primary btn-sm"><font-awesome-icon size="lg" :icon="['fas','save']"/> Uložit</button>
+                        <button @click="deletePassword(password.id)" class="btn btn-danger btn-sm"><font-awesome-icon size="lg" :icon="['fas','trash-alt']"/> Smazat</button>
                      </td>
                   </tr>
                </tbody>
+               <tr>
+                  <td colspan="4">
+                     <button @click="openAddPasswordModal()" class="btn btn-indigo btn-md btn-block btn-rounded">
+                        <font-awesome-icon color="white" size="lg" :icon="['fas','plus-circle']"/>  Přidat heslo
+                     </button>
+                  </td>
+               </tr>
             </table>
          </div>
       </div>
@@ -46,7 +51,18 @@
          <button @click="openaddImagesModal()" class="btn btn-success btn-md my-4"><font-awesome-icon color="white" size="lg" :icon="['fas','plus-circle']"/>  Přidat fotky</button>
          <div v-if="images.length>0" class="row">
             <div class="col-md-4" v-for="(image,index) in images" :key="index">
-               <img @click="slideIndex=index" :src="image.src" :alt="image.title" class="img-thumbnail z-depth-2">
+               <div class="fotka">
+                  <div class="img-options">
+                     <div class="img-text">
+                        <h6 class="img-title">{{ image.title }}</h6>
+                        <h6 class="img-description">{{ image.description }}</h6>
+                        
+                     </div>
+                     <button @click="openEditImageModal(image)" class="img-button btn btn-blue-grey btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','edit']"/></button>
+                     <button @click="openDeleteImageModal(image.id)" class="img-button btn btn-danger btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','trash-alt']"/></button>
+                  </div>
+                  <img @click="slideIndex=index" :src="image.src" :alt="image.title" class="img-thumbnail">
+               </div>
             </div>
          </div>
          <div v-else class="alert alert-secondary" role="alert">
@@ -55,11 +71,86 @@
          <div v-if="nextPageUrl!=null && images.length>0" class="row">
             <div class="col-4"></div>
             <div class="col-4">
-               <div @click="getImages(nextPageUrl)" class="btn btn-primary btn-rounded">Načíst další</div>
+               <div @click="getNextImages(nextPageUrl)" class="btn btn-primary btn-rounded">Načíst další ...</div>
             </div>
             <div class="col-4"></div>
          </div>
-      <vue-gallery :images="images.map(image=>image.src)" :index="slideIndex" @close="slideIndex=null"/>
+      </div>
+
+      <!-- modal na odstranění složky -->
+      <div v-if="deleteModal" @click="closeDeleteModal()" class="modalWrapper">
+      </div>
+      <div v-if="deleteModal" class="myModal">
+         <div class="row">
+            <div class="col-6 h4 text-danger">Pozor!</div>
+         </div>
+         <div class="row">
+            <div class="col-12">
+               <div class="h6">Opravdu si přejete smazat složku <b>{{ title }}</b>?</div>
+            </div>
+         </div>
+         <div class="row my-2">
+            <div class="col-sm-6">
+               <button @click="closeDeleteModal()" class="btn btn-light btn-block btn-sm">Zrušit</button>
+            </div>
+            <div class="col-sm-6">
+               <button @click="deleteFolder()" class="btn btn-danger btn-block btn-sm">Potvrdit</button>
+            </div>
+         </div>
+      </div>
+
+      <!-- modal na odstranění fotky -->
+      <div v-if="deleteImageModal" @click="closeDeleteImageModal()" class="modalWrapper">
+      </div>
+      <div v-if="deleteImageModal" class="myModal">
+         <div class="row">
+            <div class="col-6 h4 text-danger">Pozor!</div>
+         </div>
+         <div class="row">
+            <div class="col-12">
+               <div class="h6">Opravdu si přejete smazat fotku <b>{{ images.find(image => image.id==deleteImageId).title }}</b>?</div>
+            </div>
+         </div>
+         <div class="row my-2">
+            <div class="col-sm-6">
+               <button @click="closeDeleteImageModal()" class="btn btn-light btn-block btn-sm">Zrušit</button>
+            </div>
+            <div class="col-sm-6">
+               <button @click="deleteImage()" class="btn btn-danger btn-block btn-sm">Potvrdit</button>
+            </div>
+         </div>
+      </div>
+
+      <!-- modal na upravení fotky -->
+      <div v-if="editImageModal" @click="closeEditImageModal()" class="modalWrapper">
+      </div>
+      <div v-if="editImageModal" class="myModal">
+         <form @submit.prevent>
+            <div class="row">
+               <div class="col-12">
+                  <div class="h4">Úprava fotky: {{ editingImage.title }}</div>
+               </div>
+            </div>
+            <hr>
+            <div class="row my-3">
+               <div class="col-8">
+                  <input class="form-control" v-model="editingImage.title" type="text" placeholder="Titulek" maxlength="255">
+               </div>
+            </div>
+            <div class="row my-3">
+               <div class="col-12">
+                  <textarea v-model="editingImage.description" class="form-control z-depth-1" rows="3" maxlength="65535" placeholder="Popisek"></textarea>
+               </div>
+            </div>
+            <div class="row my-2">
+               <div class="col-sm-6">
+                  <button @click="closeEditImageModal()" class="btn btn-light btn-block btn-sm">Zrušit</button>
+               </div>
+               <div class="col-sm-6">
+                  <button @click="editImage()" class="btn btn-success btn-block btn-sm">Potvrdit</button>
+               </div>
+            </div>
+         </form>
       </div>
 
       <!-- modal na přidání hesla -->
@@ -68,7 +159,11 @@
 
       <div v-if="addPasswordModal" class="myModal">
          <div class="h5">Přidat heslo</div>
-         <div @click="addPasswordCount > 1 ? addPasswordCount-- : ''" class="circle d-inline-block">-</div>  <input v-model="addPasswordCount" type="number"> <div @click="addPasswordCount++" class="circle d-inline-block">+</div>
+         <div @click="addPasswordCount > 1 ? addPasswordCount-- : ''" class="circle d-inline-block">-</div>  
+         <div class="md-form d-inline-block">
+            <input v-model="addPasswordCount" type="number" id="form1" class="form-control">
+         </div> 
+         <div @click="addPasswordCount++" class="circle d-inline-block">+</div>
          <button @click="addPassword()" class="btn btn-success">Add</button>
       </div>
 
@@ -119,11 +214,7 @@
 </template>
 
 <script>
-import VueGallery from 'vue-gallery'
 export default {
-   components:{
-      VueGallery
-   },
    data(){
       return {
          addPasswordModal:false,
@@ -131,6 +222,12 @@ export default {
          addImagesModal:false,
          addImages:[],
          uploadPercentage:0,
+         deleteModal:false,
+         deleteImageModal:false,
+         deleteImageId:null,
+         editingImage:{},
+         editImageModal:false,
+         //
          slideIndex:null,
          id: 1,
          title: "Název",
@@ -140,7 +237,8 @@ export default {
          updated_at: "2018-12-09 14:17:27",
          images: [],
          passwords:[],
-         nextPageUrl:''
+         nextPageUrl:'',
+
       }
    },
    computed:{
@@ -204,6 +302,12 @@ export default {
       getImages(page){
          axios.get(page).then((response)=>{
             this.nextPageUrl=response.data.next_page_url;
+            this.images=response.data.data;
+         });
+      },
+      getNextImages(page){
+         axios.get(page).then((response)=>{
+            this.nextPageUrl=response.data.next_page_url;
             this.images=this.images.concat(response.data.data);
          });
       },
@@ -264,6 +368,64 @@ export default {
             $(this).scrollTop(top).scrollLeft(left);
          });
          this.addImagesModal=true;
+      },
+      openDeleteFolderModal(){
+         var top = $(window).scrollTop();
+         var left = $(window).scrollLeft();
+         $('body').css('overflow', 'hidden');
+         $(window).scroll(function(){
+            $(this).scrollTop(top).scrollLeft(left);
+         });
+         this.deleteModal=true;
+      },
+      closeDeleteModal(){
+         $('body').css('overflow', 'auto');
+         $(window).unbind('scroll');
+         this.deleteModal=false;
+      },
+      openDeleteImageModal(id){
+         var top = $(window).scrollTop();
+         var left = $(window).scrollLeft();
+         $('body').css('overflow', 'hidden');
+         $(window).scroll(function(){
+            $(this).scrollTop(top).scrollLeft(left);
+         });
+         this.deleteImageId=id;
+         this.deleteImageModal=true;
+      },
+      closeDeleteImageModal(){
+         $('body').css('overflow', 'auto');
+         $(window).unbind('scroll');
+         this.deleteImageId=null;
+         this.deleteImageModal=false;
+      },
+      deleteImage(){
+         axios.delete('/api/images/'+this.deleteImageId).then((response)=>{
+            this.getImages('/api/admin/folderImages/'+this.id);
+            this.closeDeleteImageModal();
+         });
+      },
+      openEditImageModal(image){
+         var top = $(window).scrollTop();
+         var left = $(window).scrollLeft();
+         $('body').css('overflow', 'hidden');
+         $(window).scroll(function(){
+            $(this).scrollTop(top).scrollLeft(left);
+         });
+         this.editingImage=image;
+         this.editImageModal=true;
+      },
+      closeEditImageModal(){
+         $('body').css('overflow', 'auto');
+         $(window).unbind('scroll');
+         this.editingImage={};
+         this.editImageModal=false;
+      },
+      editImage(){
+         axios.put('/api/images/'+this.editingImage.id,this.editingImage).then((response)=>{
+            this.getImages('/api/admin/folderImages/'+this.id);
+            this.closeEditImageModal();
+         });
       }
    },
    mounted(){
@@ -275,6 +437,55 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fotka{
+   position:relative;
+   width:100%;
+   height:auto;
+   .img-thumbnail {
+      padding: .25rem;
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: .25rem;
+      max-width: 100%;
+      height: auto;
+   }
+   .img-options{
+      position:absolute;
+      top:5px;
+      bottom:5px;
+      left:5px;
+      right:5px;
+      background-color: rgba(0,0,0,.55);
+      align-items: center;
+      justify-content: center;
+      z-index:10000;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.4s linear;
+      display: flex;
+      .img-text{
+         position:absolute;
+         top:0px;
+         padding:5px;
+      }
+      .img-title{
+         width:100%; height:auto;
+         word-wrap: none;
+         color: rgb(255, 255, 255); 
+         mix-blend-mode: hard-light;
+      }
+      .img-description{
+         width:100%; height:auto;
+         word-wrap: none;
+         color: rgb(255, 255, 255); 
+         mix-blend-mode: hard-light;
+      }
+   }
+}
+.fotka:hover > .img-options{
+   visibility: visible;
+   opacity: 1;
+}
 .progress-bar{
    background-color: #00C851;
    border-bottom: 2px solid rgb(8, 148, 8);
@@ -353,7 +564,7 @@ table input[type=number]{
    border-radius: 5px;
    z-index:60000;
    box-shadow: 0px 0px 10px gray;
-   padding:15px;
+   padding:25px;
    vertical-align:center;
 }
 .btn-rounded{
@@ -387,7 +598,7 @@ table input[type=number]{
       margin-bottom:1.5em;
    }
    .col-md-4:last-child{
-      margin-bottom:0em;
+      margin-right:0em;
    }
    .public-image{
       display:inline-block;
@@ -409,6 +620,31 @@ table input[type=number]{
          height:85px;;
       }
    }
+}
+.form-control[type=number]{
+   text-align: center;
+}
+.rowC {
+
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+}
+
+.columnC {
+   flex: 33.333333333333333%;
+   max-width: 33.333333333333333%;
+   padding: 0 10px;
+}
+@media (max-width:650px){
+   .columnC {
+      flex: 100%;
+      max-width: 100%;
+   }
+}
+
+.columnC>div {
+  vertical-align: middle;
 }
 </style>
 

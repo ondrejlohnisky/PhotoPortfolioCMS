@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://kavasped.cz/wp-admin/theme-editor.php?file=index.php&theme=novellite -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="wp-toolbar" lang="cs-CZ"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Editor šablon ‹ Kavasped — WordPress</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/wp-admin/admin-ajax.php',
+	pagenow = 'theme-editor',
+	typenow = '',
+	adminpage = 'theme-editor-php',
+	thousandsSeparator = '&nbsp;',
+	decimalPoint = ',',
+	isRtl = 0;
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" href="./Editor šablon ‹ Kavasped — WordPress_files/load-styles.php" type="text/css" media="all">
+<link rel="stylesheet" id="pricingtable_style-css" href="./Editor šablon ‹ Kavasped — WordPress_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="pricingtable_style_common-css" href="./Editor šablon ‹ Kavasped — WordPress_files/style-common.css" type="text/css" media="all">
+<link rel="stylesheet" id="owl.carousel.min-css" href="./Editor šablon ‹ Kavasped — WordPress_files/owl.carousel.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ParaAdmin-css" href="./Editor šablon ‹ Kavasped — WordPress_files/ParaAdmin.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="./Editor šablon ‹ Kavasped — WordPress_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="pricingtable_style-admin-css" href="./Editor šablon ‹ Kavasped — WordPress_files/style-admin.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-codemirror-css" href="./Editor šablon ‹ Kavasped — WordPress_files/codemirror.min.css" type="text/css" media="all">
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='http://kavasped.cz/wp-admin/css/ie.min.css?ver=5.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="elementor-icons-css" href="./Editor šablon ‹ Kavasped — WordPress_files/elementor-icons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-common-css" href="./Editor šablon ‹ Kavasped — WordPress_files/common.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-admin-css" href="./Editor šablon ‹ Kavasped — WordPress_files/admin.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="thickbox-css" href="./Editor šablon ‹ Kavasped — WordPress_files/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="woocommerce_admin_menu_styles-css" href="./Editor šablon ‹ Kavasped — WordPress_files/menu.css" type="text/css" media="all">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/kavasped.cz\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Editor šablon ‹ Kavasped — WordPress_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<script type="text/javascript">
+/* <![CDATA[ */
+var pricingtable_ajax = {"pricingtable_ajaxurl":"http:\/\/kavasped.cz\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var userSettings = {"url":"\/","uid":"1","time":"1552427658","secure":""};/* ]]> */
+</script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/load-scripts.php"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/scripts.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/scripts-admin.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/owl.carousel.min.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/ParaAdmin.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/code-editor.min.js"></script>
+<script type="text/javascript">
+jQuery.extend( wp.codeEditor.defaultSettings, {"codemirror":{"indentUnit":4,"indentWithTabs":true,"inputStyle":"contenteditable","lineNumbers":true,"lineWrapping":true,"styleActiveLine":true,"continueComments":true,"extraKeys":{"Ctrl-Space":"autocomplete","Ctrl-\/":"toggleComment","Cmd-\/":"toggleComment","Alt-F":"findPersistent","Ctrl-F":"findPersistent","Cmd-F":"findPersistent"},"direction":"ltr","gutters":[],"mode":"php","autoCloseBrackets":true,"autoCloseTags":true,"matchBrackets":true,"matchTags":{"bothTags":true}},"csslint":{"errors":true,"box-model":true,"display-property-grouping":true,"duplicate-properties":true,"known-properties":true,"outline-none":true},"jshint":{"boss":true,"curly":true,"eqeqeq":true,"eqnull":true,"es3":true,"expr":true,"immed":true,"noarg":true,"nonbsp":true,"onevar":true,"quotmark":"single","trailing":true,"undef":true,"unused":true,"browser":true,"globals":{"_":false,"Backbone":false,"jQuery":false,"JSON":false,"wp":false}},"htmlhint":{"tagname-lowercase":true,"attr-lowercase":true,"attr-value-double-quotes":false,"doctype-first":false,"tag-pair":true,"spec-char-escape":true,"id-unique":true,"src-not-empty":true,"attr-no-duplication":true,"alt-require":true,"space-tab-mixed-disabled":"tab","attr-unsafe-chars":true}} );
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/wp-util.min.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/wp-sanitize.min.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/wp-a11y.min.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/theme-plugin-editor.min.js"></script>
+<script type="text/javascript">
+wp.themePluginEditor.l10n = {"saveAlert":"Proveden\u00e9 zm\u011bny budou ztraceny, pokud opust\u00edte tuto str\u00e1nku.","saveError":"Nastala neo\u010dek\u00e1van\u00e1 chyba. Proveden\u00e9 zm\u011bny mo\u017en\u00e1 nebyly ulo\u017eeny. Zkuste to znovu, a rad\u011bji zkontrolujte a p\u0159\u00edpadn\u011b soubor ru\u010dn\u011b nahrajte p\u0159es FTP.","lintError":{"singular":"P\u0159ed aktualizac\u00ed souboru mus\u00edte opravit %d chybu.","plural":"P\u0159ed aktualizac\u00ed souboru mus\u00edte opravit %d chyby."}};
+jQuery( function( $ ) { wp.themePluginEditor.init( $( "#template" ), {"codeEditor":{"codemirror":{"indentUnit":4,"indentWithTabs":true,"inputStyle":"contenteditable","lineNumbers":true,"lineWrapping":true,"styleActiveLine":true,"continueComments":true,"extraKeys":{"Ctrl-Space":"autocomplete","Ctrl-\/":"toggleComment","Cmd-\/":"toggleComment","Alt-F":"findPersistent","Ctrl-F":"findPersistent","Cmd-F":"findPersistent"},"direction":"ltr","gutters":[],"mode":"php","autoCloseBrackets":true,"autoCloseTags":true,"matchBrackets":true,"matchTags":{"bothTags":true}},"csslint":{"errors":true,"box-model":true,"display-property-grouping":true,"duplicate-properties":true,"known-properties":true,"outline-none":true},"jshint":{"boss":true,"curly":true,"eqeqeq":true,"eqnull":true,"es3":true,"expr":true,"immed":true,"noarg":true,"nonbsp":true,"onevar":true,"quotmark":"single","trailing":true,"undef":true,"unused":true,"browser":true,"globals":{"_":false,"Backbone":false,"jQuery":false,"JSON":false,"wp":false}},"htmlhint":{"tagname-lowercase":true,"attr-lowercase":true,"attr-value-double-quotes":false,"doctype-first":false,"tag-pair":true,"spec-char-escape":true,"id-unique":true,"src-not-empty":true,"attr-no-duplication":true,"alt-require":true,"space-tab-mixed-disabled":"tab","attr-unsafe-chars":true}}} ); } )
+wp.themePluginEditor.themeOrPlugin = "theme";
+</script>
+	<link id="wp-admin-canonical" rel="canonical" href="http://kavasped.cz/wp-admin/theme-editor.php?file=index.php&amp;theme=novellite">
+	<script>
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, document.getElementById( 'wp-admin-canonical' ).href + window.location.hash );
+		}
+	</script>
+	<script type="text/javascript">var _wpColorScheme = {"icons":{"base":"#a0a5aa","focus":"#00a0d2","current":"#fff"}};</script>
+<link rel="icon" href="http://kavasped.cz/wp-content/uploads/2019/02/cropped-icons8-handle-with-care-48-32x32.png" sizes="32x32">
+<link rel="icon" href="http://kavasped.cz/wp-content/uploads/2019/02/cropped-icons8-handle-with-care-48-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="http://kavasped.cz/wp-content/uploads/2019/02/cropped-icons8-handle-with-care-48-180x180.png">
+<meta name="msapplication-TileImage" content="http://kavasped.cz/wp-content/uploads/2019/02/cropped-icons8-handle-with-care-48-270x270.png">
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style id="iris-css">.iris-picker{display:block;position:relative}.iris-picker,.iris-picker *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input+.iris-picker{margin-top:4px}.iris-error{background-color:#ffafaf}.iris-border{border-radius:3px;border:1px solid #aaa;width:200px;background-color:#fff}.iris-picker-inner{position:absolute;top:0;right:0;left:0;bottom:0}.iris-border .iris-picker-inner{top:10px;right:10px;left:10px;bottom:10px}.iris-picker .iris-square-inner{position:absolute;left:0;right:0;top:0;bottom:0}.iris-picker .iris-square,.iris-picker .iris-slider,.iris-picker .iris-square-inner,.iris-picker .iris-palette{border-radius:3px;box-shadow:inset 0 0 5px rgba(0,0,0,.4);height:100%;width:12.5%;float:left;margin-right:5%}.iris-only-strip .iris-slider{width:100%}.iris-picker .iris-square{width:76%;margin-right:10%;position:relative}.iris-only-strip .iris-square{display:none}.iris-picker .iris-square-inner{width:auto;margin:0}.iris-ie-9 .iris-square,.iris-ie-9 .iris-slider,.iris-ie-9 .iris-square-inner,.iris-ie-9 .iris-palette{box-shadow:none;border-radius:0}.iris-ie-9 .iris-square,.iris-ie-9 .iris-slider,.iris-ie-9 .iris-palette{outline:1px solid rgba(0,0,0,.1)}.iris-ie-lt9 .iris-square,.iris-ie-lt9 .iris-slider,.iris-ie-lt9 .iris-square-inner,.iris-ie-lt9 .iris-palette{outline:1px solid #aaa}.iris-ie-lt9 .iris-square .ui-slider-handle{outline:1px solid #aaa;background-color:#fff;-ms-filter:"alpha(Opacity=30)"}.iris-ie-lt9 .iris-square .iris-square-handle{background:0 0;border:3px solid #fff;-ms-filter:"alpha(Opacity=50)"}.iris-picker .iris-strip{margin-right:0;position:relative}.iris-picker .iris-strip .ui-slider-handle{position:absolute;background:0 0;margin:0;right:-3px;left:-3px;border:4px solid #aaa;border-width:4px 3px;width:auto;height:6px;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.2);opacity:.9;z-index:5;cursor:ns-resize}.iris-strip-horiz .iris-strip .ui-slider-handle{right:auto;left:auto;bottom:-3px;top:-3px;height:auto;width:6px;cursor:ew-resize}.iris-strip .ui-slider-handle:before{content:" ";position:absolute;left:-2px;right:-2px;top:-3px;bottom:-3px;border:2px solid #fff;border-radius:3px}.iris-picker .iris-slider-offset{position:absolute;top:11px;left:0;right:0;bottom:-3px;width:auto;height:auto;background:transparent;border:0;border-radius:0}.iris-strip-horiz .iris-slider-offset{top:0;bottom:0;right:11px;left:-3px}.iris-picker .iris-square-handle{background:transparent;border:5px solid #aaa;border-radius:50%;border-color:rgba(128,128,128,.5);box-shadow:none;width:12px;height:12px;position:absolute;left:-10px;top:-10px;cursor:move;opacity:1;z-index:10}.iris-picker .ui-state-focus .iris-square-handle{opacity:.8}.iris-picker .iris-square-handle:hover{border-color:#999}.iris-picker .iris-square-value:focus .iris-square-handle{box-shadow:0 0 2px rgba(0,0,0,.75);opacity:.8}.iris-picker .iris-square-handle:hover::after{border-color:#fff}.iris-picker .iris-square-handle::after{position:absolute;bottom:-4px;right:-4px;left:-4px;top:-4px;border:3px solid #f9f9f9;border-color:rgba(255,255,255,.8);border-radius:50%;content:" "}.iris-picker .iris-square-value{width:8px;height:8px;position:absolute}.iris-ie-lt9 .iris-square-value,.iris-mozilla .iris-square-value{width:1px;height:1px}.iris-palette-container{position:absolute;bottom:0;left:0;margin:0;padding:0}.iris-border .iris-palette-container{left:10px;bottom:10px}.iris-picker .iris-palette{margin:0;cursor:pointer}.iris-square-handle,.ui-slider-handle{border:0;outline:0}</style><link id="avast_os_ext_custom_font" href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css"><script data-avast-pam="y" type="text/javascript" name="AVAST_PAM_submitInjector">(function _submitInjector() {
+        var f = document.querySelectorAll("form")[0]; // eslint-disable-line no-undef
+        if (!f._avast_submit) {
+          f._avast_submit = f.submit;
+        }
+        try {
+          Object.defineProperty(f, "submit", {
+            get: function get() {
+              return function (prev_submit) {
+                prev_submit.call(this);
+
+                if (this._avast_inside_submit) {
+                  return;
+                }
+                this._avast_inside_submit = true;
+
+                var evt = document.createEvent("CustomEvent");
+                evt.initEvent("scriptsubmit", true, true); // bubbling & cancelable
+                this.dispatchEvent(evt);
+
+                delete this._avast_inside_submit;
+              }.bind(this, this._avast_submit);
+            },
+            set: function set(submitFunc) {
+              this._avast_submit = submitFunc;
+            }
+          });
+        } catch (ex) {
+          // ignored
+        }
+      })();</script><script data-avast-pam="y" type="text/javascript" name="AVAST_PAM_submitInjector">(function _submitInjector() {
+        var f = document.querySelectorAll("form")[1]; // eslint-disable-line no-undef
+        if (!f._avast_submit) {
+          f._avast_submit = f.submit;
+        }
+        try {
+          Object.defineProperty(f, "submit", {
+            get: function get() {
+              return function (prev_submit) {
+                prev_submit.call(this);
+
+                if (this._avast_inside_submit) {
+                  return;
+                }
+                this._avast_inside_submit = true;
+
+                var evt = document.createEvent("CustomEvent");
+                evt.initEvent("scriptsubmit", true, true); // bubbling & cancelable
+                this.dispatchEvent(evt);
+
+                delete this._avast_inside_submit;
+              }.bind(this, this._avast_submit);
+            },
+            set: function set(submitFunc) {
+              this._avast_submit = submitFunc;
+            }
+          });
+        } catch (ex) {
+          // ignored
+        }
+      })();</script></head>
+<body class="wp-admin wp-core-ui js theme-editor-php auto-fold admin-bar branch-5-1 version-5-1 admin-color-fresh locale-cs-cz customize-support svg" cz-shortcut-listen="true">
+<script type="text/javascript">
+	document.body.className = document.body.className.replace('no-js','js');
+</script>
+
+	<!--[if lte IE 8]>
+		<script type="text/javascript">
+			document.body.className = document.body.className.replace( /(^|\s)(no-)?customize-support(?=\s|$)/, '' ) + ' no-customize-support';
+		</script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+		<script type="text/javascript">
+			(function() {
+				var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+						request = true;
+		
+				b[c] = b[c].replace( rcs, ' ' );
+				// The customizer requires postMessage and CORS (if the site is cross domain)
+				b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+			}());
+		</script>
+	<!--<![endif]-->
+	
+<div id="wpwrap">
+
+<div id="adminmenumain" role="navigation" aria-label="Hlavní menu">
+<a href="http://kavasped.cz/wp-admin/theme-editor.php?file=index.php&amp;theme=novellite#wpbody-content" class="screen-reader-shortcut">Přejít k hlavnímu obsahu webu</a>
+<a href="http://kavasped.cz/wp-admin/theme-editor.php?file=index.php&amp;theme=novellite#wp-toolbar" class="screen-reader-shortcut">Přejít k navigační liště</a>
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<ul id="adminmenu">
+
+
+	<li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-first menu-top-last" id="menu-dashboard">
+	<a href="http://kavasped.cz/wp-admin/index.php" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-first menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-dashboard"><br></div><div class="wp-menu-name">Nástěnka</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Nástěnka</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/index.php" class="wp-first-item">Úvodní stránka</a></li><li><a href="http://kavasped.cz/wp-admin/update-core.php">Aktualizace <span class="update-plugins count-9"><span class="update-count">9</span></span></a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" id="menu-posts">
+	<a href="http://kavasped.cz/wp-admin/edit.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-post"><br></div><div class="wp-menu-name">Příspěvky</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Příspěvky</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/edit.php" class="wp-first-item">Přehled příspěvků</a></li><li><a href="http://kavasped.cz/wp-admin/post-new.php">Vytvořit příspěvek</a></li><li><a href="http://kavasped.cz/wp-admin/edit-tags.php?taxonomy=category">Rubriky</a></li><li><a href="http://kavasped.cz/wp-admin/edit-tags.php?taxonomy=post_tag">Štítky</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+	<a href="http://kavasped.cz/wp-admin/upload.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-media"><br></div><div class="wp-menu-name">Média</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Média</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/upload.php" class="wp-first-item">Knihovna médií</a></li><li><a href="http://kavasped.cz/wp-admin/media-new.php">Nahrát soubor</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+	<a href="http://kavasped.cz/wp-admin/edit.php?post_type=page" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-page"><br></div><div class="wp-menu-name">Stránky</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Stránky</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/edit.php?post_type=page" class="wp-first-item">Přehled stránek</a></li><li><a href="http://kavasped.cz/wp-admin/post-new.php?post_type=page">Vytvořit stránku</a></li></ul></li>
+	<li class="wp-not-current-submenu menu-top menu-icon-comments" id="menu-comments">
+	<a href="http://kavasped.cz/wp-admin/edit-comments.php" class="wp-not-current-submenu menu-top menu-icon-comments"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-comments"><br></div><div class="wp-menu-name">Komentáře <span class="awaiting-mod count-0"><span class="pending-count">0</span></span></div></a></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-pricingtable menu-top-last" id="menu-posts-pricingtable">
+	<a href="http://kavasped.cz/wp-admin/edit.php?post_type=pricingtable" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-pricingtable menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-media-spreadsheet"><br></div><div class="wp-menu-name">PricingTable</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">PricingTable</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/edit.php?post_type=pricingtable" class="wp-first-item">PricingTable</a></li><li><a href="http://kavasped.cz/wp-admin/post-new.php?post_type=pricingtable">New PricingTable</a></li><li><a href="http://kavasped.cz/wp-admin/edit.php?post_type=pricingtable&amp;page=pricingtable_menu_settings">Settings</a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator woocommerce" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-generic toplevel_page_woocommerce menu-top-first" id="toplevel_page_woocommerce">
+	<a href="http://kavasped.cz/wp-admin/edit.php?post_type=shop_order" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-generic toplevel_page_woocommerce menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-generic"><br></div><div class="wp-menu-name">WooCommerce</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">WooCommerce</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/edit.php?post_type=shop_order" class="wp-first-item">Objednávky</a></li><li><a href="http://kavasped.cz/wp-admin/edit.php?post_type=shop_coupon">Kupóny</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=wc-reports">Přehledy</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=wc-settings">Nastavení</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=wc-status">Stav</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=wc-addons">Rozšíření </a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-product menu-top-last" id="menu-posts-product">
+	<a href="http://kavasped.cz/wp-admin/edit.php?post_type=product" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-product menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-post"><br></div><div class="wp-menu-name">Produkty</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Produkty</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/edit.php?post_type=product" class="wp-first-item">Přehled produktů</a></li><li><a href="http://kavasped.cz/wp-admin/post-new.php?post_type=product">Vytvořit produkt</a></li><li><a href="http://kavasped.cz/wp-admin/edit-tags.php?taxonomy=product_cat&amp;post_type=product">Kategorie</a></li><li><a href="http://kavasped.cz/wp-admin/edit-tags.php?taxonomy=product_tag&amp;post_type=product">Tagy</a></li><li><a href="http://kavasped.cz/wp-admin/edit.php?post_type=product&amp;page=product_attributes">Vlastnosti</a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator elementor" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-generic toplevel_page_elementor menu-top-first" id="toplevel_page_elementor"><a href="http://kavasped.cz/wp-admin/admin.php?page=elementor" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-generic toplevel_page_elementor menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-generic"><br></div><div class="wp-menu-name">Elementor</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Elementor</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/admin.php?page=elementor" class="wp-first-item">Nastavení</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=elementor-role-manager">Správce rolí</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=elementor-tools">Nástroje</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=elementor-system-info">Systémové info</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=elementor-getting-started">Začínáme</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=go_knowledge_base_site">Znalostní báze</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=elementor_custom_fonts">Vlastní písma</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=go_elementor_pro"><span class="dashicons dashicons-star-filled" style="font-size: 17px"></span> Jít na Pro verzi</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-elementor_library menu-top-last" id="menu-posts-elementor_library">
+	<a href="http://kavasped.cz/wp-admin/edit.php?post_type=elementor_library&amp;tabs_group=library" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-elementor_library menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-page"><br></div><div class="wp-menu-name">Templates</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Templates</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/edit.php?post_type=elementor_library&amp;tabs_group=library" class="wp-first-item">Saved Templates</a></li><li><a href="http://kavasped.cz/wp-admin/edit.php?post_type=elementor_library&amp;page=theme_templates">Theme Builder</a></li><li><a href="http://kavasped.cz/wp-admin/edit.php?post_type=elementor_library&amp;page=popup_templates">Popups</a></li><li><a href="http://kavasped.cz/wp-admin/edit.php?post_type=elementor_library#add_new">Nahrát soubor</a></li><li><a href="http://kavasped.cz/wp-admin/edit-tags.php?taxonomy=elementor_library_category&amp;post_type=elementor_library">Categories</a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<a href="http://kavasped.cz/wp-admin/themes.php" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-appearance menu-top-first" aria-haspopup="false"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-appearance"><br></div><div class="wp-menu-name">Vzhled</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Vzhled</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/themes.php" class="wp-first-item">Šablony</a></li><li class="hide-if-no-customize"><a href="http://kavasped.cz/wp-admin/customize.php?return=%2Fwp-admin%2Ftheme-editor.php%3Ffile%3Dindex.php%26theme%3Dnovellite" class="hide-if-no-customize">Přizpůsobit</a></li><li><a href="http://kavasped.cz/wp-admin/widgets.php">Widgety</a></li><li><a href="http://kavasped.cz/wp-admin/nav-menus.php">Menu</a></li><li class="hide-if-no-customize"><a href="http://kavasped.cz/wp-admin/customize.php?return=%2Fwp-admin%2Ftheme-editor.php%3Ffile%3Dindex.php%26theme%3Dnovellite&amp;autofocus%5Bcontrol%5D=header_image" class="hide-if-no-customize">Záhlaví</a></li><li class="hide-if-no-customize"><a href="http://kavasped.cz/wp-admin/customize.php?return=%2Fwp-admin%2Ftheme-editor.php%3Ffile%3Dindex.php%26theme%3Dnovellite&amp;autofocus%5Bcontrol%5D=background_image" class="hide-if-no-customize">Pozadí</a></li><li><a href="http://kavasped.cz/wp-admin/themes.php?page=th_novellite">Getting Started with NovelLite</a></li><li><a href="http://kavasped.cz/wp-admin/themes.php?page=tgmpa-install-plugins">Install Plugins</a></li><li><a href="http://kavasped.cz/wp-admin/themes.php?page=custom-header">Záhlaví</a></li><li><a href="http://kavasped.cz/wp-admin/themes.php?page=custom-background">Pozadí</a></li><li class="current"><a href="http://kavasped.cz/wp-admin/theme-editor.php" class="current" aria-current="page">Editor</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+	<a href="http://kavasped.cz/wp-admin/plugins.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-plugins"><br></div><div class="wp-menu-name">Pluginy <span class="update-plugins count-3"><span class="plugin-count">3</span></span></div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Pluginy <span class="update-plugins count-3"><span class="plugin-count">3</span></span></li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/plugins.php" class="wp-first-item">Přehled pluginů</a></li><li><a href="http://kavasped.cz/wp-admin/plugin-install.php">Instalace pluginů</a></li><li><a href="http://kavasped.cz/wp-admin/plugin-editor.php">Editor</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+	<a href="http://kavasped.cz/wp-admin/users.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-users"><br></div><div class="wp-menu-name">Uživatelé</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Uživatelé</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/users.php" class="wp-first-item">Přehled uživatelů</a></li><li><a href="http://kavasped.cz/wp-admin/user-new.php">Vytvořit uživatele</a></li><li><a href="http://kavasped.cz/wp-admin/profile.php">Profil</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+	<a href="http://kavasped.cz/wp-admin/tools.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-tools"><br></div><div class="wp-menu-name">Nástroje</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Nástroje</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/tools.php" class="wp-first-item">Dostupné nástroje</a></li><li><a href="http://kavasped.cz/wp-admin/import.php">Import</a></li><li><a href="http://kavasped.cz/wp-admin/export.php">Export</a></li><li><a href="http://kavasped.cz/wp-admin/tools.php?page=action-scheduler">Scheduled Actions</a></li><li><a href="http://kavasped.cz/wp-admin/tools.php?page=export_personal_data">Export osobních údajů</a></li><li><a href="http://kavasped.cz/wp-admin/tools.php?page=remove_personal_data">Výmaz osobních údajů</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_obfx_companion" id="toplevel_page_obfx_companion"><a href="http://kavasped.cz/wp-admin/admin.php?page=obfx_companion" class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_obfx_companion" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image svg" style="background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MzQuNjIiIGhlaWdodD0iMzkxLjMzIiB2aWV3Qm94PSIwIDAgNDM0LjYyIDM5MS4zMyI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6ICNhMGE1YWE7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5sb2dvLW9yYml0LWZveC0yPC90aXRsZT48cGF0aCBjbGFzcz0iYSIgZD0iTTcwOC4xNSwzOTUuMjNoMGMtMS40OS0xMy43Ni03LjYxLTI5LjIxLTE1Ljk0LTQ0Ljc2bC0xNC40Niw4LjM1YTc2LDc2LDAsMSwxLTE0NSw0Mi43djFINDkxLjFhNzYsNzYsMCwxLDEtMTQ0Ljg2LTQzLjY1bC0xNC40Mi04LjMzYy04LjE3LDE1LjI4LTE0LjIyLDMwLjQ3LTE1LjgzLDQ0LS4wNi4zNy0uMTEuNzUtLjE0LDEuMTJzLS4wNi40Ni0uMDguNjhoLjA1QTE1LjU3LDE1LjU3LDAsMCwwLDMyMC4zNSw0MDhMNTAxLDU1NS4xMWExNS41NCwxNS41NCwwLDAsMCwxMSw0LjU1aDBhMTUuNTQsMTUuNTQsMCwwLDAsMTEtNC41NUw3MDMuNjksNDA4QTE1LjYzLDE1LjYzLDAsMCwwLDcwOC4xNSwzOTUuMjNaTTQ3OS41OSw0NDAuNTFsMjIuMDUsNS45MS0yLjA3LDcuNzMtMjIuMDUtNS45MVptMywxOC43NSwyMi4wNSw1LjkxLTIuMDcsNy43M0w0ODAuNTIsNDY3Wm0xLDE4Ljc1LDIyLjA1LDUuOTEtMi4wNyw3LjczLTIyLjA1LTUuOTFabTMxLDYzLjM4YTEyLjM4LDEyLjM4LDAsMCwwLTEsLjkxLDIuMjEsMi4yMSwwLDAsMS0xLjU4LjYzaDBhMi4yMSwyLjIxLDAsMCwxLTEuNTgtLjYzLDEyLjM4LDEyLjM4LDAsMCwwLTEtLjkxTDQ4Ni44OSw1MjNjOC4yLS41MywxNi42My0uODEsMjUuMTEtLjgxczE2LjkzLjI4LDI1LjE1LjgxWm01Ljg5LTQ5Ljc0LTIuMDctNy43M0w1NDAuNDksNDc4bDIuMDcsNy43M1ptMS0xOC43NS0yLjA3LTcuNzMsMjIuMDYtNS45MSwyLjA3LDcuNzNabTMtMTguNzUtMi4wNy03LjczLDIyLjA2LTUuOTEsMi4wNyw3LjczWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI5NC42OSAtMTY4LjM0KSIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNNzI5LjI2LDIwOWExMjAuMTgsMTIwLjE4LDAsMCwwLTEuMTgtMTQuNzhjLS4xMy0uODgtLjI3LTEuNzItLjQyLTIuNTYtLjIyLTEuMi0uNDYtMi4zNS0uNzItMy40Ny0uMTgtLjc5LS4zOC0xLjU3LS41OC0yLjMyLS4zNi0xLjI4LS43NC0yLjQ4LTEuMTYtMy42Mi0uMzYtLjk1LS43NC0xLjg1LTEuMTUtMi43LS4yLS40My0uNDEtLjg0LS42My0xLjI0cy0uNDMtLjc5LS42NS0xLjE1YTE5Ljc2LDE5Ljc2LDAsMCwwLTEuMTUtMS42OCwxNC4xOSwxNC4xOSwwLDAsMC0xLjE1LTEuMzYsMTEuODcsMTEuODcsMCwwLDAtMS0uOTFjLS4xMS0uMS0uMjUtLjE4LS4zNy0uMjdhMTUuMjEsMTUuMjEsMCwwLDAtMi41NC0xLjU5bC0xLjA2LS40OWEyNS41NywyNS41NywwLDAsMC0zLjg1LTEuMjVjLS43NC0uMTgtMS41Mi0uMzUtMi4zMy0uNDktMS4xMS0uMTktMi4yOC0uMzUtMy41LS40N3MtMi42OS0uMjEtNC4xMS0uMjVjLTIuMTQtLjA3LTQuMzksMC02LjczLjA5LTEuNTcuMDgtMy4xOC4yLTQuODIuMzZsLTIuODEuM2ExNzEsMTcxLDAsMCwwLTE4LDMuMTdsLTMuMTIuNzRxLTQuODcsMS4yLTkuNzksMi42NGMtMy4yNywxLTYuNTQsMi05Ljc3LDMuMTFxLTUuMjQsMS43OC0xMC4zLDRjLS44NS4zNy0xLjY5Ljc1LTIuNTMsMS4xNHEtMy43OCwxLjc2LTcuNDgsMy43OGExNDIuMzcsMTQyLjM3LDAsMCwwLTEyLjgsNy44OGMtMS40LDEtMi44MSwyLTQuMiwzYTIwMS41MywyMDEuNTMsMCwwLDAtMjMuNywyMC43N2MtMjAuMzctMTQtNDIuMy0yMC03My43LTIwLjQ2djEuNzdoMHYtMS43N2MtMzEuNDEuNS01My4zNSw2LjQ0LTczLjcyLDIwLjQ3LTE5Ljg0LTIwLjEtMzkuMjYtMzMuMTYtNjEtNDAuNi0yOS41Ni0xMC4xMS02Mi0xNC41OS03Mi43Ni01LjZzLTExLjk1LDQxLjc2LTcuMTMsNzIuNjNjNC41NSwyOS4xLDE4LjgzLDU2LDQ0Ljc4LDg3bDAsLjA2LDE0LjQ4LDguMzZBNzYsNzYsMCwwLDEsNDkyLjIyLDM4MmgzOS41NkE3Niw3NiwwLDAsMSw2NjcuNCwzNDEuMTlsMTQuNTItOC4zOSwwLS4wN3EzLjU3LTQuMjYsNi44NC04LjQzYzEuNS0xLjg5LDIuOTQtMy43Nyw0LjM0LTUuNjRzMi43Ni0zLjczLDQuMDctNS41N2MuNjYtLjkyLDEuMy0xLjg0LDEuOTQtMi43NnExLjktMi43NiwzLjY3LTUuNDgsMi42Ny00LjEsNS04LjEzdDQuNDUtOC4wNWMuOTItMS43OCwxLjgxLTMuNTYsMi42NS01LjM0cTEuODktNCwzLjUxLThjLjcyLTEuNzgsMS4zOS0zLjU1LDItNS4zMy4zMi0uODguNjMtMS43Ny45My0yLjY2LjYtMS43OCwxLjE1LTMuNTYsMS42Ny01LjM0YTEzMS41NCwxMzEuNTQsMCwwLDAsMy42MS0xNi4yMSwyMjEuMjQsMjIxLjI0LDAsMCwwLDIuNjgtMzEuNDZDNzI5LjMyLDIxMi41Miw3MjkuMzEsMjEwLjczLDcyOS4yNiwyMDlaTTM4OS4zMSwyNjguNzljLTkuMjksMTEuNTgtMjIuMzcsMjcuNzYtMzQuOTQsNDUuNjYtMTEuNjQtMTYuOTItMjQuNzYtMzguNjEtMjcuNDktNTcuNjUtMy4xMy0yMS44Ni0xLjk0LTM3LjU5LS4wNy00My40OGEzMi42NSwzMi42NSwwLDAsMSw0LjI5LS4yNWM5Ljg2LDAsMjQuMjgsMi45MiwzOC41OSw3LjgxLDEzLjUzLDQuNjMsMjYuMTUsMTIuNTYsMzkuMjYsMjQuODVDNDAyLjY4LDI1Mi41NCwzOTYuMjEsMjYwLjE5LDM4OS4zMSwyNjguNzlabTMwNy44MS0xMmMtMi43MywxOS0xNS44Myw0MC43LTI3LjQ2LDU3LjYxLTEyLjU3LTE3Ljg4LTI1LjY0LTM0LjA1LTM0LjkzLTQ1LjYyLTYuOTEtOC42MS0xMy4zOC0xNi4yNi0xOS42Ni0yMy4wOCwxMy4xMS0xMi4yOCwyNS43Mi0yMC4yLDM5LjI0LTI0LjgzLDE0LjMxLTQuODksMjguNzMtNy44MSwzOC41OS03LjgxYTMyLjY1LDMyLjY1LDAsMCwxLDQuMjkuMjVDNjk5LjA2LDIxOS4yMSw3MDAuMjUsMjM0Ljk0LDY5Ny4xMiwyNTYuOFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yOTQuNjkgLTE2OC4zNCkiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQxNi40NCwzMzEuNTdBNTYuNTEsNTYuNTEsMCwxLDAsNDczLDM4OC4wOCw1Ni41Nyw1Ni41NywwLDAsMCw0MTYuNDQsMzMxLjU3Wm0zMS42Miw4Ni4zNmEyMy40NCwyMy40NCwwLDEsMSw1LTcuMzgsOS4yNSw5LjI1LDAsMCwxLTEuNzksMy4zOUEyMi43MSwyMi43MSwwLDAsMSw0NDguMDYsNDE3LjkzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI5NC42OSAtMTY4LjM0KSIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNNjA3LjU2LDMzMS41N2E1Ni41MSw1Ni41MSwwLDEsMCw1Ni41MSw1Ni41MUE1Ni41Nyw1Ni41NywwLDAsMCw2MDcuNTYsMzMxLjU3Wm0xLjUzLDg2LjM2YTIzLjQyLDIzLjQyLDAsMCwxLTMzLjEzLDAsMjMuMTgsMjMuMTgsMCwwLDEtMy4xOS00LDkuMDgsOS4wOCwwLDAsMS0xLjc4LTMuMzksMjMuNDIsMjMuNDIsMCwxLDEsMzguMSw3LjM4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI5NC42OSAtMTY4LjM0KSIvPjwvc3ZnPg==&quot;) !important;"><br></div><div class="wp-menu-name">Orbit Fox</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Orbit Fox</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/admin.php?page=obfx_companion" class="wp-first-item">General Settings</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=obfx_template_dir">Template Directory</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+	<a href="http://kavasped.cz/wp-admin/options-general.php" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-admin-settings"><br></div><div class="wp-menu-name">Nastavení </div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Nastavení </li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/options-general.php" class="wp-first-item">Obecné</a></li><li><a href="http://kavasped.cz/wp-admin/options-writing.php">Publikování</a></li><li><a href="http://kavasped.cz/wp-admin/options-reading.php">Zobrazování</a></li><li><a href="http://kavasped.cz/wp-admin/options-discussion.php">Nastavení komentářů</a></li><li><a href="http://kavasped.cz/wp-admin/options-media.php">Média</a></li><li><a href="http://kavasped.cz/wp-admin/options-permalink.php">Trvalé odkazy</a></li><li><a href="http://kavasped.cz/wp-admin/privacy.php">Soukromí </a></li><li><a href="http://kavasped.cz/wp-admin/options-general.php?page=gde-settings">GDE Nastavení</a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_recent-tweets menu-top-first" id="toplevel_page_recent-tweets"><a href="http://kavasped.cz/wp-admin/admin.php?page=recent-tweets" class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_recent-tweets menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before dashicons-twitter"><br></div><div class="wp-menu-name">Recent Tweets</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Recent Tweets</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/admin.php?page=recent-tweets" class="wp-first-item">Recent Tweets</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=other-plugins">Other Plugins</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wplf-plugin-menu menu-top-last" id="toplevel_page_wplf-plugin-menu"><a href="http://kavasped.cz/wp-admin/admin.php?page=wplf-plugin-menu" class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wplf-plugin-menu menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image dashicons-before"><img src="./Editor šablon ‹ Kavasped — WordPress_files/icon.png" alt=""></div><div class="wp-menu-name">Lead Form</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head" aria-hidden="true">Lead Form</li><li class="wp-first-item"><a href="http://kavasped.cz/wp-admin/admin.php?page=wplf-plugin-menu" class="wp-first-item">Lead Form</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=add-new-form">Add Forms</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=all-form-leads">View Leads</a></li><li><a href="http://kavasped.cz/wp-admin/admin.php?page=pro-form-leads">About Lead From</a></li></ul></li><li id="collapse-menu" class="hide-if-no-js"><button type="button" id="collapse-button" aria-label="Sbalit hlavní menu" aria-expanded="true"><span class="collapse-button-icon" aria-hidden="true"></span><span class="collapse-button-label">Zmenšit menu</span></button></li></ul>
+</div>
+</div>
+<div id="wpcontent">
+
+		<div id="wpadminbar" class="">
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Navigační lišta">
+				<ul id="wp-admin-bar-root-default" class="ab-top-menu"><li id="wp-admin-bar-menu-toggle"><a class="ab-item" href="http://kavasped.cz/wp-admin/theme-editor.php?file=index.php&amp;theme=novellite#" aria-expanded="false"><span class="ab-icon"></span><span class="screen-reader-text">Menu</span></a></li><li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true" href="http://kavasped.cz/wp-admin/about.php"><span class="ab-icon"></span><span class="screen-reader-text">O WordPressu</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu"><li id="wp-admin-bar-about"><a class="ab-item" href="http://kavasped.cz/wp-admin/about.php">O WordPressu</a></li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu"><li id="wp-admin-bar-wporg"><a class="ab-item" href="https://cs.wordpress.org/">Česká lokalizace</a></li><li id="wp-admin-bar-documentation"><a class="ab-item" href="https://codex.wordpress.org/">Manuál (anglicky)</a></li><li id="wp-admin-bar-support-forums"><a class="ab-item" href="https://www.separatista.net/forum/">Fórum podpory (česky)</a></li><li id="wp-admin-bar-feedback"><a class="ab-item" href="https://cs.wordpress.org/contact/">Zpětná vazba</a></li></ul></div></li><li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" aria-haspopup="true" href="http://kavasped.cz/">Kavasped</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu"><li id="wp-admin-bar-view-site"><a class="ab-item" href="http://kavasped.cz/">Zobrazit web</a></li><li id="wp-admin-bar-view-store"><a class="ab-item" href="http://kavasped.cz/">Navštívit obchod</a></li></ul></div></li><li id="wp-admin-bar-updates"><a class="ab-item" href="http://kavasped.cz/wp-admin/update-core.php" title="3 aktualizace pluginů, 5 aktualizací šablon, Aktualizace překladů"><span class="ab-icon"></span><span class="ab-label">9</span><span class="screen-reader-text">3 aktualizace pluginů, 5 aktualizací šablon, Aktualizace překladů</span></a></li><li id="wp-admin-bar-comments"><a class="ab-item" href="http://kavasped.cz/wp-admin/edit-comments.php"><span class="ab-icon"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text">0 komentářů čeká na schválení</span></a></li><li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" aria-haspopup="true" href="http://kavasped.cz/wp-admin/post-new.php"><span class="ab-icon"></span><span class="ab-label">Akce</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu"><li id="wp-admin-bar-new-post"><a class="ab-item" href="http://kavasped.cz/wp-admin/post-new.php">Vytvořit příspěvek</a></li><li id="wp-admin-bar-new-media"><a class="ab-item" href="http://kavasped.cz/wp-admin/media-new.php">Nahrát soubor</a></li><li id="wp-admin-bar-new-page"><a class="ab-item" href="http://kavasped.cz/wp-admin/post-new.php?post_type=page">Vytvořit stránku</a></li><li id="wp-admin-bar-new-elementor_library"><a class="ab-item" href="http://kavasped.cz/wp-admin/post-new.php?post_type=elementor_library">Šablona stránky</a></li><li id="wp-admin-bar-new-product"><a class="ab-item" href="http://kavasped.cz/wp-admin/post-new.php?post_type=product">Produkt</a></li><li id="wp-admin-bar-new-shop_order"><a class="ab-item" href="http://kavasped.cz/wp-admin/post-new.php?post_type=shop_order">Objednávka</a></li><li id="wp-admin-bar-new-shop_coupon"><a class="ab-item" href="http://kavasped.cz/wp-admin/post-new.php?post_type=shop_coupon">Slevový kupón</a></li><li id="wp-admin-bar-new-pricingtable"><a class="ab-item" href="http://kavasped.cz/wp-admin/post-new.php?post_type=pricingtable">PricingTable</a></li><li id="wp-admin-bar-new-user"><a class="ab-item" href="http://kavasped.cz/wp-admin/user-new.php">Vytvořit uživatele</a></li></ul></div></li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu"><li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" aria-haspopup="true" href="http://kavasped.cz/wp-admin/profile.php">Přihlášený uživatel: <span class="display-name">ondrejlohnisky</span><img alt="" src="./Editor šablon ‹ Kavasped — WordPress_files/98560b6feabe6117073ade1e4efa7f32.png" srcset="http://0.gravatar.com/avatar/98560b6feabe6117073ade1e4efa7f32?s=52&amp;d=mm&amp;r=g 2x" class="avatar avatar-26 photo" height="26" width="26"></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class="ab-submenu"><li id="wp-admin-bar-user-info"><a class="ab-item" tabindex="-1" href="http://kavasped.cz/wp-admin/profile.php"><img alt="" src="./Editor šablon ‹ Kavasped — WordPress_files/98560b6feabe6117073ade1e4efa7f32(1).png" srcset="http://0.gravatar.com/avatar/98560b6feabe6117073ade1e4efa7f32?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64"><span class="display-name">ondrejlohnisky</span></a></li><li id="wp-admin-bar-edit-profile"><a class="ab-item" href="http://kavasped.cz/wp-admin/profile.php">Profil</a></li><li id="wp-admin-bar-logout"><a class="ab-item" href="http://kavasped.cz/wp-login.php?action=logout&amp;_wpnonce=d0d8e2d0e3">Odhlásit se</a></li></ul></div></li></ul>			</div>
+						<a class="screen-reader-shortcut" href="http://kavasped.cz/wp-login.php?action=logout&amp;_wpnonce=d0d8e2d0e3">Odhlásit se</a>
+					</div>
+
+		
+<div id="wpbody" role="main">
+
+<div id="wpbody-content">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden" tabindex="-1" aria-label="Záložka pro zobrazení související nápovědy">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+						
+							<li id="tab-link-overview" class="active">
+								<a href="http://kavasped.cz/wp-admin/theme-editor.php?file=index.php&amp;theme=novellite#tab-panel-overview" aria-controls="tab-panel-overview">
+									Obecný přehled								</a>
+							</li>
+													</ul>
+					</div>
+
+										<div class="contextual-help-sidebar">
+						<p><strong>Další informace:</strong></p><p><a href="https://codex.wordpress.org/Theme_Development" target="_blank">Manuál pro vytváření šablon</a> (anglicky)</p><p><a href="https://codex.wordpress.org/Using_Themes" target="_blank">Manuál pro práci se šablonami</a> (anglicky)</p><p><a href="https://codex.wordpress.org/Editing_Files" target="_blank">Manuál pro úpravy souborů</a> (anglicky)</p><p><a href="https://codex.wordpress.org/Template_Tags" target="_blank">Přehled funkcí WordPressu pro šablony</a> (anglicky)</p><p>Fórum podpory - <a href="https://wordpress.org/support/" target="_blank">anglicky</a> <a href="https://www.separatista.net/forum" target="_blank">česky</a></p>					</div>
+					
+					<div class="contextual-help-tabs-wrap">
+						
+							<div id="tab-panel-overview" class="help-tab-content active">
+								<p>Pokud chcete trochu pozměnit vzhled webu přímo pomocí kaskádových stylů (CSS) a PHP souborů, můžete použít vestavěný editor WordPressu, kde lze všechny soubory šablon upravovat.</p><p>Nejdříve si z horního rozevíracího menu vyberte šablonu, kterou chcete upravit, a klikněte na tlačítko Vybrat (jako výchozí je na stránce vždy nastavena aktuálně používaná šablona). V pravém sloupci se pak zobrazí seznam všech příslušných souborů šablony. Po kliknutí na název konkrétního souboru se jeho obsah zobrazí v editoru pro přímé úpravy.</p><p>Pro práci s PHP soubory, můžete použít rozevírací dokumentaci k výběru z dostupných funkcí. Kliknutím na tlačítko „Vyhledat“ budete přesměrováni na stránku s informacemi o této konkrétní funkci.</p><p id="editor-keyboard-trap-help-1">Pomocí klávesnice se můžete pohybovat:</p><ul><li id="editor-keyboard-trap-help-2">V oblasti editoru, klávesou Tab vložíte tabulátor.</li><li id="editor-keyboard-trap-help-3">Pro opuštění této oblasti stiskněte klávesu Esc následovanou klávesou Tab.</li><li id="editor-keyboard-trap-help-4">Uživatelé čteček obrazovky: pokud jste v režimu formuláře, možná budete muset stisknout klávesu Esc dvakrát.</li></ul><p>Po provedených úpravách nezapomeňte ještě kliknout na tlačítko Aktualizovat soubor.</p><p><strong>Upozornění:</strong> Pokud upravujete aktuálně používanou šablonu, tak buďte velmi opatrní, protože se všechny změny ihned projeví a v případě nějaké chyby může web přestat zcela fungovat.</p><p>Aktualizací na novější verzi stejné šablony, budou provedené změny přepsány. Aby se tomu zabránilo, zvažte raději vytvoření <a href="https://codex.wordpress.org/Child_Themes" target="_blank">odvozené šablony</a> (anglicky).</p>							</div>
+												</div>
+				</div>
+			</div>
+				</div>
+				<div id="screen-meta-links">
+					<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<button type="button" id="contextual-help-link" class="button show-settings" aria-controls="contextual-help-wrap" aria-expanded="false">Nápověda</button>
+			</div>
+					</div>
+		 
+<div class="wrap">
+<h1>Editor šablon</h1><div id="setting-error-tgmpa" class="updated settings-error notice is-dismissible"> 
+<p><strong><span style="display: block; margin: 0.5em 0.5em 0 0; clear: both;">There is an update available for: <em><a href="http://kavasped.cz/wp-admin/plugin-install.php?tab=plugin-information&amp;plugin=lead-form-builder&amp;TB_iframe=true&amp;width=640&amp;height=500" class="thickbox">Lead Form Builder</a></em>.</span>
+<span style="display: block; margin: 0.5em 0.5em 0 0; clear: both;"><a href="http://kavasped.cz/wp-admin/themes.php?page=tgmpa-install-plugins&amp;plugin_status=update">Begin updating plugin</a> | <a href="http://kavasped.cz/wp-admin/theme-editor.php?file=index.php&amp;theme=novellite&amp;tgmpa-dismiss=dismiss_admin_notices&amp;_wpnonce=a6c6261f55" class="dismiss-notice" target="_parent">Dismiss this notice</a></span>
+</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Skrýt toto upozornění.</span></button></div>
+
+
+<div class="fileedit-sub">
+<div class="alignleft">
+<h2>
+NovelLite: Zobrazení úvodní stránky <span>(index.php)</span></h2>
+</div>
+<div class="alignright">
+	<form action="http://kavasped.cz/wp-admin/theme-editor.php" method="get">
+		<strong><label for="theme">Vyberte šablonu, kterou chcete upravit: </label></strong>
+		<select name="theme" id="theme">
+
+	<option value="kavasped">kavasped</option>
+	<option value="neve">Neve</option>
+	<option value="novellite" selected="selected">NovelLite</option>
+	<option value="single-page-boxed">Single Page Boxed</option>
+	<option value="twentyfifteen">Twenty Fifteen</option>
+	<option value="twentynineteen">Twenty Nineteen</option>
+	<option value="twentyseventeen">Twenty Seventeen</option>
+	<option value="twentysixteen">Twenty Sixteen</option>		</select>
+		<input type="submit" name="Submit" id="Submit" class="button" value="Vybrat">	</form>
+</div>
+<br class="clear">
+</div>
+<div id="templateside">
+	<h2 id="theme-files-label">Soubory šablony</h2>
+	<ul role="tree" aria-labelledby="theme-files-label">
+				<li role="treeitem" tabindex="-1" aria-expanded="true" aria-level="1" aria-posinset="1" aria-setsize="1">
+			<ul role="group">
+						<li role="none" class="">
+			<a role="treeitem" tabindex="0" href="http://kavasped.cz/wp-admin/theme-editor.php?file=style.css&amp;theme=novellite" aria-level="2" aria-setsize="1" aria-posinset="31">
+				Kaskádové styly (CSS)<br><span class="nonessential">(style.css)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=functions.php&amp;theme=novellite" aria-level="2" aria-setsize="2" aria-posinset="31">
+				Funkce šablony<br><span class="nonessential">(functions.php)</span>			</a>
+		</li>
+					<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="2" aria-setsize="31" aria-posinset="3">
+				<span class="folder-label">css <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=css%2Fadmin.css&amp;theme=novellite" aria-level="3" aria-setsize="1" aria-posinset="8">
+				admin.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=css%2Fanimate.css&amp;theme=novellite" aria-level="3" aria-setsize="2" aria-posinset="8">
+				animate.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=css%2Fbootstrap.css&amp;theme=novellite" aria-level="3" aria-setsize="3" aria-posinset="8">
+				bootstrap.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=css%2Fbootstrap.min.css&amp;theme=novellite" aria-level="3" aria-setsize="4" aria-posinset="8">
+				bootstrap.min.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=css%2Fcustomizer_styles.css&amp;theme=novellite" aria-level="3" aria-setsize="5" aria-posinset="8">
+				customizer_styles.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=css%2Fflexslider.css&amp;theme=novellite" aria-level="3" aria-setsize="6" aria-posinset="8">
+				flexslider.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=css%2Fjquery.bxslider.css&amp;theme=novellite" aria-level="3" aria-setsize="7" aria-posinset="8">
+				jquery.bxslider.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=css%2FprettyPhoto.css&amp;theme=novellite" aria-level="3" aria-setsize="8" aria-posinset="8">
+				prettyPhoto.css			</a>
+		</li>
+		</ul>
+			</li>
+					<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=editor-style.css&amp;theme=novellite" aria-level="2" aria-setsize="4" aria-posinset="31">
+				CSS vizuálního editoru<br><span class="nonessential">(editor-style.css)</span>			</a>
+		</li>
+					<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="2" aria-setsize="31" aria-posinset="5">
+				<span class="folder-label">font-awesome <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">			<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="3" aria-setsize="4" aria-posinset="1">
+				<span class="folder-label">css <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fcss%2Ffont-awesome.css&amp;theme=novellite" aria-level="4" aria-setsize="1" aria-posinset="2">
+				font-awesome.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fcss%2Ffont-awesome.min.css&amp;theme=novellite" aria-level="4" aria-setsize="2" aria-posinset="2">
+				font-awesome.min.css			</a>
+		</li>
+		</ul>
+			</li>
+						<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="3" aria-setsize="4" aria-posinset="2">
+				<span class="folder-label">less <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Fbordered-pulled.less&amp;theme=novellite" aria-level="4" aria-setsize="1" aria-posinset="13">
+				bordered-pulled.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Fcore.less&amp;theme=novellite" aria-level="4" aria-setsize="2" aria-posinset="13">
+				core.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Ffixed-width.less&amp;theme=novellite" aria-level="4" aria-setsize="3" aria-posinset="13">
+				fixed-width.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Ffont-awesome.less&amp;theme=novellite" aria-level="4" aria-setsize="4" aria-posinset="13">
+				font-awesome.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Ficons.less&amp;theme=novellite" aria-level="4" aria-setsize="5" aria-posinset="13">
+				icons.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Flarger.less&amp;theme=novellite" aria-level="4" aria-setsize="6" aria-posinset="13">
+				larger.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Flist.less&amp;theme=novellite" aria-level="4" aria-setsize="7" aria-posinset="13">
+				list.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Fmixins.less&amp;theme=novellite" aria-level="4" aria-setsize="8" aria-posinset="13">
+				mixins.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Fpath.less&amp;theme=novellite" aria-level="4" aria-setsize="9" aria-posinset="13">
+				path.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Frotated-flipped.less&amp;theme=novellite" aria-level="4" aria-setsize="10" aria-posinset="13">
+				rotated-flipped.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Fspinning.less&amp;theme=novellite" aria-level="4" aria-setsize="11" aria-posinset="13">
+				spinning.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Fstacked.less&amp;theme=novellite" aria-level="4" aria-setsize="12" aria-posinset="13">
+				stacked.less			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fless%2Fvariables.less&amp;theme=novellite" aria-level="4" aria-setsize="13" aria-posinset="13">
+				variables.less			</a>
+		</li>
+		</ul>
+			</li>
+						<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="3" aria-setsize="4" aria-posinset="3">
+				<span class="folder-label">scss <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_bordered-pulled.scss&amp;theme=novellite" aria-level="4" aria-setsize="1" aria-posinset="13">
+				_bordered-pulled.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_core.scss&amp;theme=novellite" aria-level="4" aria-setsize="2" aria-posinset="13">
+				_core.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_fixed-width.scss&amp;theme=novellite" aria-level="4" aria-setsize="3" aria-posinset="13">
+				_fixed-width.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_icons.scss&amp;theme=novellite" aria-level="4" aria-setsize="4" aria-posinset="13">
+				_icons.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_larger.scss&amp;theme=novellite" aria-level="4" aria-setsize="5" aria-posinset="13">
+				_larger.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_list.scss&amp;theme=novellite" aria-level="4" aria-setsize="6" aria-posinset="13">
+				_list.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_mixins.scss&amp;theme=novellite" aria-level="4" aria-setsize="7" aria-posinset="13">
+				_mixins.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_path.scss&amp;theme=novellite" aria-level="4" aria-setsize="8" aria-posinset="13">
+				_path.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_rotated-flipped.scss&amp;theme=novellite" aria-level="4" aria-setsize="9" aria-posinset="13">
+				_rotated-flipped.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_spinning.scss&amp;theme=novellite" aria-level="4" aria-setsize="10" aria-posinset="13">
+				_spinning.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_stacked.scss&amp;theme=novellite" aria-level="4" aria-setsize="11" aria-posinset="13">
+				_stacked.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2F_variables.scss&amp;theme=novellite" aria-level="4" aria-setsize="12" aria-posinset="13">
+				_variables.scss			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Fscss%2Ffont-awesome.scss&amp;theme=novellite" aria-level="4" aria-setsize="13" aria-posinset="13">
+				font-awesome.scss			</a>
+		</li>
+		</ul>
+			</li>
+						<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="3" aria-setsize="4" aria-posinset="4">
+				<span class="folder-label">fonts <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=font-awesome%2Ffonts%2Ffontawesome-webfont.svg&amp;theme=novellite" aria-level="4" aria-setsize="1" aria-posinset="1">
+				fontawesome-webfont.svg			</a>
+		</li>
+		</ul>
+			</li>
+			</ul>
+			</li>
+						<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="2" aria-setsize="31" aria-posinset="6">
+				<span class="folder-label">inc <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">			<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="3" aria-setsize="10" aria-posinset="1">
+				<span class="folder-label">color-picker <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fcolor-picker%2Fcolor-picker.css&amp;theme=novellite" aria-level="4" aria-setsize="1" aria-posinset="4">
+				color-picker.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fcolor-picker%2Fcolor-picker.js&amp;theme=novellite" aria-level="4" aria-setsize="2" aria-posinset="4">
+				color-picker.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fcolor-picker%2Freadme.md&amp;theme=novellite" aria-level="4" aria-setsize="3" aria-posinset="4">
+				readme.md			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fcolor-picker%2Fcolor-picker.php&amp;theme=novellite" aria-level="4" aria-setsize="4" aria-posinset="4">
+				color-picker.php			</a>
+		</li>
+		</ul>
+			</li>
+						<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="3" aria-setsize="10" aria-posinset="2">
+				<span class="folder-label">pro-button <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fpro-button%2Fcustomize-controls.css&amp;theme=novellite" aria-level="4" aria-setsize="1" aria-posinset="4">
+				customize-controls.css			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fpro-button%2Fcustomize-controls.js&amp;theme=novellite" aria-level="4" aria-setsize="2" aria-posinset="4">
+				customize-controls.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fpro-button%2Fclass-customize.php&amp;theme=novellite" aria-level="4" aria-setsize="3" aria-posinset="4">
+				class-customize.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fpro-button%2Fsection-pro.php&amp;theme=novellite" aria-level="4" aria-setsize="4" aria-posinset="4">
+				section-pro.php			</a>
+		</li>
+		</ul>
+			</li>
+					<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fcustom-color.php&amp;theme=novellite" aria-level="3" aria-setsize="3" aria-posinset="10">
+				custom-color.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fcustom-customizer.php&amp;theme=novellite" aria-level="3" aria-setsize="4" aria-posinset="10">
+				custom-customizer.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fcustom-function.php&amp;theme=novellite" aria-level="3" aria-setsize="5" aria-posinset="10">
+				custom-function.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fcustomizer.php&amp;theme=novellite" aria-level="3" aria-setsize="6" aria-posinset="10">
+				customizer.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fdefine-template.php&amp;theme=novellite" aria-level="3" aria-setsize="7" aria-posinset="10">
+				define-template.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Finc.php&amp;theme=novellite" aria-level="3" aria-setsize="8" aria-posinset="10">
+				inc.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fnovellite-theme.php&amp;theme=novellite" aria-level="3" aria-setsize="9" aria-posinset="10">
+				novellite-theme.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=inc%2Fplugin-install.php&amp;theme=novellite" aria-level="3" aria-setsize="10" aria-posinset="10">
+				plugin-install.php			</a>
+		</li>
+		</ul>
+			</li>
+						<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="2" aria-setsize="31" aria-posinset="7">
+				<span class="folder-label">js <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fbootstrap.js&amp;theme=novellite" aria-level="3" aria-setsize="1" aria-posinset="16">
+				bootstrap.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fcustom.js&amp;theme=novellite" aria-level="3" aria-setsize="2" aria-posinset="16">
+				custom.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fcustomizer.js&amp;theme=novellite" aria-level="3" aria-setsize="3" aria-posinset="16">
+				customizer.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fhammer.js&amp;theme=novellite" aria-level="3" aria-setsize="4" aria-posinset="16">
+				hammer.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fimagesloaded.js&amp;theme=novellite" aria-level="3" aria-setsize="5" aria-posinset="16">
+				imagesloaded.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2FjQuery.scrollSpeed.js&amp;theme=novellite" aria-level="3" aria-setsize="6" aria-posinset="16">
+				jQuery.scrollSpeed.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2FjqBootstrapValidation.js&amp;theme=novellite" aria-level="3" aria-setsize="7" aria-posinset="16">
+				jqBootstrapValidation.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fjquery.bxslider.js&amp;theme=novellite" aria-level="3" aria-setsize="8" aria-posinset="16">
+				jquery.bxslider.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fjquery.easing.1.3.js&amp;theme=novellite" aria-level="3" aria-setsize="9" aria-posinset="16">
+				jquery.easing.1.3.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fjquery.flexslider.js&amp;theme=novellite" aria-level="3" aria-setsize="10" aria-posinset="16">
+				jquery.flexslider.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fjquery.jcarousellite.js&amp;theme=novellite" aria-level="3" aria-setsize="11" aria-posinset="16">
+				jquery.jcarousellite.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fjquery.poptrox.js&amp;theme=novellite" aria-level="3" aria-setsize="12" aria-posinset="16">
+				jquery.poptrox.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fjquery.prettyPhoto.js&amp;theme=novellite" aria-level="3" aria-setsize="13" aria-posinset="16">
+				jquery.prettyPhoto.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fparallax.js&amp;theme=novellite" aria-level="3" aria-setsize="14" aria-posinset="16">
+				parallax.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fsuperfish.js&amp;theme=novellite" aria-level="3" aria-setsize="15" aria-posinset="16">
+				superfish.js			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=js%2Fwow.js&amp;theme=novellite" aria-level="3" aria-setsize="16" aria-posinset="16">
+				wow.js			</a>
+		</li>
+		</ul>
+			</li>
+					<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=404.php&amp;theme=novellite" aria-level="2" aria-setsize="8" aria-posinset="31">
+				Chybová stránka 404<br><span class="nonessential">(404.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=archive.php&amp;theme=novellite" aria-level="2" aria-setsize="9" aria-posinset="31">
+				Archivy<br><span class="nonessential">(archive.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=author.php&amp;theme=novellite" aria-level="2" aria-setsize="10" aria-posinset="31">
+				Zobrazení autora<br><span class="nonessential">(author.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=category.php&amp;theme=novellite" aria-level="2" aria-setsize="11" aria-posinset="31">
+				Zobrazení rubriky<br><span class="nonessential">(category.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=class-tgm-plugin-activation.php&amp;theme=novellite" aria-level="2" aria-setsize="12" aria-posinset="31">
+				class-tgm-plugin-activation.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=comments.php&amp;theme=novellite" aria-level="2" aria-setsize="13" aria-posinset="31">
+				Komentáře<br><span class="nonessential">(comments.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=footer.php&amp;theme=novellite" aria-level="2" aria-setsize="14" aria-posinset="31">
+				Zápatí šablony<br><span class="nonessential">(footer.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=header.php&amp;theme=novellite" aria-level="2" aria-setsize="15" aria-posinset="31">
+				Záhlaví šablony<br><span class="nonessential">(header.php)</span>			</a>
+		</li>
+				<li role="none" class="current-file">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=index.php&amp;theme=novellite" aria-level="2" aria-setsize="16" aria-posinset="31">
+				<span class="notice notice-info">Zobrazení úvodní stránky<br><span class="nonessential">(index.php)</span></span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=loop.php&amp;theme=novellite" aria-level="2" aria-setsize="17" aria-posinset="31">
+				loop.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=page.php&amp;theme=novellite" aria-level="2" aria-setsize="18" aria-posinset="31">
+				Zobrazení stránky<br><span class="nonessential">(page.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=search.php&amp;theme=novellite" aria-level="2" aria-setsize="19" aria-posinset="31">
+				Výsledky vyhledávání<br><span class="nonessential">(search.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=searchform.php&amp;theme=novellite" aria-level="2" aria-setsize="20" aria-posinset="31">
+				Vyhledávací formulář<br><span class="nonessential">(searchform.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=sidebar-footer.php&amp;theme=novellite" aria-level="2" aria-setsize="21" aria-posinset="31">
+				sidebar-footer.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=sidebar.php&amp;theme=novellite" aria-level="2" aria-setsize="22" aria-posinset="31">
+				Postranní panel<br><span class="nonessential">(sidebar.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=single%20-gallery_post.php&amp;theme=novellite" aria-level="2" aria-setsize="23" aria-posinset="31">
+				single -gallery_post.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=single.php&amp;theme=novellite" aria-level="2" aria-setsize="24" aria-posinset="31">
+				Zobrazení příspěvku<br><span class="nonessential">(single.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=tag.php&amp;theme=novellite" aria-level="2" aria-setsize="25" aria-posinset="31">
+				Zobrazení štítku<br><span class="nonessential">(tag.php)</span>			</a>
+		</li>
+					<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="2" aria-setsize="31" aria-posinset="26">
+				<span class="folder-label">template <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=template%2Fhome-slider.php&amp;theme=novellite" aria-level="3" aria-setsize="1" aria-posinset="8">
+				home-slider.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=template%2Fsection_blog.php&amp;theme=novellite" aria-level="3" aria-setsize="2" aria-posinset="8">
+				section_blog.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=template%2Fsection_countactus.php&amp;theme=novellite" aria-level="3" aria-setsize="3" aria-posinset="8">
+				section_countactus.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=template%2Fsection_pricing.php&amp;theme=novellite" aria-level="3" aria-setsize="4" aria-posinset="8">
+				section_pricing.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=template%2Fsection_team.php&amp;theme=novellite" aria-level="3" aria-setsize="5" aria-posinset="8">
+				section_team.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=template%2Fsection_testimonial.php&amp;theme=novellite" aria-level="3" aria-setsize="6" aria-posinset="8">
+				section_testimonial.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=template%2Fsection_three_column.php&amp;theme=novellite" aria-level="3" aria-setsize="7" aria-posinset="8">
+				section_three_column.php			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=template%2Fsection_woo.php&amp;theme=novellite" aria-level="3" aria-setsize="8" aria-posinset="8">
+				section_woo.php			</a>
+		</li>
+		</ul>
+			</li>
+					<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=template-frontpage.php&amp;theme=novellite" aria-level="2" aria-setsize="27" aria-posinset="31">
+				Front Page - šablona stránky<br><span class="nonessential">(template-frontpage.php)</span>			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=woocommerce.php&amp;theme=novellite" aria-level="2" aria-setsize="28" aria-posinset="31">
+				woocommerce.php			</a>
+		</li>
+					<li role="treeitem" aria-expanded="false" tabindex="-1" aria-level="2" aria-setsize="31" aria-posinset="29">
+				<span class="folder-label">fonts <span class="screen-reader-text">složka</span><span aria-hidden="true" class="icon"></span></span>
+				<ul role="group" class="tree-folder">		<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=fonts%2Fglyphicons-halflings-regular.svg&amp;theme=novellite" aria-level="3" aria-setsize="1" aria-posinset="1">
+				glyphicons-halflings-regular.svg			</a>
+		</li>
+		</ul>
+			</li>
+					<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=license.txt&amp;theme=novellite" aria-level="2" aria-setsize="30" aria-posinset="31">
+				license.txt			</a>
+		</li>
+				<li role="none" class="">
+			<a role="treeitem" tabindex="-1" href="http://kavasped.cz/wp-admin/theme-editor.php?file=readme.txt&amp;theme=novellite" aria-level="2" aria-setsize="31" aria-posinset="31">
+				readme.txt			</a>
+		</li>
+					</ul>
+		</li>
+	</ul>
+</div>
+
+	<form name="template" id="template" action="http://kavasped.cz/wp-admin/theme-editor.php" method="post" class="AVAST_PAM_nonloginform">
+		<input type="hidden" id="nonce" name="nonce" value="c2ce365ad6"><input type="hidden" name="_wp_http_referer" value="/wp-admin/theme-editor.php?file=index.php&amp;theme=novellite">		<div>
+			<label for="newcontent" id="theme-plugin-editor-label">Obsah vybraného souboru:</label>
+			<textarea cols="70" rows="30" name="newcontent" id="newcontent" aria-describedby="editor-keyboard-trap-help-1 editor-keyboard-trap-help-2 editor-keyboard-trap-help-3 editor-keyboard-trap-help-4" style="display: none;">&lt;?php
+/**
+* The main template file.
+*
+* This is the most generic template file in a WordPress theme
+* and one of the two required files for a theme (the other being style.css).
+* It is used to display a page when nothing more specific matches a query. 
+* E.g., it puts together the home page when no home.php file exists.
+* Learn more: http://codex.wordpress.org/Template_Hierarchy
+*
+*/
+?&gt;
+&lt;?php get_header(); ?&gt;
+&lt;div class="page_heading_container" &lt;?php if (get_theme_mod('header_image','') != '') { ?&gt;
+ style="background: url(&lt;?php echo esc_url(get_theme_mod('header_image','')); ?&gt;);"
+ &lt;?php }?&gt; &gt;
+  &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+		&lt;div class="col-md-12"&gt;
+&lt;div class="page_heading_content"&gt;
+&lt;h1 style='visibility: hidden;'&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="page-container"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="page-content"&gt;
+                &lt;div class="col-md-9"&gt;
+                    &lt;div class="content-bar gallery"&gt; 
+                        &lt;?php
+                        $limit = get_option('posts_per_page');
+                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                        query_posts('showposts=' . $limit . '&amp;paged=' . $paged);
+                        $wp_query-&gt;is_archive = true;
+                        $wp_query-&gt;is_home = false;
+                        ?&gt;
+                        &lt;!--Start Post--&gt;
+                        &lt;?php get_template_part('loop', 'blog'); ?&gt;   
+                        &lt;div class="clear"&gt;&lt;/div&gt;
+                        &lt;?php NovelLite_pagination(); ?&gt; 
+                    &lt;/div&gt;
+                &lt;/div&gt;
+				&lt;div class="col-md-3"&gt;
+		&lt;!--Start Sidebar--&gt;
+		&lt;?php get_sidebar(); ?&gt;
+		&lt;!--End Sidebar--&gt;
+		&lt;/div&gt; 
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="clear"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;?php get_footer(); ?&gt;</textarea><div class="CodeMirror cm-s-default CodeMirror-wrap CodeMirror-focused"><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px; width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 1124px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: 0px; border-right-width: 30px; min-height: 1124px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""></div><div class="CodeMirror-code" role="textbox" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" tabindex="0" aria-multiline="true" aria-labelledby="theme-plugin-editor-label" aria-describedby="editor-keyboard-trap-help-1 editor-keyboard-trap-help-2 editor-keyboard-trap-help-3 editor-keyboard-trap-help-4" style=""><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">&lt;?php</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* The main template file.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">*</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* This is the most generic template file in a WordPress theme</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* and one of the two required files for a theme (the other being style.css).</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* It is used to display a page when nothing more specific matches a query. </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* E.g., it puts together the home page when no home.php file exists.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">* Learn more: http://codex.wordpress.org/Template_Hierarchy</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">*</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">*/</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">?&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">&lt;?php</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">get_header</span>(); </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">$arr</span> <span class="cm-operator">=</span> <span class="cm-variable">get_defined_vars</span>();</span></pre></div><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground" contenteditable="false"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" contenteditable="false" style="left: -30px; width: 30px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print_r</span>(<span class="cm-variable-2">$arr</span>);</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">?&gt;</span></span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"page_heading_container"</span> <span class="cm-meta">&lt;?php</span> <span class="cm-keyword">if</span> (<span class="cm-variable">get_theme_mod</span>(<span class="cm-string">'header_image'</span>,<span class="cm-string">''</span>) <span class="cm-operator">!=</span> <span class="cm-string">''</span>) { <span class="cm-meta">?&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-attribute">style</span>=<span class="cm-string">"background: url(</span><span class="cm-meta">&lt;?php</span> <span class="cm-keyword">echo</span> <span class="cm-variable">esc_url</span>(<span class="cm-variable">get_theme_mod</span>(<span class="cm-string">'header_image'</span>,<span class="cm-string">''</span>)); <span class="cm-meta">?&gt;</span><span class="cm-string">);"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-meta">&lt;?php</span> }<span class="cm-meta">?&gt;</span> <span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-md-12"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"page_heading_content"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span> <span class="cm-attribute">style</span>=<span class="cm-string">'visibility: hidden;'</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-meta">&lt;?php</span> <span class="cm-variable">the_title</span>(); <span class="cm-meta">?&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"clear"</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">33</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"page-container"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">34</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">35</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"row"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">36</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"page-content"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">37</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"col-md-9"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">38</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"content-bar gallery"</span><span class="cm-tag cm-bracket">&gt;</span> </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">39</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-meta">&lt;?php</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">40</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">$limit</span> <span class="cm-operator">=</span> <span class="cm-variable">get_option</span>(<span class="cm-string">'posts_per_page'</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">41</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable-2">$paged</span> <span class="cm-operator">=</span> (<span class="cm-variable">get_query_var</span>(<span class="cm-string">'paged'</span>)) <span class="cm-operator">?</span> <span class="cm-variable">get_query_var</span>(<span class="cm-string">'paged'</span>) : <span class="cm-number">1</span>;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 1124px;"></div><div class="CodeMirror-gutters" style="height: 1154px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+			<input type="hidden" name="action" value="update">
+			<input type="hidden" name="file" value="index.php">
+			<input type="hidden" name="theme" value="novellite">
+		</div>
+			<div id="documentation" class="hide-if-no-js">
+		<label for="docs-list">Manuál:</label>
+		<select name="docs-list" id="docs-list"><option value="">Název funkce…</option><option value="NovelLite_pagination">NovelLite_pagination()</option><option value="esc_url">esc_url()</option><option value="get_footer">get_footer()</option><option value="get_header">get_header()</option><option value="get_option">get_option()</option><option value="get_query_var">get_query_var()</option><option value="get_sidebar">get_sidebar()</option><option value="get_template_part">get_template_part()</option><option value="get_theme_mod">get_theme_mod()</option><option value="query_posts">query_posts()</option><option value="the_title">the_title()</option></select>		<input disabled="" id="docs-lookup" type="button" class="button" value="Vyhledat" onclick="if ( &#39;&#39; != jQuery(&#39;#docs-list&#39;).val() ) { window.open( &#39;https://api.wordpress.org/core/handbook/1.0/?function=&#39; + escape( jQuery( &#39;#docs-list&#39; ).val() ) + &#39;&amp;locale=cs_CZ&amp;version=5.1&amp;redirect=true&#39;); }">
+		</div>
+	
+	<div>
+		<div class="editor-notices">
+							<div class="notice notice-warning inline">
+					<p>
+												<strong>Upozornění:</strong>						Soubor je součástí aktuálně používané základní šablony.					</p>
+				</div>
+					</div>
+			<p class="submit">
+			<input type="submit" name="submit" id="submit" class="button button-primary" value="Aktualizovat soubor">			<span class="spinner"></span>
+		</p>
+		</div>
+		<script type="text/html" id="tmpl-wp-file-editor-notice">
+		<div class="notice inline notice-{{ data.type || 'info' }} {{ data.alt ? 'notice-alt' : '' }} {{ data.dismissible ? 'is-dismissible' : '' }} {{ data.classes || '' }}">
+			<# if ( 'php_error' === data.code ) { #>
+				<p>
+					Vaše změny PHP kódu v souboru {{ data.file }} byly vráceny zpět kvůli chybě na řádku č. {{ data.line }}.				</p>
+				<pre>{{ data.message }}</pre>
+			<# } else if ( 'file_not_writable' === data.code ) { #>
+				<p>Pokud chcete uložit upravený soubor, musí mít nastaveno <a href="https://codex.wordpress.org/Changing_File_Permissions" title="Přečtěte si v manuálu o nastavení práv k souborům">právo zápisu</a>, např. CHMOD 666.</p>
+			<# } else { #>
+				<p>{{ data.message || data.code }}</p>
+
+				<# if ( 'lint_errors' === data.code ) { #>
+					<p>
+						<# var elementId = 'el-' + String( Math.random() ); #>
+						<input id="{{ elementId }}"  type="checkbox">
+						<label for="{{ elementId }}">Aktualizovat, i kdyby to mohlo znefunkčnit tento web?</label>
+					</p>
+				<# } #>
+			<# } #>
+			<# if ( data.dismissible ) { #>
+				<button type="button" class="notice-dismiss"><span class="screen-reader-text">Zavřít</span></button>
+			<# } #>
+		</div>
+	</script>
+		</form>
+	<br class="clear">
+</div>
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="wpfooter" role="contentinfo">
+		<p id="footer-left" class="alignleft">
+		<span id="footer-thankyou">Děkujeme, že používáte <a href="https://cs.wordpress.org/">WordPress</a>.</span>	</p>
+	<p id="footer-upgrade" class="alignright">
+		Verze: 5.1	</p>
+	<div class="clear"></div>
+</div>
+<script type="text/template" id="tmpl-elementor-templates-modal__header">
+	<div class="elementor-templates-modal__header__logo-area"></div>
+	<div class="elementor-templates-modal__header__menu-area"></div>
+	<div class="elementor-templates-modal__header__items-area">
+		<# if ( closeType ) { #>
+			<div class="elementor-templates-modal__header__close elementor-templates-modal__header__close--{{{ closeType }}} elementor-templates-modal__header__item">
+				<# if ( 'skip' === closeType ) { #>
+				<span>Přeskočit</span>
+				<# } #>
+				<i class="eicon-close" aria-hidden="true" title="Zavřít"></i>
+				<span class="elementor-screen-only">Zavřít</span>
+			</div>
+		<# } #>
+		<div id="elementor-template-library-header-tools"></div>
+	</div>
+</script>
+
+<script type="text/template" id="tmpl-elementor-templates-modal__header__logo">
+	<span class="elementor-templates-modal__header__logo__icon-wrapper">
+		<i class="eicon-elementor"></i>
+	</span>
+	<span class="elementor-templates-modal__header__logo__title">{{{ title }}}</span>
+</script>
+<script type="text/template" id="tmpl-elementor-finder">
+	<div id="elementor-finder__search">
+		<i class="eicon-search"></i>
+		<input id="elementor-finder__search__input" placeholder="Type to find anything in Elementor">
+	</div>
+	<div id="elementor-finder__content"></div>
+</script>
+
+<script type="text/template" id="tmpl-elementor-finder-results-container">
+	<div id="elementor-finder__no-results">Nebyly nalezeny žádné výsledky.</div>
+	<div id="elementor-finder__results"></div>
+</script>
+
+<script type="text/template" id="tmpl-elementor-finder__results__category">
+	<div class="elementor-finder__results__category__title">{{{ title }}}</div>
+	<div class="elementor-finder__results__category__items"></div>
+</script>
+
+<script type="text/template" id="tmpl-elementor-finder__results__item">
+	<a href="{{ url }}" class="elementor-finder__results__item__link">
+		<div class="elementor-finder__results__item__icon">
+			<i class="eicon-{{{ icon }}}"></i>
+		</div>
+		<div class="elementor-finder__results__item__title">{{{ title }}}</div>
+		<# if ( description ) { #>
+			<div class="elementor-finder__results__item__description">- {{{ description }}}</div>
+		<# } #>
+	</a>
+	<# if ( actions.length ) { #>
+		<div class="elementor-finder__results__item__actions">
+		<# jQuery.each( actions, function() { #>
+			<a class="elementor-finder__results__item__action elementor-finder__results__item__action--{{ this.name }}" href="{{ this.url }}" target="_blank">
+				<i class="eicon-{{{ this.icon }}}"></i>
+			</a>
+		<# } ); #>
+		</div>
+	<# } #>
+</script>
+	<div id="wp-auth-check-wrap" class="hidden">
+	<div id="wp-auth-check-bg"></div>
+	<div id="wp-auth-check">
+	<button type="button" class="wp-auth-check-close button-link"><span class="screen-reader-text">Zavřít dialogové okno</span></button>
+			<div id="wp-auth-check-form" class="loading" data-src="http://kavasped.cz/wp-login.php?interim-login=1&amp;wp_lang=cs_CZ"></div>
+			<div class="wp-auth-fallback">
+		<p><b class="wp-auth-fallback-expired" tabindex="0">Aktuální přihlašovací relace právě vypršela</b></p>
+		<p><a href="http://kavasped.cz/wp-login.php" target="_blank">Přihlaste se prosím znovu.</a>
+		Přihlašovací stránka bude zobrazena v nové záložce. Po přihlášení můžete záložku zavřít a vrátit se zpět na stávající stránku.</p>
+	</div>
+	</div>
+	</div>
+	
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpColorPickerL10n = {"clear":"Vymazat","clearAriaLabel":"Zru\u0161it barvu","defaultString":"V\u00fdchoz\u00ed","defaultAriaLabel":"Vyberte v\u00fdchoz\u00ed barvu","pick":"Zvolit barvu","defaultLabel":"Hodnota barvy"};var commonL10n = {"warnDelete":"Chyst\u00e1te se trvale smazat tyto polo\u017eky z va\u0161eho webu.\nTuto akci nelze vr\u00e1tit zp\u011bt.\n\u201eZru\u0161it\u201c pro zastaven\u00ed, \u201eOK\u201c pro odstran\u011bn\u00ed.","dismiss":"Skr\u00fdt toto upozorn\u011bn\u00ed.","collapseMenu":"Sbalit hlavn\u00ed menu","expandMenu":"Rozbalit hlavn\u00ed menu"};/* ]]> */
+</script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/load-scripts(1).php"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/color-picker.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/wp-polyfill.min.js"></script>
+<script type="text/javascript">
+( 'fetch' in window ) || document.write( '<script src="http://kavasped.cz/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="http://kavasped.cz/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="http://kavasped.cz/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="http://kavasped.cz/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/hooks.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var heartbeatSettings = {"nonce":"52e750d31f"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/heartbeat.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var authcheckL10n = {"beforeunload":"Aktu\u00e1ln\u00ed relace pr\u00e1v\u011b vypr\u0161ela. M\u016f\u017eete se rovnou p\u0159ihl\u00e1sit nebo pou\u017e\u00edt standardn\u00ed p\u0159ihla\u0161ovac\u00ed str\u00e1nku.","interval":"180"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/wp-auth-check.min.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/backbone.min.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/backbone.marionette.min.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/backbone.radio.min.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/common-modules.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/position.min.js"></script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/dialog.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var elementorCommonConfig = {"version":"2.4.6","isRTL":"","activeModules":["ajax","finder","connect"],"urls":{"assets":"http:\/\/kavasped.cz\/wp-content\/plugins\/elementor\/assets\/"},"ajax":{"url":"http:\/\/kavasped.cz\/wp-admin\/admin-ajax.php","nonce":"f9e293f82e"},"finder":{"data":{"edit":{"title":"Upravit","dynamic":true,"name":"edit"},"general":{"title":"Obecn\u00e9","dynamic":false,"items":{"saved-templates":{"title":"Saved Templates","icon":"library-save","url":"http:\/\/kavasped.cz\/wp-admin\/edit.php?post_type=elementor_library&tabs_group=library","keywords":["template","section","page","library"]},"system-info":{"title":"Syst\u00e9mov\u00e9 info","icon":"info","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=elementor-system-info","keywords":["system","info","environment","elementor"]},"role-manager":{"title":"Spr\u00e1vce rol\u00ed","icon":"person","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=elementor-role-manager","keywords":["role","manager","user","elementor"]},"knowledge-base":{"title":"Znalostn\u00ed b\u00e1ze","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=go_knowledge_base_site","keywords":["help","knowledge","docs","elementor"]}},"name":"general"},"create":{"title":"Vytvo\u0159it","dynamic":false,"items":{"post":{"title":"P\u0159idat nov\u00fd P\u0159\u00edsp\u011bvek","icon":"plus-circle","url":"http:\/\/kavasped.cz\/wp-admin\/edit.php?action=elementor_new_post&post_type=post&_wpnonce=ca8da3e3eb","keywords":["post","page","template","new","create"]},"page":{"title":"P\u0159idat nov\u00fd Str\u00e1nka","icon":"plus-circle","url":"http:\/\/kavasped.cz\/wp-admin\/edit.php?action=elementor_new_post&post_type=page&_wpnonce=ca8da3e3eb","keywords":["post","page","template","new","create"]},"elementor_library":{"title":"P\u0159idat nov\u00fd \u0160ablona str\u00e1nky","icon":"plus-circle","url":"http:\/\/kavasped.cz\/wp-admin\/edit.php?post_type=elementor_library#add_new","keywords":["post","page","template","new","create"]}},"name":"create"},"site":{"title":"Str\u00e1nka","dynamic":false,"items":{"homepage":{"title":"Domovsk\u00e1 str\u00e1nka","url":"http:\/\/kavasped.cz","icon":"home-heart","keywords":["home","page"]},"wordpress-dashboard":{"title":"Info deska","icon":"dashboard","url":"http:\/\/kavasped.cz\/wp-admin\/","keywords":["dashboard","wordpress"]},"wordpress-menus":{"title":"Menus","icon":"wordpress","url":"http:\/\/kavasped.cz\/wp-admin\/nav-menus.php","keywords":["menu","wordpress"]},"wordpress-themes":{"title":"Themes","icon":"wordpress","url":"http:\/\/kavasped.cz\/wp-admin\/themes.php","keywords":["themes","wordpress"]},"wordpress-customizer":{"title":"Customizer","icon":"wordpress","url":"http:\/\/kavasped.cz\/wp-admin\/customize.php","keywords":["customizer","wordpress"]},"wordpress-plugins":{"title":"Pluginy","icon":"wordpress","url":"http:\/\/kavasped.cz\/wp-admin\/plugins.php","keywords":["plugins","wordpress"]},"wordpress-users":{"title":"U\u017eivatel\u00e9","icon":"wordpress","url":"http:\/\/kavasped.cz\/wp-admin\/users.php","keywords":["users","profile","wordpress"]}},"name":"site"},"settings":{"title":"Nastaven\u00ed","dynamic":false,"items":{"general-settings":{"title":"Obecn\u00e9 nastaven\u00ed","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=elementor","keywords":["general","settings","elementor"]},"style":{"title":"CSS","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=elementor#tab-style","keywords":["style","settings","elementor"]},"advanced":{"title":"Pokro\u010dil\u00e9","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=elementor#tab-advanced","keywords":["advanced","settings","elementor"]}},"name":"settings"},"tools":{"title":"N\u00e1stroje","dynamic":false,"items":{"tools":{"title":"N\u00e1stroje","icon":"tools","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=elementor-tools","keywords":["tools","regenerate css","safe mode","debug bar","sync library","elementor"]},"replace-url":{"title":"Nahradit URL","icon":"tools","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=elementor-tools#tab-replace_url","keywords":["tools","replace url","domain","elementor"]},"version-control":{"title":"Verzov\u00e1n\u00ed","icon":"time-line","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=elementor-tools#tab-versions","keywords":["tools","version","control","rollback","beta","elementor"]},"maintenance-mode":{"title":"Re\u017eim \u00fadr\u017eby","icon":"tools","url":"http:\/\/kavasped.cz\/wp-admin\/admin.php?page=elementor-tools#tab-maintenance_mode","keywords":["tools","maintenance","coming soon","elementor"]}},"name":"tools"}},"i18n":{"finder":"Finder"}},"connect":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/common.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var elementorAdminConfig = {"home_url":"http:\/\/kavasped.cz","i18n":{"rollback_confirm":"Jste si jist\u00fd, \u017ee chcete znovu nainstalovat p\u0159edchoz\u00ed verzi?","rollback_to_previous_version":"Vr\u00e1cen\u00ed zp\u011bt k p\u0159edchoz\u00ed verzi","yes":"Continue","cancel":"Zru\u0161it","new_template":"Nov\u00e9 t\u00e9ma","back_to_wordpress_editor_message":"Please note that you are switching to WordPress default editor. Your current layout, design and content might break.","back_to_wordpress_editor_header":"Zp\u011bt do editoru WordPress"},"feedback":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/admin.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"N\u00e1sleduj\u00edc\u00ed >","prev":"< P\u0159edchoz\u00ed","image":"Obr\u00e1zek","of":"z celkem","close":"Zav\u0159\u00edt","noiframes":"Tato funkce WordPressu vy\u017eaduje pou\u017eit\u00ed vnit\u0159n\u00edch r\u00e1m\u016f (iframe), kter\u00e9 v\u0161ak patrn\u011b nem\u00e1te povoleny nebo je v\u00e1\u0161 prohl\u00ed\u017ee\u010d v\u016fbec nepodporuje.","loadingAnimation":"http:\/\/kavasped.cz\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Editor šablon ‹ Kavasped — WordPress_files/thickbox.js"></script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+
+
+<div id="wp-a11y-speak-polite" aria-live="polite" aria-relevant="additions text" aria-atomic="true" class="screen-reader-text wp-a11y-speak-region"></div><div id="wp-a11y-speak-assertive" aria-live="assertive" aria-relevant="additions text" aria-atomic="true" class="screen-reader-text wp-a11y-speak-region"></div></body></html>

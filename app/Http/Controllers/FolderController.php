@@ -90,8 +90,6 @@ class FolderController extends Controller
             if(isset($_GET['password'])){
                 if(count($folder->passwords()->where('password',$_GET['password'])->get())>0){
                     if($folder->passwords()->where('password',$_GET['password'])->get()[0]->password_count>0){
-                        $password_count=$folder->passwords()->where('password',$_GET['password'])->get()[0]->password_count;
-                        $folder->passwords()->where('password',$_GET['password'])->decrement('password_count');
                         return $folder;
                     }else{
                         return ['error' => true, 'message' => 'Heslo se již nedá použít. Požádejte adminitrátora o nové heslo!'];

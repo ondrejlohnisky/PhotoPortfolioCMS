@@ -21,6 +21,7 @@
 
 <style lang="scss">
 
+
 div.page{
    position:absolute;
    height:100%;
@@ -32,20 +33,22 @@ div.page{
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+   position:absolute;
+   right:0px !important;
+   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+   box-shadow: inset 0 0 5px grey; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: grey; 
-  border-radius: 5px;
-}
+   background: grey; 
+   border-radius: 5px;
+}  
 
 ::-webkit-scrollbar-thumb:hover {
-  background:rgb(172, 172, 172); 
+   background:rgb(172, 172, 172); 
 }
 
 </style>

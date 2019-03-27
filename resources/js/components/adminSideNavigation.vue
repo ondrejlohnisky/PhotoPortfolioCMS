@@ -12,7 +12,7 @@
                <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaSlozek' ? 'active navItem' : 'navItem'">Správa složek</router-link></li>
                <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaAdministratoru' ? 'active navItem' : 'navItem'">Správa administrátorů</router-link></li>
             </ul><br/>
-            <Footer/>
+            <Footer class="footer"/>
          </div>
       </div>
    </div>
@@ -104,6 +104,11 @@ h5{
    font-weight: bold;
 }
 
+.footer{
+   position:absolute;
+   bottom:0;
+}
+
 #close{
    position:absolute;
    cursor:pointer;
@@ -189,11 +194,6 @@ h5{
 .active{
    border-right:25px solid rgba(0, 128, 0, 0.6) !important;
    background-color: rgb(223, 223, 223);
-}
-
-.footer{
-   padding:10px 25px;
-   font-size:15px;
 }
 
 @media (max-width: 991px){

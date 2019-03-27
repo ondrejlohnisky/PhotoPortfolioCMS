@@ -1,6 +1,7 @@
 <template>
    <div class="admin">
       <uploadModal v-if="$store.state.uploadModal"/>
+      <settingModal v-if="$store.state.settingModal" :user="user"/>
       <adminSideNavigation :username="user.name" class="sideNavigation"/>
       <adminNavigation class="navigation"/>
       <div class="content">
@@ -15,6 +16,7 @@
 import adminNavigation from './components/adminNavigation'
 import adminSideNavigation from './components/adminSideNavigation'
 import uploadModal from './components/uploadModal'
+import settingModal from './components/settingModal'
 import {EventBus} from './event-bus.js'
    export default {
       props:{
@@ -36,7 +38,8 @@ import {EventBus} from './event-bus.js'
       components:{
          adminSideNavigation,
          adminNavigation,
-         uploadModal
+         uploadModal,
+         settingModal
       },
       mounted() {
          this.$store.commit('setApiToken',this.user.api_token);

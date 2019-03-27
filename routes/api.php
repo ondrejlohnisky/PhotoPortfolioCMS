@@ -17,11 +17,11 @@ use Illuminate\Http\Request;
 
 Route::apiResource('folders','FolderController');
 Route::get('/folders/check/{folder}','FolderController@checkFolderAccessability');
-Route::get('admin/folders/{folder}','FolderController@adminShow');
+Route::get('admin/folders/{folder}','FolderController@adminShow'); //admin verze getFolders vyžadující admin oprávnění
 Route::apiResource('passwords','PasswordController');
 Route::apiResource('images','ImageController');
 Route::get('folderImages/{folder}', 'ImageController@getImages');
-Route::get('admin/folderImages/{folder}', 'ImageController@adminGetImages');
+Route::get('admin/folderImages/{folder}', 'ImageController@adminGetImages'); //admin verze getImages vyžadující admin oprávnění
 
 Route::group(['prefix' => '/v1', 'middleware' => 'auth:api'], function () {
     Route::get('/user', function (Request $request) {

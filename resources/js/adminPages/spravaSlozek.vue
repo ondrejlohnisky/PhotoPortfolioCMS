@@ -69,7 +69,7 @@ import {EventBus} from '../event-bus.js'
             $(window).scroll(function(){
                $(this).scrollTop(top).scrollLeft(left);
             });
-            this.$store.commit('openUploadModal');
+            this.$store.commit('uploadModal');
          }
       },
       mounted(){

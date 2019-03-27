@@ -17,7 +17,7 @@
       <div v-if="nextPageUrl!=null && images.length>0" class="row">
          <div class="col-4"></div>
          <div class="col-4">
-            <div @click="getImages(nextPageUrl)" class="btn btn-primary btn-rounded">Načíst další</div>  
+            <div @click="getImages(nextPageUrl)" class="btn btn-primary btn-rounded">Načíst další ...</div>  
          </div>
          <div class="col-4"></div>
       </div>

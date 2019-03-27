@@ -6,6 +6,7 @@ use App\Image;
 use App\Folder;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -40,7 +41,6 @@ class ImageController extends Controller
             if(isset($_GET['password'])){
                 if(count($folder->passwords()->where('password',$_GET['password'])->get())>0){
                     if($folder->passwords()->where('password',$_GET['password'])->get()[0]->password_count>0){
-                        $password_count=$folder->passwords()->where('password',$_GET['password'])->get()[0]->password_count;
                         $folder->passwords()->where('password',$_GET['password'])->decrement('password_count');
                         return $folder->images()->simplePaginate(10);
                     }else{
@@ -126,7 +126,9 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image)
     {
-        //
+        $image->title = $request->title;
+        $image->description = $request->description;
+        $image->save();
     }
 
     /**
@@ -137,5 +139,8 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
+        Storage::disk('local')->delete($image->src);
+        $image->delete();
+        return ['error' => false,'message' => 'Fotka smazána!'];
     }
 }

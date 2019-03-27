@@ -75,7 +75,7 @@ export default {
       closeUploadModal(){
          $('body').css('overflow', 'auto');
          $(window).unbind('scroll');
-         this.$store.commit('closeUploadModal')
+         this.$store.commit('uploadModal')
       },
       createFolder(){
          if(this.title==''){

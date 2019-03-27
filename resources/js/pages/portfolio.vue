@@ -32,14 +32,16 @@
                <div class="h6 text-danger">Složka <span class="text-primary">{{ passwordModalName }}</span> je zamčená</div>
             </div>
          </div>
-         <div class="row">
-            <div class="col-md-7">
-               <input id="passwordInput" v-model="password" type="password" class="form-control" placeholder="heslo">
+         <form>
+            <div class="row">
+               <div class="col-md-7">
+                  <input id="passwordInput" v-model="password" type="password" class="form-control" placeholder="heslo">
+               </div>
+               <div class="col-md-3">
+                  <button @click.prevent="enterPassword()" class="btn btn-success btn-md">Potvrdit</button>
+               </div>
             </div>
-            <div class="col-md-3">
-               <button @click="enterPassword()" class="btn btn-success btn-md">Potvrdit</button>
-            </div>
-         </div>
+         </form>
       </div>
    </div>
 </template>
@@ -66,6 +68,8 @@ export default {
          this.passwordModal=false;
          this.password='';
          this.passwordModalId=0;
+         this.error=false;
+         this.errorMessage='';
       },
       openPasswordModal(){
          var top = $(window).scrollTop();

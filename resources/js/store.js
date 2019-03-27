@@ -5,8 +5,8 @@ export default new Vuex.Store({
    state:{
       ApiToken: 'undefined',
       uploadModal:false,
-      folderPassword:''
-
+      settingModal:false,
+      folderPassword:'',
    },
    mutations:{
       setFolderPassword(state,password){
@@ -16,11 +16,11 @@ export default new Vuex.Store({
          state.ApiToken=token;
       },
       //upload Modal-otevření/zavření upload modalu
-      openUploadModal(state){
-         state.uploadModal=true;
+      uploadModal(state){
+         state.uploadModal=!state.uploadModal;
       },
-      closeUploadModal(state){
-         state.uploadModal=false;
+      settingModal(state){
+         state.settingModal=!state.settingModal;
       }
    }
 
