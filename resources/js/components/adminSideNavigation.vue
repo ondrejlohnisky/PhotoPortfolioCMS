@@ -10,7 +10,8 @@
             <ul class="nav">
                <li><router-link :to="{name: 'dashboard'}" :class="this.$route.name=='dashboard' ? 'active navItem' : 'navItem'">Dashboard</router-link></li>
                <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaSlozek' ? 'active navItem' : 'navItem'">Správa složek</router-link></li>
-               <li><router-link :to="{name: 'spravaSlozek'}" :class="this.$route.name=='spravaAdministratoru' ? 'active navItem' : 'navItem'">Správa administrátorů</router-link></li>
+               <li><router-link :to="{name: 'adminreview'}" :class="this.$route.name=='adminreview' ? 'active navItem' : 'navItem'">Review</router-link></li>
+               <li><router-link :to="{name: 'administratori'}" :class="this.$route.name=='administratori' ? 'active navItem' : 'navItem'">Administrátoři</router-link></li>
             </ul><br/>
             <Footer class="footer"/>
          </div>

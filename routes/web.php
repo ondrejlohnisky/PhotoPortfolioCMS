@@ -39,7 +39,7 @@ Route::get('/access/images/folders/{folder}/{filename}','ImageController@adminAc
 
 //auth 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('/{adminVue}','AdminController@showPage')->where('adminVue','|dashboard|sprava_slozek|folder\/[\d]*');
+    Route::get('/{adminVue}','AdminController@showPage')->where('adminVue','|dashboard|sprava_slozek|folder\/[\d]*|review|administratori');
     Auth::routes(['register' => false]);
 });
 

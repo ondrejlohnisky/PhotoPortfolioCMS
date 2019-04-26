@@ -7,6 +7,7 @@ export default new Vuex.Store({
       uploadModal:false,
       settingModal:false,
       folderPassword:'',
+      showSlider:false
    },
    mutations:{
       setFolderPassword(state,password){
@@ -21,6 +22,10 @@ export default new Vuex.Store({
       },
       settingModal(state){
          state.settingModal=!state.settingModal;
+      },
+      //slider zavřít
+      toggleSlider(state){
+         state.showSlider=!state.showSlider;
       }
    }
 

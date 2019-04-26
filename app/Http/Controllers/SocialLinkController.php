@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class SocialLinkController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth:api')->only(['store','update','destroy']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,17 +17,7 @@ class SocialLinkController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return social_link::get();
     }
 
     /**
@@ -33,32 +26,7 @@ class SocialLinkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\social_link  $social_link
-     * @return \Illuminate\Http\Response
-     */
-    public function show(social_link $social_link)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\social_link  $social_link
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(social_link $social_link)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -69,7 +37,13 @@ class SocialLinkController extends Controller
      */
     public function update(Request $request, social_link $social_link)
     {
-        //
+        try {
+            $social_link->link=$request->link;
+            $social_link->save();
+        } catch (\Throwable $th) {
+            echo $th;
+        }
+
     }
 
     /**

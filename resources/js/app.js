@@ -17,6 +17,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook,faInstagram,faFlickr,faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faCog,faSignOutAlt,faDesktop,faPlusCircle,faImages,faImage,faLock,faTrashAlt,faCheckCircle, faSave, faEdit} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 // veřejné stránky
 import Bts from './pages/bts'
 import Contact from './pages/contact'
@@ -30,6 +31,8 @@ import Folder from './pages/folder'
 import SpravaSlozek from './adminPages/spravaSlozek'
 import Dashboard from './adminPages/dashboard'
 import AdminFolder from './adminPages/adminfolder'
+import AdminReview from './adminPages/AdminReview'
+import Administratori from './adminPages/administratori'
 
 //rozdělovací komponenty mezi veřejnými a administrátorkými stránky
 import page from './page'
@@ -94,7 +97,15 @@ const router = new VueRouter({
             path: '/admin/folder/:id',
             name: 'adminfolder',
             component: AdminFolder
-        }
+        },{
+            path: '/admin/review',
+            name: 'adminreview',
+            component: AdminReview
+        },{
+            path: '/admin/administratori',
+            name: 'administratori',
+            component: AdminReview
+        },
     ],
 });
 

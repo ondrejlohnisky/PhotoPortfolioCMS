@@ -19,11 +19,11 @@
                </thead>
                <tbody>
                   <tr v-for="(password,index) in passwords" :key="index">
-                     <td><p class="text-muted text-monospace">{{ password.password }}</p></td>
+                     <td><p class="text-muted text-monospace ">{{ password.password }}</p></td>
                      <td>
                         <div @click="password.password_count > 1 ? password.password_count-- : ''" class="circle d-inline-block">-</div>
                         <div class="md-form d-inline-block">
-                           <input v-model="password.password_count" type="number" id="form2" class="form-control">
+                           <input v-model.number="password.password_count" type="number" id="form2" class="form-control"/>
                         </div> 
                         <div @click="password.password_count++" class="circle d-inline-block">+</div></td>
                      <td>
@@ -49,19 +49,53 @@
             <div class="col-md-9"><h3>{{ title }}</h3><p>{{ description }}</p></div>
          </div><hr/>
          <button @click="openaddImagesModal()" class="btn btn-success btn-md my-4"><font-awesome-icon color="white" size="lg" :icon="['fas','plus-circle']"/>  Přidat fotky</button>
-         <div v-if="images.length>0" class="row">
-            <div class="col-md-4" v-for="(image,index) in images" :key="index">
-               <div class="fotka">
-                  <div class="img-options">
-                     <div class="img-text">
-                        <h6 class="img-title">{{ image.title }}</h6>
-                        <h6 class="img-description">{{ image.description }}</h6>
-                        
+         <div v-if="images.length>0" class="rowC">
+            <div class="columnC">
+               <div v-for="(image,index) in images1" :key="index">
+                  <div class="fotka">
+                     <div class="img-options">
+                        <div class="img-text">
+                           <h6 class="img-title">{{ image.title }}</h6>
+                           <h6 class="img-description">{{ image.description }}</h6>
+                           
+                        </div>
+                        <button @click="openEditImageModal(image)" class="img-button btn btn-blue-grey btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','edit']"/></button>
+                        <button @click="openDeleteImageModal(image.id)" class="img-button btn btn-danger btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','trash-alt']"/></button>
                      </div>
-                     <button @click="openEditImageModal(image)" class="img-button btn btn-blue-grey btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','edit']"/></button>
-                     <button @click="openDeleteImageModal(image.id)" class="img-button btn btn-danger btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','trash-alt']"/></button>
+                     <img @click="slideIndex=index" :src="image.src" :alt="image.title" class="img-thumbnail">
                   </div>
-                  <img @click="slideIndex=index" :src="image.src" :alt="image.title" class="img-thumbnail">
+               </div>
+            </div>
+            <div class="columnC">
+               <div v-for="(image,index) in images2" :key="index">
+                  <div class="fotka">
+                     <div class="img-options">
+                        <div class="img-text">
+                           <h6 class="img-title">{{ image.title }}</h6>
+                           <h6 class="img-description">{{ image.description }}</h6>
+                           
+                        </div>
+                        <button @click="openEditImageModal(image)" class="img-button btn btn-blue-grey btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','edit']"/></button>
+                        <button @click="openDeleteImageModal(image.id)" class="img-button btn btn-danger btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','trash-alt']"/></button>
+                     </div>
+                     <img @click="slideIndex=index" :src="image.src" :alt="image.title" class="img-thumbnail">
+                  </div>
+               </div>
+            </div>
+            <div class="columnC">
+               <div v-for="(image,index) in images3" :key="index">
+                  <div class="fotka">
+                     <div class="img-options">
+                        <div class="img-text">
+                           <h6 class="img-title">{{ image.title }}</h6>
+                           <h6 class="img-description">{{ image.description }}</h6>
+                           
+                        </div>
+                        <button @click="openEditImageModal(image)" class="img-button btn btn-blue-grey btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','edit']"/></button>
+                        <button @click="openDeleteImageModal(image.id)" class="img-button btn btn-danger btn-sm btn-rounded float-right mx-1"><font-awesome-icon size="lg" :icon="['fas','trash-alt']"/></button>
+                     </div>
+                     <img @click="slideIndex=index" :src="image.src" :alt="image.title" class="img-thumbnail">
+                  </div>
                </div>
             </div>
          </div>
@@ -242,6 +276,53 @@ export default {
       }
    },
    computed:{
+      images1(){
+         var arr = [];
+         let temp = 1;
+         for(var i=0;i<this.images.length;i++){
+            if(temp==3){
+               temp++;
+            }else if(temp==2){
+               temp++;
+            }else if(temp==1){
+               arr.push(this.images[i]);
+               temp++;
+            }
+            temp==4 ? temp=1 : '';
+         }
+         return arr;
+      },
+      images2(){
+         var arr = [];
+         let temp = 1;
+         for(var i=0;i<this.images.length;i++){
+            if(temp==3){
+               temp++;
+            }else if(temp==2){
+               arr.push(this.images[i]);
+               temp++;
+            }else if(temp==1){
+               temp++;
+            }
+            temp==4 ? temp=1 : '';
+         }
+         return arr;
+      },images3(){
+         var arr = [];
+         let temp = 1;
+         for(var i=0;i<this.images.length;i++){
+            if(temp==3){
+               arr.push(this.images[i]);
+               temp++;
+            }else if(temp==2){
+               temp++;
+            }else if(temp==1){
+               temp++;
+            }
+            temp==4 ? temp=1 : '';
+         }
+         return arr;
+      },
       addImagesSizeTotal(){
          let sum=0;
          this.addImages.forEach(element => {
@@ -437,6 +518,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .fotka{
    position:relative;
    width:100%;
@@ -467,18 +549,19 @@ export default {
          position:absolute;
          top:0px;
          padding:5px;
+         width:100%; height:auto;
+         max-height: 100px;
+         overflow: auto;
+         word-wrap: none;
+         color: rgb(255, 255, 255); 
+         mix-blend-mode: hard-light;
       }
       .img-title{
-         width:100%; height:auto;
-         word-wrap: none;
-         color: rgb(255, 255, 255); 
-         mix-blend-mode: hard-light;
+         text-align: center;
+         font-size: 20px;
       }
       .img-description{
-         width:100%; height:auto;
-         word-wrap: none;
-         color: rgb(255, 255, 255); 
-         mix-blend-mode: hard-light;
+         font-size: 15px;
       }
    }
 }
@@ -603,6 +686,7 @@ table input[type=number]{
    .public-image{
       display:inline-block;
       text-align: center;
+      
    }
    .col-md-9{
       p{
@@ -628,13 +712,16 @@ table input[type=number]{
 
    display: flex;
    flex-wrap: wrap;
-   padding: 0 4px;
 }
 
 .columnC {
    flex: 33.333333333333333%;
    max-width: 33.333333333333333%;
-   padding: 0 10px;
+   padding: 0 5px;
+   .fotka{
+      margin-bottom:10px;
+   }
+
 }
 @media (max-width:650px){
    .columnC {
@@ -646,5 +733,6 @@ table input[type=number]{
 .columnC>div {
   vertical-align: middle;
 }
+
 </style>
 

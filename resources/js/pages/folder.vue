@@ -1,35 +1,62 @@
 <template>
-   <div class="jumbotron">
-      <div class="row">
-         <div class="col-md-3 public-image"><img class="rounded-circle" :src="public_image" :alt="title"></div>
-         <div class="col-md-9"><h3>{{ title }}</h3><p>{{ description }}</p></div>
-      </div>
-      <hr/>
-      <br/>
-      <div v-if="images.length>0" class="row">
-         <div class="col-md-4" v-for="(image,index) in images" :key="index">
-            <img @click="slideIndex=index" :src="image.src" :alt="image.title" class="img-thumbnail z-depth-2">
+   <div>
+      <div class="jumbotron">
+         <div class="row">
+            <div class="col-md-3 public-image"><img class="rounded-circle" :src="public_image" :alt="title"></div>
+            <div class="col-md-9"><h3>{{ title }}</h3><p>{{ description }}</p></div>
+         </div>
+         <hr/>
+         <br/>
+         <div v-if="windowWidth>650"> 
+            <div v-if="images.length>0" class="rowC">
+               <div class="columnC">
+                  <div v-for="(image,index) in images1" :key="index">
+                     <img @click="openSlider(index*3)" :src="image.src" :alt="image.title" class="img-thumbnail z-depth-1">
+                  </div>
+               </div>
+               <div class="columnC">
+                  <div v-for="(image,index) in images2" :key="index">
+                     <img @click="openSlider((index*3)+1)" :src="image.src" :alt="image.title" class="img-thumbnail z-depth-1">
+                  </div>
+               </div>
+               <div class="columnC">
+                  <div v-for="(image,index) in images3" :key="index">
+                     <img @click="openSlider((index*3)+2)" :src="image.src" :alt="image.title" class="img-thumbnail z-depth-1">
+                  </div>
+               </div>
+            </div>
+            <div v-else class="alert alert-secondary" role="alert">
+               <strong>Zatím žádné příspěvky</strong>
+            </div>
+         </div>
+         <div v-else>
+            <div class="row">
+               <div class="col-12" v-for="(image,index) in images" :key="index">
+                     <img @click="openSlider(index)" :src="image.src" :alt="image.title" class="img-thumbnail z-depth-1">
+                  </div>
+            </div>
+         </div>
+         <div v-if="nextPageUrl!=null && images.length>0" class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+               <div @click="getImages(nextPageUrl)" class="btn btn-primary btn-rounded">Načíst další ...</div>  
+            </div>
+            <div class="col-4"></div>
          </div>
       </div>
-      <div v-else class="alert alert-secondary" role="alert">
-         <strong>Zatím žádné příspěvky</strong>
-      </div>
-      <div v-if="nextPageUrl!=null && images.length>0" class="row">
-         <div class="col-4"></div>
-         <div class="col-4">
-            <div @click="getImages(nextPageUrl)" class="btn btn-primary btn-rounded">Načíst další ...</div>  
+      <transition name="fade">
+         <div v-if="$store.state.showSlider">
+            <image-slider-gallery :images="images" :index="slideIndex"/>
          </div>
-         <div class="col-4"></div>
-      </div>
-   <vue-gallery :images="images.map(image=>image.src)" :index="slideIndex" @close="slideIndex=null"/>
+      </transition>
    </div>
 </template>
 
 <script>
-   import VueGallery from 'vue-gallery'
+   import imageSliderGallery from '../components/image-slider-gallery';
    export default {
       components:{
-         VueGallery
+         imageSliderGallery
       },
       data(){
          return {
@@ -51,13 +78,66 @@
                //    updated_at: "2018-12-09 14:17:27"
                // }
             ],
-            nextPageUrl:''
+            nextPageUrl:'',
+            windowWidth:0
+         }
+      },
+      computed:{
+         images1(){
+            var arr = [];
+            let temp = 1;
+            for(var i=0;i<this.images.length;i++){
+               if(temp==3){
+                  temp++;
+               }else if(temp==2){
+                  temp++;
+               }else if(temp==1){
+                  arr.push(this.images[i]);
+                  temp++;
+               }
+               temp==4 ? temp=1 : '';
+            }
+            return arr;
+         },
+         images2(){
+            var arr = [];
+            let temp = 1;
+            for(var i=0;i<this.images.length;i++){
+               if(temp==3){
+                  temp++;
+               }else if(temp==2){
+                  arr.push(this.images[i]);
+                  temp++;
+               }else if(temp==1){
+                  temp++;
+               }
+               temp==4 ? temp=1 : '';
+            }
+            return arr;
+         },images3(){
+            var arr = [];
+            let temp = 1;
+            for(var i=0;i<this.images.length;i++){
+               if(temp==3){
+                  arr.push(this.images[i]);
+                  temp++;
+               }else if(temp==2){
+                  temp++;
+               }else if(temp==1){
+                  temp++;
+               }
+               temp==4 ? temp=1 : '';
+            }
+            return arr;
          }
       },
       methods:{
+         openSlider(index){
+            this.$store.commit('toggleSlider');
+            this.slideIndex=index;
+         },
          getFolder(id,password){
             axios.get('/api/folders/'+id+'?password='+password).then((response)=>{
-               console.log(response)
                this.id=response.data.id;
                this.title=response.data.title;
                this.description=response.data.description;
@@ -82,11 +162,31 @@
       },
       mounted(){
          this.getFolder(this.$route.params.id,this.$store.state.folderPassword);
+         this.windowWidth=window.innerWidth
+         window.addEventListener('resize', evt => {
+            this.windowWidth=window.innerWidth;
+         });
+      },
+      destroyed(){
+         window.removeEventListener('resize');
       }
    }
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active{
+   transition: opacity .5s;
+}
+.fade-leave-active {
+   opacity: 0;
+}
+.fade-enter, .fade-leave-to {
+   opacity: 0;
+}
+
+.img-thumbnail{
+   margin-bottom: 10px;
+}
 .row{
    .col-md-4{
       margin-bottom:1.5em;
@@ -109,5 +209,32 @@
       border:3px solid darkgrey;
    }
 }
+
+.rowC {
+
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.columnC {
+   flex: 33.333333333333333%;
+   max-width: 33.333333333333333%;
+   padding: 0 5px;
+   .fotka{
+      margin-bottom:10px;
+   }
+
+}
+@media (max-width:650px){
+   .columnC {
+      flex: 100%;
+      max-width: 100%;
+   }
+}
+
+.columnC>div {
+  vertical-align: middle;
+}
+
 </style>
 

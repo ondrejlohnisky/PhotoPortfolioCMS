@@ -12,7 +12,9 @@
          </li>
       </ul>
       <div class="imgContainer">
-         <img v-for="(image,index) in images" :key="index" :src="image.src" :alt="image.description">
+         <div class="image" v-for="(image,index) in images" :key="index" >
+            <img :src="image.src" :alt="image.description">
+         </div>
       </div>
    </div>
 </template>
@@ -188,8 +190,8 @@
             this.mountInterval();
          },
          addPhotoOnStartAndEnd(){
-            const lastPic = $(".imgContainer > img:last-child").clone();
-            const firstPic = $(".imgContainer > img:first-child").clone();
+            const lastPic = $(".imgContainer > .image:last-child").clone();
+            const firstPic = $(".imgContainer > .image:first-child").clone();
             $(".imgContainer").prepend(lastPic);
             $(".imgContainer").append(firstPic);
 
@@ -214,10 +216,16 @@
                });
             }
 
-            $(".imgContainer img,.view").css({
+            $(".imgContainer>.image,.view").css({
                'width':this.width+'px',
                'height':(this.width*3)/4+'px'
             });
+
+            $(".imgContainer>.image>img").css({
+               'width':'auto ',
+               'height':(this.width*3)/4+'px'
+            });
+            
          },
          mountInterval() {
             var that=this;
@@ -257,8 +265,12 @@
 .col-md-6{
       padding:0;
 }
-.imgContainer img{
-   display:inline;
+.imgContainer>.image{
+   display:inline-block;
+   img{
+      margin-left:auto;
+      margin-right:auto;
+   }
 }
 .view{
    -webkit-user-select:none;
@@ -294,7 +306,7 @@
       position:absolute;
       top:50%;
       transform: translate(0,-50%);
-      color:white;
+      color:black;
       z-index: 10000;
    }
    .arrow-right{

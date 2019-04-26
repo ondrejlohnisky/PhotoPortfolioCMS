@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg- b g rounded-bottom">
         <div class="container-fluid">
             <router-link :to="{name: 'home'}"><img draggable="false" src="/images/PodpisLogo.png" alt="PetrSmille" class="logo"></router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID">
@@ -25,9 +25,7 @@
                     </li>
                 </ul>
                 <div class="icons ml-auto">
-                    <li class="facebook"><a href=""><font-awesome-icon size="2x" :icon="['fab','facebook']" /></a></li>
-                    <li class="instagram"><a href=""><font-awesome-icon size="2x" :icon="['fab','instagram']" /></a></li>
-                    <li class="youtube"><a href=""><font-awesome-icon size="2x" :icon="['fab','youtube']" /></a></li>
+                    <li v-for="(link,index) in links" :key="index" :class="link.name"><a :href="link.link" target="_blank"><font-awesome-icon size="2x" :icon="['fab',link.name]" /></a></li>
 
                     <svg width="0px" height="0px" >
                         <linearGradient id="lgrad" x1="50%" y1="0%" x2="50%" y2="100%" > 
@@ -46,6 +44,16 @@
 
 <script>
     export default {
+        data() {
+            return {
+                links:[]
+            }
+        },
+        mounted() {
+            axios.get('/api/social_links').then((response) => {
+                this.links=response.data;
+            });
+        },
     }
 </script>
 

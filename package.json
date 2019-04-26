@@ -28,7 +28,6 @@
         "es6-promise": "^4.2.5",
         "eslint": "^5.11.1",
         "mdbootstrap": "^4.5.16",
-        "vue-gallery": "^1.5.0",
         "vue-router": "^3.0.2",
         "vuex": "^3.0.1"
     }
