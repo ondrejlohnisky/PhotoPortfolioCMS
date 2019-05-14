@@ -23,6 +23,9 @@ Route::apiResource('images','ImageController');
 Route::get('folderImages/{folder}', 'ImageController@getImages');
 Route::get('admin/folderImages/{folder}', 'ImageController@adminGetImages'); //admin verze getImages vyžadující admin oprávnění
 Route::apiResource('/social_links','SocialLinkController');
+Route::post('/invitation','InvitationController@store');
+Route::put('/invitation/{invitation}','InvitationController@verify');
+Route::apiResource('/user','AdminController');
 
 Route::group(['prefix' => '/v1', 'middleware' => 'auth:api'], function () {
     Route::get('/user', function (Request $request) {

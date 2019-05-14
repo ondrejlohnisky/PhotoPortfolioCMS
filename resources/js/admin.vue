@@ -4,7 +4,7 @@
       <settingModal v-if="$store.state.settingModal" :user="user"/>
       <adminSideNavigation :username="user.name" class="sideNavigation"/>
       <adminNavigation class="navigation"/>
-      <div class="content">
+      <div class="content" v-if="$store.state.ApiToken!='undefined'">
          <div class="container-fluid">
             <router-view/>
          </div>
@@ -42,6 +42,7 @@ import {EventBus} from './event-bus.js'
          settingModal
       },
       mounted() {
+         this.$store.commit('setUser',this.user);
          this.$store.commit('setApiToken',this.user.api_token);
          axios.defaults.headers.common['Authorization'] = 'Bearer '+this.user.api_token;
       }

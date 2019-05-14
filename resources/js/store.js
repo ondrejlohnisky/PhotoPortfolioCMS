@@ -7,7 +7,8 @@ export default new Vuex.Store({
       uploadModal:false,
       settingModal:false,
       folderPassword:'',
-      showSlider:false
+      showSlider:false,
+      user:{}
    },
    mutations:{
       setFolderPassword(state,password){
@@ -15,6 +16,9 @@ export default new Vuex.Store({
       },
       setApiToken(state,token){ // nastavit administrátorký api token pro CRUD  (bezpečnost)
          state.ApiToken=token;
+      },
+      setUser(state,user){
+         state.user=user;
       },
       //upload Modal-otevření/zavření upload modalu
       uploadModal(state){

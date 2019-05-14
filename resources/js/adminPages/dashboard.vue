@@ -5,7 +5,7 @@
          </div>
          <div class="col-md-4">
             <h3>Odkazy na sociální sítě</h3>
-            <ul class="icons list-group list-group-flush">
+            <ul v-if="links.length>0" class="icons list-group list-group-flush">
                <li>
                   <div class="md-form">
                      <div class="facebook prefix"><font-awesome-icon size="sm" :icon="['fab','facebook']" /></div>

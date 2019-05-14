@@ -15,7 +15,7 @@
          <p class="h6 mb-4">Základní informace</p>
          <div class="form-row">
             <div class="col-sm-6 mb-2">
-               <input v-model="title" type="text" class="form-control" placeholder="Název"> 
+               <input v-model="title" type="text" class="form-control" placeholder="Název" max="25"> 
             </div>
             <div class="col-sm-6 mb-2">
                <textarea v-model="description" type="text" class="form-control" placeholder="Popis"></textarea>

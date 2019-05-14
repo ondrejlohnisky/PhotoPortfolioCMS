@@ -59,9 +59,6 @@ import {EventBus} from '../event-bus.js'
                this.folders=response.data.data;
             })
          },
-         uploadFolder(){
-            axios.post('/api/folders',)
-         },
          openUploadModal(){
             var top = $(window).scrollTop();
             var left = $(window).scrollLeft();

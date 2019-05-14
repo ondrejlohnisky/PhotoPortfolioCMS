@@ -3,10 +3,17 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Invitation;
+use App\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
+
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -22,6 +29,8 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+
+    
 
     /**
      * Where to redirect users after registration.
@@ -63,11 +72,39 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'api_token' => str_random(60),
-        ]);
+        try {
+            $invitation = Invitation::get()->where('email',$data['email'])->first();
+            if($invitation!=null){
+                if($data['token'] == $invitation->token){
+                    $user = User::create([
+                        'name' => $data['name'],
+                        'email' => $data['email'],
+                        'password' => Hash::make($data['password']),
+                        'api_token' => str_random(60),
+                    ]);
+                    $user->roles()->attach(Role::where('name', 'Admin')->first());
+
+                    Mail::to($data['email'])->send(new WelcomeMail($user));
+                    return $user;
+                }
+            }else return false;
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+        
+    }
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        
+        if($user = $this->create($request->all())){
+            event(new Registered($user));
+
+            $this->guard()->login($user);
+
+            return $this->registered($request, $user)
+                            ?: redirect($this->redirectPath());
+        }else return redirect('/admin/register');
     }
 }

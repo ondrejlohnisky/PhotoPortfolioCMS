@@ -104,7 +104,7 @@ const router = new VueRouter({
         },{
             path: '/admin/administratori',
             name: 'administratori',
-            component: AdminReview
+            component: Administratori
         },
     ],
 });

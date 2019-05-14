@@ -3,17 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
 
 class AdminController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth');
+        $this->middleware('auth:api', ['only' => ['index']]);
     }
 
     public function showPage()
     {
-        return view('admin.index',['user'=>auth()->user()]);
+        return view('admin.index',['user'=>User::with('roles')->find(Auth::id())]);
     }
     /**
      * Display a listing of the resource.
@@ -22,7 +24,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+
+        return User::with('roles')->get()->transform(function($value,$key){
+            unset($value->api_token);
+            return $value;
+        });
     }
 
     /**
