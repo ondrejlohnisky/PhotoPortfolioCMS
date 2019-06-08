@@ -24,5 +24,21 @@ class UserSeeder extends Seeder
         $user->save();
         $user->roles()->attach($role_owner);
 
+        $user = new User();
+        $user->name = 'Petr Smille';
+        $user->email = 'petr.smille@gmail.com';
+        $user->password = Hash::make('petr123');
+        $user->api_token = str_random(60);
+        $user->save();
+        $user->roles()->attach($role_admin);
+
+        $user = new User();
+        $user->name = 'Nekdo';
+        $user->email = 'nekdo.nekdo@gmail.com';
+        $user->password = Hash::make('nekdo123');
+        $user->api_token = str_random(60);
+        $user->save();
+        $user->roles()->attach($role_admin);
+
     }
 }

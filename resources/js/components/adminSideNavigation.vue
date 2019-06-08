@@ -167,6 +167,7 @@ h5{
    list-style-type:none;
    display: flex;
    flex-direction: column;
+   overflow-y: hidden;
 }
 .navItem{
    text-align: left;

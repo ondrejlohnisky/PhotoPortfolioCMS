@@ -625,31 +625,6 @@ table input[type=number]{
    width:7vw;
    text-align: center;
 }
-.modalWrapper{
-   position:fixed;
-   z-index: 50000;
-   top:0;   
-   left:0;
-   width:100%;
-   height:100%;
-   background-color: rgba(199, 199, 199, 0.4)
-}
-.myModal{
-   position:fixed;
-   overflow-x: hidden;
-   left:50%;
-   top:35%;
-   height:auto;
-   max-height:65%;
-   width:fit-content;
-   transform: translate(-50%, -50%);
-   background-color: white;
-   border-radius: 5px;
-   z-index:60000;
-   box-shadow: 0px 0px 10px gray;
-   padding:25px;
-   vertical-align:center;
-}
 .btn-rounded{
   border-radius: 45px;
 }

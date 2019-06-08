@@ -1,10 +1,30 @@
 <template>
    <div>
       <transition name="slide-fade">
-         <div v-if="message" class="alert alert-success" role="alert">
+         <div v-if="message" :class="['alert',error ? 'alert-danger' : 'alert-success']" role="alert">
             <div v-html="message"></div>
          </div>
       </transition>
+      <div v-if="deleteModal" @click="closeDeleteModal()" class="modalWrapper">
+      </div>
+      <div v-if="deleteModal" class="myModal">
+         <div class="row">
+            <div class="col-6 h4 text-danger">Pozor!</div>
+         </div>
+         <div class="row">
+            <div class="col-12">
+               <div class="h6">Opravdu si přejete smazat uživatele <b>{{ deleteAdminObject.name }}</b>?</div>
+            </div>
+         </div>
+         <div class="row my-2">
+            <div class="col-sm-6">
+               <button @click="closeDeleteModal()" class="btn btn-light btn-block btn-sm">Zrušit</button>
+            </div>
+            <div class="col-sm-6">
+               <button @click="deleteAdmin()" class="btn btn-danger btn-block btn-sm">Potvrdit</button>
+            </div>
+         </div>
+      </div>
       <div v-if="addAdminModal" @click="closeAddAdminModal()" class="modalWrapper">
       </div>
       <div v-if="addAdminModal" class="myModal">
@@ -53,7 +73,7 @@
                      <td>{{ admin.email }}</td>
                      <td><span v-for="(role,index) in admin.roles" :key='index'>{{ role.name }} </span></td>
                      <td><span v-for="(role,index) in admin.roles" :key='index'>{{ role.description }} </span></td>
-                     <td><button></button></td>
+                     <td><button @click="openDeleteModal(admin);" class="btn btn-danger btn-sm btn-block">Smazat</button></td>
                   </tr>
                   <tr>
                      <th>Pozvat administrátora: </th>
@@ -63,7 +83,7 @@
                </tbody>
             </table>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-4" id="selfInfo">
             <h3>Informace o vás</h3>
             <ul class="list-group">
                ID:
@@ -73,7 +93,11 @@
                Váš email:
                <li class="list-group-item">{{ loggedAdmin.email }}</li><br/>
                Datum a čas registrace:<li class="list-group-item">{{ loggedAdmin.created_at }}</li>
-            </ul><hr/>
+               <br>
+               <button @click="openSettingModal()" class="btn btn-blue-grey btn-sm btn-block"><font-awesome-icon size="lg" :icon="['fas','cog']"/> Upravit</button>
+            </ul>
+            
+            <hr/>
             <h3>Vaše role</h3>
             <ul v-for="(role,index) in loggedAdmin.roles" :key="index" class="list-group">
                <li class="list-group-item">{{ role.name }}</li>
@@ -92,7 +116,10 @@ export default {
          addAdminModal: false,
          newAdminEmail:'',
          message:'',
-         loggedAdmin:{}
+         error:false,
+         loggedAdmin:{},
+         deleteModal:false,
+         deleteAdminObject:{}
       }
    },
    methods:{
@@ -118,12 +145,56 @@ export default {
       },
       addAdmin(){
          axios.post('/api/invitation',{'email':this.newAdminEmail}).then(response => {
-            console.log(response);
-            this.closeAddAdminModal();
-            this.message="Uživatel <strong>"+this.newAdminEmail+"</strong> byl pozván k registraci.";
+            this.message=response.data.message;
+            this.error=response.data.error;
             setTimeout(()=>{
                this.message='';
-            },4000)
+               this.error=false;
+            },4000);
+         });
+         this.closeAddAdminModal();
+      },
+      openSettingModal(){
+         var top = $(window).scrollTop();
+         var left = $(window).scrollLeft();
+         $('body').css('overflow', 'hidden');
+         $(window).scroll(function(){
+            $(this).scrollTop(top).scrollLeft(left);
+         });
+         this.$store.commit('settingModal');
+      },
+      openDeleteModal(admin){
+         var top = $(window).scrollTop();
+         var left = $(window).scrollLeft();
+         $('body').css('overflow', 'hidden');
+         $(window).scroll(function(){
+            $(this).scrollTop(top).scrollLeft(left);
+         });
+         this.deleteAdminObject=admin;
+         this.deleteModal=true;
+      },
+      closeDeleteModal(){
+         $('body').css('overflow', 'auto');
+         $(window).unbind('scroll');
+         this.deleteAdminObject={};
+         this.deleteModal=false;
+      },
+      deleteAdmin(){
+         axios.delete('/api/user/'+this.deleteAdminObject.id).then(response => {
+            this.closeDeleteModal();
+            console.log(response.data);
+            this.message=response.data.message;
+            this.error=response.data.error;
+            this.getAdmins();
+            setTimeout(()=>{
+               this.message='';
+            },4000);
+         }).catch(error =>{
+            this.closeDeleteModal();
+            this.message=error;
+            setTimeout(()=>{
+               this.message='';
+            },4000);
          });
       }
 
@@ -136,6 +207,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#selfInfo{
+   border-left:2px dashed black;
+}
 #inviteButton{
    width:fit-content;
 }
@@ -143,31 +217,6 @@ export default {
    width:100%;
 }
 
-.modalWrapper{
-   position:fixed;
-   z-index: 50000;
-   top:0;   
-   left:0;
-   width:100%;
-   height:100%;
-   background-color: rgba(199, 199, 199, 0.4)
-}
-.myModal{
-   position:fixed;
-   overflow-x: hidden;
-   left:50%;
-   top:35%;
-   height:auto;
-   max-height:65%;
-   width:fit-content;
-   transform: translate(-50%, -50%);
-   background-color: white;
-   border-radius: 5px;
-   z-index:60000;
-   box-shadow: 0px 0px 10px gray;
-   padding:25px;
-   vertical-align:center;
-}
 .slide-fade-enter-active {
   transition: all .5s ease-in;
 }

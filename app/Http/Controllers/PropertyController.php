@@ -7,6 +7,10 @@ use App\Property;
 
 class PropertyController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth:api');
+    }
+    
     public function setGlobalFoldersPassword(Request $request){
         $password = Property::where('name','globalFoldersPassword')->first();
         $password->update(['value' => $request->password]);

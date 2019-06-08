@@ -4,6 +4,11 @@
          <div class="row">
             <div class="col-md-3 public-image"><img class="rounded-circle" :src="public_image" :alt="title"></div>
             <div class="col-md-9"><h3>{{ title }}</h3><p>{{ description }}</p></div>
+            <div class="ml-auto">
+               <div class="fb-share-button" :data-href="locationHref" data-layout="button_count" data-size="large"><a target="_blank" :href="'https://www.facebook.com/sharer/sharer.php?u='+locationHref+'+;src=sdkpreparse'" class="fb-xfbml-parse-ignore">Sdílet</a></div>
+               <button class="btn btn-success btn-md"><font-awesome-icon size="lg" :icon="['fas','download']"/> Stáhnout</button>
+            </div>
+            
          </div>
          <hr/>
          <br/>
@@ -67,19 +72,10 @@
             public_image: "/images/placeholder-image.jpg",
             created_at: "2018-12-09 14:17:27",
             updated_at: "2018-12-09 14:17:27",
-            images: [
-               // {
-               //    id: 1,
-               //    title: "fotka 1",
-               //    description: "deskripcedeskripcedeskripcedeskripce !deskripce!",
-               //    src: "https://www.boxmotions.com/blog/wp-content/uploads/2017/06/1458593290-timbercraft-tiny-home-2.jpg",
-               //    folder_id: 1,
-               //    created_at: "2018-12-09 14:17:27",
-               //    updated_at: "2018-12-09 14:17:27"
-               // }
-            ],
+            images: [],
             nextPageUrl:'',
-            windowWidth:0
+            windowWidth:0,
+            locationHref:''
          }
       },
       computed:{
@@ -161,6 +157,7 @@
          }
       },
       mounted(){
+         this.locationHref=window.location.href;
          this.getFolder(this.$route.params.id,this.$store.state.folderPassword);
          this.windowWidth=window.innerWidth
          window.addEventListener('resize', evt => {

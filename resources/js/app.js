@@ -15,7 +15,7 @@ import Vuex from 'vuex'
 import store from  './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebook,faInstagram,faFlickr,faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faCog,faSignOutAlt,faDesktop,faPlusCircle,faImages,faImage,faLock,faTrashAlt,faCheckCircle, faSave, faEdit} from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faCog,faSignOutAlt,faDesktop,faPlusCircle,faImages,faImage,faLock,faTrashAlt,faCheckCircle, faSave, faEdit, faDownload} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // veřejné stránky
@@ -38,7 +38,7 @@ import Administratori from './adminPages/administratori'
 import page from './page'
 import admin from './admin'
 
-library.add(faFacebook,faInstagram,faFlickr,faYoutube,faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faDesktop,faCog,faSignOutAlt,faPlusCircle,faImage,faImages,faLock,faTrashAlt,faCheckCircle,faSave,faEdit)
+library.add(faFacebook,faInstagram,faFlickr,faYoutube,faAngleLeft,faAngleRight,faDotCircle,faCircle,faEllipsisH,faAngleDoubleLeft,faDesktop,faCog,faSignOutAlt,faPlusCircle,faImage,faImages,faLock,faTrashAlt,faCheckCircle,faSave,faEdit,faDownload)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

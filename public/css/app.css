@@ -52,3 +52,50 @@
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.modalWrapper {
+  position: fixed;
+  z-index: 50000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(199, 199, 199, 0.4);
+}
+
+.myModal {
+  position: fixed;
+  overflow-x: hidden;
+  left: 50%;
+  top: 35%;
+  height: auto;
+  max-height: 65%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 5px;
+  z-index: 60000;
+  -webkit-box-shadow: 0px 0px 10px gray;
+          box-shadow: 0px 0px 10px gray;
+  padding: 25px;
+  vertical-align: center;
+}
+
+.slide-fade-enter-active {
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+.slide-fade-leave-active {
+  -webkit-transition: all .8s ease-out;
+  transition: all .8s ease-out;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  margin-top: -65px;
+  opacity: 0;
+}
+

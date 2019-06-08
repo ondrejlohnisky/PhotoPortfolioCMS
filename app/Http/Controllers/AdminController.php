@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\User;
 use Auth;
 
@@ -10,7 +11,7 @@ class AdminController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth:api', ['only' => ['index']]);
+        $this->middleware('auth:api', ['only' => ['index','destroy']]);
     }
 
     public function showPage()
@@ -29,6 +30,13 @@ class AdminController extends Controller
             unset($value->api_token);
             return $value;
         });
+    }
+    public function changePassword(Request $request, User $user)
+    {
+        if(Hash::check($request->oldPassword,$user->password)){
+            $user->update(['password' => Hash::make($request->newPassword)]);;
+            return $user;
+        }
     }
 
     /**
@@ -92,8 +100,16 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,User $user)
     {
-        //
+        try {
+            if($request->user()->authorizeRoles('Owner')){
+                $user->delete();
+                return ['error'=>false,'message'=>'Uživatel smazán.'];
+            }else return ['error'=>true,'message'=>'Na tuto akci nemáte oprávnění.'];
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+
     }
 }

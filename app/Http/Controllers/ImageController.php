@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Image;
 use App\Folder;
+use App\Property;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -25,7 +26,8 @@ class ImageController extends Controller
         foreach (Folder::all() as $folder) {
             $isLocked=Folder::find($folder->id)->passwords()->exists();
             if(!$isLocked){
-                array_push($response,Folder::find($folder->id)->images()->first());
+                if(Folder::find($folder->id)->images()->first()!=null)
+                    array_push($response,Folder::find($folder->id)->images()->inRandomOrder()->first());
             }
         }
         return $response;
@@ -46,6 +48,8 @@ class ImageController extends Controller
                     }else{
                         return ['error' => true, 'message' => 'Heslo se již nedá použít. Požádejte adminitrátora o nové heslo!'];
                     }
+                }elseif(Property::where('name','globalFoldersPassword')->first()['value']==$_GET['password']){
+                    return $folder->images()->simplePaginate(10);
                 }else{
                     return ['error' => true,'message' => 'Špatné heslo!'];
                 }
@@ -74,6 +78,8 @@ class ImageController extends Controller
                         }else{
                             return ['error' => true, 'message' => 'Heslo se již nedá použít. Požádejte adminitrátora o nové heslo!'];
                         }
+                    }elseif(Property::where('name','globalFoldersPassword')->first()['value']==$_GET['password']){
+                        return response()->file(storage_path('app/images/folders/'.$folderID.'/').$image);
                     }else{
                         return ['error' => true,'message' => 'Špatné heslo'];
                     }

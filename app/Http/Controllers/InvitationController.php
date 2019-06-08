@@ -31,14 +31,18 @@ class InvitationController extends Controller
     public function store(Request $request)
     {
         try {
-            $request->user()->authorizeRoles('Owner');
-            $token=str_random(20);
-            $invitation = new Invitation;
-            $invitation->email = $request->email;
-            $invitation->token = $token;
-            $invitation->save();
-            Mail::to($request->email)->send(new RegistrationInvite($request->email,$token));
-            return $invitation;
+            if($request->user()->authorizeRoles('Owner')){
+                $token=str_random(20);
+                $invitation = new Invitation;
+                $invitation->email = $request->email;
+                $invitation->token = $token;
+                $invitation->save();
+                Mail::to($request->email)->send(new RegistrationInvite($request->email,$token));
+                return ['error'=>false,'message'=>'Uživatel <strong>'.$request->email.'</strong> byl pozván k registraci.'];
+            }else{
+                return ['error'=>true,'message'=>'Na tuto akci nemáte oprávnění.'];
+            }
+            
         } catch (\Throwable $th) {
             return $th;
         }

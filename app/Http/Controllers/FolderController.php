@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\FolderResource;
 use Illuminate\Support\Facades\Storage;
 use File;
+use App\Property;
 
 class FolderController extends Controller
 {
@@ -70,6 +71,8 @@ class FolderController extends Controller
                 }else{
                     return ['error' => true, 'message' => 'Heslo se již nedá použít. Požádejte adminitrátora o nové heslo!'];
                 }
+            }elseif(Property::where('name','globalFoldersPassword')->first()['value']==$_GET['password']){
+                return ['error' => false];
             }else{
                 return ['error' => true,'message' => 'Špatné heslo'];
             }
@@ -94,6 +97,8 @@ class FolderController extends Controller
                     }else{
                         return ['error' => true, 'message' => 'Heslo se již nedá použít. Požádejte adminitrátora o nové heslo!'];
                     }
+                }elseif(Property::where('name','globalFoldersPassword')->first()['value']==$_GET['password']){
+                    return $folder;
                 }else{
                     return ['error' => true,'message' => 'Špatné heslo!'];
                 }
